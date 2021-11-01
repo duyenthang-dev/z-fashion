@@ -1,3 +1,8 @@
-.header1{
+.header-container {
     background-color: green;
+    font-size: 1.6rem;
+}
+.header__appbar{
+    background-color: red;
+    font-size: 1.6rem;
 }
