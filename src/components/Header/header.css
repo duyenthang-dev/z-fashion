@@ -1,3 +1,50 @@
-.header1{
-    background-color: green;
+.header {
+    font-size: 1.6rem;
+    padding-top: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding-bottom: 1rem;
+    
+    position: sticky;
+    top: 0;
+}
+.header__logo img {
+    height: 5rem;
+    padding-left: 5rem;
+}
+.item1 {
+    text-align: left;
+}
+.item3 {
+    text-align: right;
+}
+.header__menu ul {
+    display: flex;
+    gap: 5rem;
+    margin-top: 1rem;
+}
+.header__right {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+.header__auth {
+    font-size: 1.4rem;
+}
+.header__widget {
+    display: flex;
+    gap: 1.5rem;
+    padding-right: 2rem;
+}
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+.active {
+    padding-bottom: 5px;
+    border-bottom: #ca1515 solid 3px;
 }
