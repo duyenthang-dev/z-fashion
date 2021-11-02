@@ -41,19 +41,19 @@ function Header() {
                     <div className="header__menu">
                         <ul>
                             <li className="active">
-                                <a href="#">Trang chủ</a>
+                                <a href="/">Trang chủ</a>
                             </li>
                             <li>
-                                <a href="#">Cửa hàng</a>
+                                <a href="/">Cửa hàng</a>
                             </li>
                             <li>
-                                <a href="#">Blog</a>
+                                <a href="/">Blog</a>
                             </li>
                             <li>
-                                <a href="#">Điều hướng</a>
+                                <a href="/">Điều hướng</a>
                             </li>
                             <li>
-                                <a href="#">Liên hệ</a>
+                                <a href="/">Liên hệ</a>
                             </li>
                         </ul>
                     </div>
@@ -61,9 +61,9 @@ function Header() {
                 <Grid item lg={3} className="item3">
                     <div className="header__right">
                         <div className="header__auth">
-                            <a href="#">Đăng nhập</a>
+                            <a href="/">Đăng nhập</a>
                             <span>/</span>
-                            <a href="#">Đăng kí</a>
+                            <a href="/">Đăng kí</a>
                         </div>
 
                         <div className="header__widget">
