@@ -36,7 +36,7 @@ const Home = () => {
     return (
         <Fragment>
             <MetaTags>
-                <title>Flone | Fashion Home</title>
+                <title>Z Fashion | Refined Life</title>
             </MetaTags>
             <Header />
             <HeroSlider />
