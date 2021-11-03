@@ -6,7 +6,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Badge from "@mui/material/Badge";
 import SearchIcon from "@mui/icons-material/Search";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 // const mainNav = [
 //     {
@@ -38,25 +38,25 @@ function Header() {
                     </div>
                 </Grid>
                 <Grid item xl={6} lg={7} className="item2">
-                    <div className="header__menu">
+                    <nav className="header__menu">
                         <ul>
                             <li className="active">
-                                <a href="/">Trang chủ</a>
+                                <NavLink to="/home">Trang chủ</NavLink>
                             </li>
                             <li>
-                                <a href="/">Cửa hàng</a>
+                                <NavLink to="/catalog">Cửa hàng</NavLink>
                             </li>
                             <li>
-                                <a href="/">Blog</a>
+                                <NavLink to="/blog">Blog</NavLink>
                             </li>
                             <li>
-                                <a href="/">Điều hướng</a>
+                                <NavLink to="/blog">Điều hướng</NavLink>
                             </li>
                             <li>
-                                <a href="/">Liên hệ</a>
+                                <NavLink to="/contact">Liên hệ</NavLink>
                             </li>
                         </ul>
-                    </div>
+                    </nav>
                 </Grid>
                 <Grid item lg={3} className="item3">
                     <div className="header__right">
