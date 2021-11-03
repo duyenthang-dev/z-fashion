@@ -49,7 +49,6 @@
     margin-bottom: 5rem;
 }
 
-
 /* Margin - left */
 .ml-1 {
     margin-right: 1rem;
@@ -65,4 +64,26 @@
 }
 .ml-5 {
     margin-right: 5rem;
+}
+
+.align-self {
+    align-self: center;
+}
+.btn {
+    color: #ffffff;
+    background: #ca1515;
+    font-weight: 500;
+    border: none;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 50px;
+}
+.position-relative {
+    position: relative;
+}
+
+.shop-link {
+    display: inline-block;
+    border-bottom: 2px solid #db5b5d;
+    color: #db5b5d;
 }

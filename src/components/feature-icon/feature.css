@@ -1,0 +1,24 @@
+.features-container{
+    /* background-color: #cfe8fc; */
+    height:400px;
+    font-size: 1.5rem;
+    color: #555;
+    text-align: left;
+   
+}
+
+.features__service-item{
+    display: flex;
+    padding-left: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-top: 2rem;
+}
+.features__service-item .fsi__description{
+    padding-left: 1.5rem;
+}
+.fsi__description h6{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #111;
+}
