@@ -6,14 +6,15 @@ import React, { Fragment } from "react";
 const ProductRating = (props) => {
     let rating = [];
     for (let i = 1; i <= props.ratingValue; i++) {
-        rating.push(<BsStarFill key={i} style={{ color: "#ff9806" }}></BsStarFill>);
+        rating.push(<BsStarFill key={i} style={{ color: "#ff9806", size:props.size }}></BsStarFill>);
     }
     for (let i = props.ratingValue + 1; i <= 5; i++) {
-        rating.push(<BsStar key={i} style={{ color: "#ff9806" }}></BsStar>);
+        rating.push(<BsStar key={i} style={{ color: "#ff9806",size:props.size }}></BsStar>);
     }
     return <Fragment>{rating}</Fragment>;
 };
 ProductRating.propTypes = {
-    ratingValue: PropTypes.number
+    ratingValue: PropTypes.number,
+    size: PropTypes.number,
 }
 export default ProductRating;

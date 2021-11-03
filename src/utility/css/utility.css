@@ -90,3 +90,13 @@
 .yeallow {
     color: #ff9806;
 }
+.hidden{
+    display: none;
+}
+.center{
+    margin:0 auto;
+}
+
+.pt-5 {
+    padding-top: 5rem;
+}
