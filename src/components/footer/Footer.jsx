@@ -74,7 +74,7 @@ function Footer() {
                         <p>newletter</p>
                         <form action="#">
                             <input type="text" placeholder="Email" />
-                            <button type="submit" class="btn">
+                            <button type="submit" className="btn">
                                 Subscribe
                             </button>
                         </form>

@@ -1,7 +1,12 @@
 export default function ProductItem() {
     return (
-        <div className="header-container">
-            <h2>oke</h2>
+        <div className="product-item">
+            <div className="product-item__img">
+                
+            </div>
+            <div className="product-item__content">
+
+            </div>
         </div>
     );
 }

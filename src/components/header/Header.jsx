@@ -49,8 +49,34 @@ function Header() {
                             <li>
                                 <NavLink to="/blog">Blog</NavLink>
                             </li>
-                            <li>
+                            <li className="dropdown">
                                 <NavLink to="/blog">Điều hướng</NavLink>
+                                <div className="space"></div>
+                                <ul className="sub-menu">
+                                    <li className="sub-menu--1">
+                                        <NavLink to="/about-us">
+                                            Về chúng tôi
+                                        </NavLink>
+                                    </li>
+                                    <li className="sub-menu--2">
+                                        <NavLink to="/cart">Giỏ hàng</NavLink>
+                                    </li>
+                                    <li className="sub-menu--3">
+                                        <NavLink to="/whishlist">
+                                            Mục ưu thích
+                                        </NavLink>
+                                    </li>
+                                    <li className="sub-menu--4">
+                                        <NavLink to="/product-detail">
+                                            Mục ưu thích
+                                        </NavLink>
+                                    </li>
+                                    <li className="sub-menu--5">
+                                        <NavLink to="/checkout">
+                                            Thanh toán
+                                        </NavLink>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <NavLink to="/contact">Liên hệ</NavLink>
