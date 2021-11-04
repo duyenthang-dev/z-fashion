@@ -32,7 +32,8 @@ import Header from "./../../container/header/index";
 import HeroSlider from "./../../container/hero-slider/index";
 import Features from "./../../container/feature-icon/index";
 import Footer from "./../../container/footer/index";
-import ProductRating from './../../components/product/productRating'
+// import ProductRating from './../../components/product/productRating'
+import TabProduct from "../../components/product/tab-product/tabProduct";
 const Home = () => {
     return (
         <Fragment>
@@ -42,7 +43,8 @@ const Home = () => {
             <Header />
             <HeroSlider />
             <Features />
-            <ProductRating ratingValue = {3} />
+            {/* <ProductRating ratingValue = {3} /> */}
+            <TabProduct />
             <Footer />
         </Fragment>
     );

@@ -1,8 +1,8 @@
 //* file luu tat ca hinh anh
 
 //* áo len nam
-import SWEATER_BROWN_MALE from "./assets/images/product/sweater_brown_male.jpg";
-import SWEATER_YEALLOW_MALE from "./assets/images/product/sweater_brown_male.jpg";
+import SWEATER_BROWN_MALE from "./assets/images/product/sweater-brown-male.jpg";
+import SWEATER_YEALLOW_MALE from "./assets/images/product/sweater-yellow-male.jpg";
 import SWEATER_GRAY_MALE from "./assets/images/product/sweater-gray-male.jpg";
 
 //* áo thun nam
