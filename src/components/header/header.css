@@ -10,6 +10,7 @@
     z-index: 2;
     color: #333;
     background-color: #fff;
+    font-weight: 500;
 }
 .header__logo img {
     height: 4rem;
@@ -21,10 +22,14 @@
 .item3 {
     text-align: right;
 }
-.header__menu ul {
+.header__menu > ul {
     display: flex;
     gap: 5rem;
     margin-top: 1rem;
+}
+
+.header__menu ul li a:hover {
+    color: #ff2f2f;
 }
 .header__right {
     display: flex;
@@ -46,9 +51,67 @@ ul {
 
 a {
     text-decoration: none;
-    color:#333;
+    color: #333;
 }
 .active {
     padding-bottom: 2px;
     border-bottom: #ca1515 solid 3px;
+}
+/* sub menu */
+.dropdown {
+    position: relative;
+    height: 100%;
+}
+.sub-menu {
+    width: 20rem;
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    text-align: left;
+    padding-left: 2rem;
+    margin-top: 2.3rem;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+    transition: all 0.5s ease 0s;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+    z-index: -1;
+}
+.sub-menu li a{
+    font-weight: 500;
+}
+.space {
+    height: 5rem;
+    width: 10rem;
+    color: #333;
+    position: absolute;
+}
+.dropdown:hover ul {
+    visibility: visible;
+}
+.sub-menu li {
+    display: block;
+    margin-bottom: 2rem;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    font-weight: 400;
+}
+.sub-menu li:nth-child(1) {
+    margin-top: 2rem;
+}
+.dropdown:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+}
+.space:hover + .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
 }

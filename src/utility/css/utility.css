@@ -87,3 +87,16 @@
     border-bottom: 2px solid #db5b5d;
     color: #db5b5d;
 }
+.yeallow {
+    color: #ff9806;
+}
+.hidden{
+    display: none;
+}
+.center{
+    margin:0 auto;
+}
+
+.pt-5 {
+    padding-top: 5rem;
+}
