@@ -16,7 +16,7 @@ const ProductItem = (props) => {
         clasStatus = 'hidden';
     else clasStatus = 'sale';
     return (
-        <div className="product-item center pt-5">
+        <div className="product-item center">
             <div className="product-item__img">
                 <Link to="/home">
                     <img

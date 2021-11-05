@@ -1,5 +1,6 @@
 //* file luu tat ca hinh anh
-
+//* Banners
+import BANNER from "./assets/images/banner/banner-1.jpg";
 //* áo len nam
 import SWEATER_BROWN_MALE from "./assets/images/product/sweater-brown-male.jpg";
 import SWEATER_YEALLOW_MALE from "./assets/images/product/sweater-yellow-male.jpg";
@@ -26,6 +27,10 @@ import SKIRT_CARO_FEMALE from "./assets/images/product/skirt-caro-female.jpg";
 import SKIRT_PINK_FEMALE from "./assets/images/product/skirt-pink-female.jpg";
 
 //* Váy nữ
+
+
+const bannerImg = BANNER;
+
 const sweaterMale = {
     BROWN: SWEATER_BROWN_MALE,
     YEALLOW: SWEATER_YEALLOW_MALE,
@@ -55,4 +60,4 @@ const skirtFemale = {
     CARO: SKIRT_CARO_FEMALE,
     PINK: SKIRT_PINK_FEMALE,
 };
-export { sweaterMale, shirtMale, khakiMale, sweaterFemale, skirtFemale };
+export { sweaterMale, shirtMale, khakiMale, sweaterFemale, skirtFemale, bannerImg };

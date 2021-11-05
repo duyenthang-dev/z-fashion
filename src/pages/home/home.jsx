@@ -1,28 +1,20 @@
 /**
  * *---------------------------  Header Area  ---------------------------------------------
- *
- *
+
  * *---------------------------  Hero slider ---------------------------------------------
- *
- *
+
  * *--------------------------- Feature slider --------------------------------------------------
- *
- *
+
  * *--------------------------- Tab product slider ---------------------------------------------
- *
- *
+ 
  * *---------------------------- Banner Area ---------------------------------------------
- *
- *
+
  * *-- ------------------------ Hot product Area ---------------------------------------------
- *
- *
+
  * *--------------------------- Brand Logo Area ---------------------------------------------
- *
- *
+
  * *--------------------------- Testononial Area ---------------------------------------------
- *
- *
+
  * *--------------------------- Footer Area ---------------------------------------------
  */
 
@@ -32,6 +24,8 @@ import Header from "./../../container/header/index";
 import HeroSlider from "./../../container/hero-slider/index";
 import Features from "./../../container/feature-icon/index";
 import Footer from "./../../container/footer/index";
+import Banner from "./../../container/banner/index";
+import "./../../utility/css/utility.css";
 // import ProductRating from './../../components/product/productRating'
 import TabProduct from "../../components/product/tab-product/tabProduct";
 const Home = () => {
@@ -44,7 +38,8 @@ const Home = () => {
             <HeroSlider />
             <Features />
             {/* <ProductRating ratingValue = {3} /> */}
-            <TabProduct />
+            <TabProduct className="mt-5" />
+            <Banner />
             <Footer />
         </Fragment>
     );
