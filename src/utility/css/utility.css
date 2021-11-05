@@ -14,7 +14,7 @@
 .mt-5 {
     margin-top: 5rem;
 }
-.mt-10{
+.mt-10 {
     margin-top: 10rem;
 }
 /* Margin - right */
@@ -92,13 +92,16 @@
 .yeallow {
     color: #ff9806;
 }
-.hidden{
+.hidden {
     display: none;
 }
-.center{
-    margin:0 auto;
+.center {
+    margin: 0 auto;
 }
 
 .pt-5 {
     padding-top: 5rem;
+}
+.m-auto {
+    margin: auto;
 }

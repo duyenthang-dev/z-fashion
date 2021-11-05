@@ -1,4 +1,33 @@
-.banner{
+.banner {
     background-color: #cfe8fc;
     height: 50rem;
+    font-size: 1.5rem;
+    justify-content: center;
+    display: flex;
+}
+
+.banner__slider {
+    text-align: center;
+}
+.banner-container {
+    margin: 0 auto;
+}
+.banner__item span {
+    font-size: 1.8rem;
+    color: #ff2f2f;
+    text-transform: uppercase;
+}
+.banner__item h1 {
+    font-family: "Cookie", cursive;
+    font-size: 8rem;
+    line-height: 1.2;
+    font-weight: normal;
+}
+
+.banner__item a {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.banner__item a:hover{
+    color: #ff2f2f;
 }
