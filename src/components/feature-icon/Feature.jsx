@@ -5,7 +5,7 @@ import "./feature.css";
 import "./../../utility/css/utility.css";
 const Feature = () => {
     return (
-        <div className="features">
+        <div className="features mt-4">
             <Container maxWidth="lg">
                 <Grid container spacing={2} className="features-container">
                     <Grid item lg={3} md={4} sm={6}>

@@ -1,5 +1,6 @@
 .container {
     width: 280px;
+    
 }
 .product-item {
     position: relative;
@@ -7,6 +8,7 @@
     width: 270px;
     text-align: left;
     color: #333;
+    margin-bottom: 3rem;
 }
 
 .product-item__img {
