@@ -25,6 +25,7 @@ import HeroSlider from "./../../container/hero-slider/index";
 import Features from "./../../container/feature-icon/index";
 import Footer from "./../../container/footer/index";
 import Banner from "./../../container/banner/index";
+import BlogList from "./../../container/blog/blog-list/index";
 import "./../../utility/css/utility.css";
 // import ProductRating from './../../components/product/productRating'
 import TabProduct from "../../components/product/tab-product/tabProduct";
@@ -39,7 +40,8 @@ const Home = () => {
             <Features />
             {/* <ProductRating ratingValue = {3} /> */}
             <TabProduct className="mt-5" />
-            <Banner />
+            <Banner className="mb-5"/>
+            <BlogList className="mt-5"/>
             <Footer />
         </Fragment>
     );

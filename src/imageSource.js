@@ -28,6 +28,10 @@ import SKIRT_PINK_FEMALE from "./assets/images/product/skirt-pink-female.jpg";
 
 //* Váy nữ
 
+//* blog
+import BLOG_1 from "./assets/images/blog/blog-1.jpg";
+import BLOG_2 from "./assets/images/blog/blog-2.jpg";
+import BLOG_3 from "./assets/images/blog/blog-3.jpg";
 
 const bannerImg = BANNER;
 
@@ -60,4 +64,18 @@ const skirtFemale = {
     CARO: SKIRT_CARO_FEMALE,
     PINK: SKIRT_PINK_FEMALE,
 };
-export { sweaterMale, shirtMale, khakiMale, sweaterFemale, skirtFemale, bannerImg };
+
+const blogSingle = {
+    BLOG_1: BLOG_1 ,
+    BLOG_2: BLOG_2 ,
+    BLOG_3: BLOG_3,
+};
+export {
+    sweaterMale,
+    shirtMale,
+    khakiMale,
+    sweaterFemale,
+    skirtFemale,
+    bannerImg,
+    blogSingle,
+};
