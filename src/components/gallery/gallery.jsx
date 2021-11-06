@@ -36,6 +36,7 @@ const Gallery = () => {
                         <img src={gallery.INS_6} alt="gallery" width="100%" />
                     </div>
                 </Grid>
+
             </Grid>
         </div>
     );

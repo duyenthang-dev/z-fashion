@@ -1,0 +1,44 @@
+.tab-product {
+    font-size: 1.5rem;
+    
+}
+.tab-product__filter {
+    display: flex;
+}
+.tab-product__filter ul {
+    display: flex;
+    flex: 1;
+    padding-right: 2rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+.tab-product__title {
+    text-align: left;
+}
+.tab-product h3 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: left;
+    /* margin-left: 2rem; */
+    position: relative;
+    padding-bottom: 1rem;
+    display: inline-block;
+    
+}
+.tab-product h3:after {
+    content: "";
+    width: 40%;
+    height: 3px;
+    background-color: #ff2f2f;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.active{
+    border-bottom: 3px solid #ff2f2f;
+}
+
+.tab-product li{
+    cursor: pointer;
+}
