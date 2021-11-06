@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import HeroSlider from '../../components/hero-slider/HeroSlider'
+import HeroSlider from '../../components/hero-slider/heroSlider'
 
 const HeroSliderContainer = () => {
     return (
