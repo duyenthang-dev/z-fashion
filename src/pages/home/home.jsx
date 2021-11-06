@@ -21,10 +21,10 @@
 import React, { Fragment } from "react";
 import MetaTags from "react-meta-tags";
 import Header from "./../../container/header/index";
-import HeroSlider from "./../../container/hero-slider/index";
+import HeroSliderContainer from "./../../container/hero-slider/index";
 import Features from "./../../container/feature-icon/index";
 import Footer from "./../../container/footer/index";
-import Banner from "./../../container/banner/index";
+import BannerComponent from "./../../container/banner/index";
 import "./../../utility/css/utility.css";
 // import ProductRating from './../../components/product/productRating'
 import TabProduct from "../../components/product/tab-product/tabProduct";
@@ -35,11 +35,11 @@ const Home = () => {
                 <title>Z Fashion | Refined Life</title>
             </MetaTags>
             <Header />
-            <HeroSlider />
+            <HeroSliderContainer />
             <Features />
             {/* <ProductRating ratingValue = {3} /> */}
             <TabProduct className="mt-5" />
-            <Banner />
+            <BannerComponent />
             <Footer />
         </Fragment>
     );
