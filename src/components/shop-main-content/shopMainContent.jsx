@@ -4,7 +4,8 @@ import * as React from "react";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import ShopLeftBar from "../shop-left-bar/shopLeftBar"
-import ShopMainMenu from "../shop-main-menu/shopMainMenu"
+import TabProduct from "./tabProduct/tabProduct";
+
 
 
 function shopMainContent() 
@@ -17,7 +18,7 @@ function shopMainContent()
                         <ShopLeftBar />
                     </Grid>
                     <Grid item xs={8} md={9} className="main__menu">
-                        <ShopMainMenu />
+                        <TabProduct />
                     </Grid>
                 </Grid>
             </Container>
