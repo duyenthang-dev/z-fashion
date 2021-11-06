@@ -12,7 +12,6 @@ const Cart = () => {
             </MetaTags>
             <Header />
             <ShopCart />
-
             <Footer />
         </Fragment>
     );
