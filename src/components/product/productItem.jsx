@@ -1,6 +1,5 @@
 import "./productItem.css";
 import { Link } from "react-router-dom";
-import { skirtFemale } from "./../../imageSource";
 import "./../../utility/css/utility.css";
 import { MdZoomOutMap } from "react-icons/md";
 import { BsCartPlusFill } from "react-icons/bs";
