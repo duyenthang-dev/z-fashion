@@ -1,0 +1,84 @@
+.discount {
+    font-size: 1.5rem;
+}
+
+.discount__text {
+    background-color: #f4f4f4;
+    text-align: center;
+    height: 99%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+.discount__title span,
+.discount__countdown{
+    z-index: 5;
+}
+.discount__title{
+    padding-bottom: 6rem;
+    position: relative;
+
+}
+.discount__title > span{
+    font-weight: 500;
+}
+.discount__title h5{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.discount__title >h5 > span{
+    color: #ca1515;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.discount__title h2 {
+    font-family: "Cookie", cursive;
+    font-size: 5.5rem;
+    font-weight: normal;
+    color: #ca1515;
+}
+/* .discount__title:after {
+    content: "";
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 3;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+} */
+.discount__countdown {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+.countdown__item {
+    display: flex;
+    gap: 1rem;
+}
+
+.countdown__item > span{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.countdown__item > p{
+    font-size: 1.5rem;
+   text-transform: uppercase;
+   font-weight: 500;
+}
+.discount__text > a{
+    padding-top: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #ca1515;
+    display: inline-block;
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}

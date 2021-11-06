@@ -1,9 +1,12 @@
-.blog-list__title {
-    text-align: left;
-    font-size: 1.5rem;
+.testi__list {
+    align-items: center;
+    padding-top: 5rem;
+}
+.testi__title {
+    font-size: 2.4rem;
 }
 
-.blog-list__title h3 {
+.testi__title h3 {
     font-size: 2.4rem;
     text-transform: uppercase;
     font-weight: 500;
@@ -12,17 +15,12 @@
     position: relative;
 }
 
-.blog-list__title h3:after {
+.testi__title h3:after {
     content: "";
-    width: 40%;
+    width: 30%;
     height: 3px;
     background-color: #ff2f2f;
     position: absolute;
     left: 0;
     bottom: 0;
-}
-.blog-list__link{
-    text-align: right;
-    padding-right: 2rem;
-    font-size: 1.5rem;
 }

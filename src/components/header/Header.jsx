@@ -8,24 +8,6 @@ import Badge from "@mui/material/Badge";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link, NavLink } from "react-router-dom";
 
-// const mainNav = [
-//     {
-//         display: "Trang chủ",
-//         path: "/",
-//     },
-//     {
-//         display: "Sản phẩm",
-//         path: "/catalog",
-//     },
-//     {
-//         display: "Blog",
-//         path: "/blog",
-//     },
-//     {
-//         display: "Liên hệ",
-//         path: "/contact",
-//     },
-// ];
 function Header() {
     return (
         <div className="header">
@@ -72,7 +54,7 @@ function Header() {
                                         </NavLink>
                                     </li>
                                     <li className="sub-menu--5">
-                                        <NavLink to="/checkout">
+                                        <NavLink to="/check-out">
                                             Thanh toán
                                         </NavLink>
                                     </li>

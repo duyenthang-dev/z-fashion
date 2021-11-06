@@ -33,6 +33,21 @@ import BLOG_1 from "./assets/images/blog/blog-1.jpg";
 import BLOG_2 from "./assets/images/blog/blog-2.jpg";
 import BLOG_3 from "./assets/images/blog/blog-3.jpg";
 
+//* avatar
+import AVT_1 from "./assets/images/avatar/avt-1.svg";
+import AVT_2 from "./assets/images/avatar/avt-2.svg";
+import AVT_3 from "./assets/images/avatar/avt-3.svg";
+
+//* discount
+import DISCOUNT from "./assets/images/discount.jpg";
+
+//* gallery
+import INS_1 from "./assets/images/gallery/insta-1.jpg";
+import INS_2 from "./assets/images/gallery/insta-2.jpg";
+import INS_3 from "./assets/images/gallery/insta-3.jpg";
+import INS_4 from "./assets/images/gallery/insta-4.jpg";
+import INS_5 from "./assets/images/gallery/insta-5.jpg";
+import INS_6 from "./assets/images/gallery/insta-6.jpg";
 const bannerImg = BANNER;
 
 const sweaterMale = {
@@ -66,9 +81,22 @@ const skirtFemale = {
 };
 
 const blogSingle = {
-    BLOG_1: BLOG_1 ,
-    BLOG_2: BLOG_2 ,
-    BLOG_3: BLOG_3,
+    BLOG_1,
+    BLOG_2,
+    BLOG_3,
+};
+const avatar = {
+    AVT_1,
+    AVT_2,
+    AVT_3,
+};
+const gallery = {
+    INS_1,
+    INS_2,
+    INS_3,
+    INS_4,
+    INS_5,
+    INS_6,
 };
 export {
     sweaterMale,
@@ -78,4 +106,7 @@ export {
     skirtFemale,
     bannerImg,
     blogSingle,
+    avatar,
+    DISCOUNT,
+    gallery
 };
