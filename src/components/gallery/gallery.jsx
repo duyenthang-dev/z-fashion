@@ -4,7 +4,7 @@ import { gallery } from "./../../imageSource";
 import "./../../utility/css/utility.css";
 const Gallery = () => {
     return (
-        <div className="gallery mt-10 ">
+        <div className="gallery mt-15">
             <Grid container maxWidth="xl">
                 <Grid item lg={2} md={4} sm={4}>
                     <div className="gallry__item-1">

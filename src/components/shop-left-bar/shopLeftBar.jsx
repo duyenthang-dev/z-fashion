@@ -10,35 +10,34 @@ function ShopLeftBar() {
         <div className="shop__sidebar">
             <div className="sidebar__categories">
                 <div className="section-title">
-                    <h4>Categories</h4>
+                    <h4>Danh mục</h4>
                 </div>
                 <div className="categories__accordion">
                     <div className="accordion" id="accordionExample">
                         <div className="card">
                             <div className="card-heading active">
-                                <a href="/" data-toggle="collapse" data-target="#collapseOne">Women</a>
+                                <a href="/" data-toggle="collapse" data-target="#collapseOne">Nữ</a>
                             </div>
                             <div id="collapseOne" className="collapse show" data-parent="#accordionExample">
                                 <div className="card-body">
                                     <ul>
-                                        <li><a href="/">Coats</a></li>
+                                        <li><a href="/">Áo khoác</a></li>
                                         <li><a href="/">Jackets</a></li>
-                                        <li><a href="/">Dresses</a></li>
-                                        <li><a href="/">Shirts</a></li>
-                                        <li><a href="/">T-shirts</a></li>
-                                        <li><a href="/">Jeans</a></li>
+                                        <li><a href="/">Váy</a></li>
+                                        <li><a href="/">Áo thun</a></li>
+                                        <li><a href="/">Quần Jeans</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div className="card">
                             <div className="card-heading">
-                                <a href="/" data-toggle="collapse" data-target="#collapseTwo">Men</a>
+                                <a href="/" data-toggle="collapse" data-target="#collapseTwo">Nam</a>
                             </div>
                             <div id="collapseTwo" className="collapse" data-parent="#accordionExample">
                                 <div className="card-body">
                                     <ul>
-                                        <li><a href="/">Coats</a></li>
+                                        <li><a href="/">Áo khoác</a></li>
                                         <li><a href="/">Jackets</a></li>
                                         <li><a href="/">Dresses</a></li>
                                         <li><a href="/">Shirts</a></li>
@@ -50,7 +49,7 @@ function ShopLeftBar() {
                         </div>
                         <div className="card">
                             <div className="card-heading">
-                                <a href="/" data-toggle="collapse" data-target="#collapseThree">Kids</a>
+                                <a href="/" data-toggle="collapse" data-target="#collapseThree">Trẻ em</a>
                             </div>
                             <div id="collapseThree" className="collapse" data-parent="#accordionExample">
                                 <div className="card-body">
@@ -67,7 +66,7 @@ function ShopLeftBar() {
                         </div>
                         <div className="card">
                             <div className="card-heading">
-                                <a href="/" data-toggle="collapse" data-target="#collapseFour">Accessories</a>
+                                <a href="/" data-toggle="collapse" data-target="#collapseFour">Phụ kiện</a>
                             </div>
                             <div id="collapseFour" className="collapse" data-parent="#accordionExample">
                                 <div className="card-body">
@@ -104,7 +103,7 @@ function ShopLeftBar() {
             </div>
             <div className="sidebar__filter">
                 <div className="section-title">
-                    <h4>Shop by price</h4>
+                    <h4>Lọc theo giá</h4>
                 </div>
                 <div className="filter-range-wrap">
                     <div className="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
@@ -122,7 +121,7 @@ function ShopLeftBar() {
             </div>
             <div className="sidebar__sizes">
                 <div className="section-title">
-                    <h4>Shop by size</h4>
+                    <h4>Lọc theo size</h4>
                 </div>
                 <div className="size__list">
                     <label for="xxs">
@@ -169,7 +168,7 @@ function ShopLeftBar() {
             </div>
             <div className="sidebar__color" >
                 <div className="section-title">
-                    <h4>Shop by size</h4>
+                    <h4>Lọc theo màu</h4>
                 </div>
                 <div className="size__list color__list">
                     <label for="black">

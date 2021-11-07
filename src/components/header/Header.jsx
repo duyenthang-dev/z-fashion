@@ -22,7 +22,7 @@ function Header() {
                 <Grid item xl={6} lg={7} className="item2">
                     <nav className="header__menu">
                         <ul>
-                            <li className="active">
+                            <li>
                                 <NavLink to="/home">Trang chủ</NavLink>
                             </li>
                             <li>

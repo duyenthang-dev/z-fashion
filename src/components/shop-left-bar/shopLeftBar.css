@@ -4,6 +4,7 @@
 
 .shop__sidebar {
     text-align: left;
+	font-size: 1.5rem;
 }
 
 .sidebar__categories {
@@ -37,7 +38,7 @@
 }
 
 .categories__accordion .card-heading a {
-	font-size: 14px;
+	font-size: 15px;
 	font-weight: 500;
 	color: #111111;
 	display: block;
@@ -66,7 +67,7 @@
 }
 
 .categories__accordion .card-body li a {
-	font-size: 14px;
+	font-size: 15px;
 	color: #666666;
 	line-height: 30px;
 }

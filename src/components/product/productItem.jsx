@@ -20,19 +20,19 @@ const ProductItem = (props) => {
                 <Link to="/home">
                     <img
                         src={props.src}
-                        width="270"
-                        height="360"
+                        width="255"
+                        height="340"
                         alt="chân váy nữ hồng"
                     />
                 </Link>
                 <span className={`product-status ${clasStatus}`}>{props.status}</span>
                 <div className="product-action">
                     <div className="product-action__add">
-                        <BsCartPlusFill style={{ fontSize: "2rem" }} />
+                        <BsCartPlusFill style={{ fontSize: "1.8rem" }} />
                         <span>Thêm vào giỏ</span>
                     </div>
                     <div className="product-action__view">
-                        <MdZoomOutMap style={{ fontSize: "2rem" }} />
+                        <MdZoomOutMap style={{ fontSize: "1.8rem" }} />
                     </div>
                 </div>
             </div>

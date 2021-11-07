@@ -1,11 +1,11 @@
 .container {
-    width: 280px;
+    width: 255px;
     
 }
 .product-item {
     position: relative;
     font-size: 1.5rem;
-    width: 270px;
+    width: 255px;
     text-align: left;
     color: #333;
     margin-bottom: 3rem;

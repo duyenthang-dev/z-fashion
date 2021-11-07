@@ -11,7 +11,7 @@ const HeroSlider = () => {
                 <Grid container>
                     <Grid item lg={5} md={5} sm={5} className="align-self">
                         <div className="hero__content hero-animate">
-                            <span className="category">Ưu đãi tháng 10</span>
+                            <span className="category">Ưu đãi tháng 11</span>
                             <h2 className="title-1">Giảm giá tới</h2>
                             <h2 className="title-2">50%</h2>
                             <a href="/" className="btn btn-l">
@@ -27,7 +27,7 @@ const HeroSlider = () => {
                             </div>
                             <div className="hero__sale">
                                 <div className="hero__sale__content">
-                                    <div className="title">Áo khoác nữ</div>
+                                    <div className="title">Áo khoác nam</div>
                                     <div className="price">300000 VNĐ</div>
                                     <a href="/" className="shop-link">Mua ngay</a>
                                 </div>
