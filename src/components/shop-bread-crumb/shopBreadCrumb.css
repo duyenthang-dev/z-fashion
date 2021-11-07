@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+.breadcrumb {
+    padding-left: 24px;
+    font-size: 20px !important;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .breadcrumb {
+        margin-left: 20px;
+    }
+  }

@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+.left__side {
+    padding-left: 24px;;
+}
+
+.main__menu {
+    padding-right: 24px;
+}
