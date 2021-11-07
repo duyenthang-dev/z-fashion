@@ -5,8 +5,7 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import ShopLeftBar from "../shop-left-bar/shopLeftBar"
 import TabProduct from "./tabProduct/tabProduct";
-
-
+import PaginationControlled from "./../../components/pagnigation/Pagnigation"
 
 function shopMainContent() 
 {
@@ -19,6 +18,7 @@ function shopMainContent()
                     </Grid>
                     <Grid item xs={8} md={9} lg={9} className="main__menu">
                         <TabProduct />
+                        <PaginationControlled />
                     </Grid>
                 </Grid>
             </Container>
