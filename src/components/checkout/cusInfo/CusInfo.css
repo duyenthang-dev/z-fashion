@@ -1,0 +1,53 @@
+.cusinfo {
+    height: 372px;
+    width: 750px;
+    margin-top: 30px;
+    margin-left: 205px;
+}
+
+.top {
+    width: 750px;
+    display: flex;
+}
+
+.top h2 {
+    margin-left: 5px;
+}
+
+.lin {
+    height: 22px;
+    width: 5px;
+    background-color: #EF5DA8;
+}
+
+.cusinfo hr {
+    margin-bottom: 20px;
+}
+
+.cusinfo form {
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.phoneE {
+    display: flex;
+    justify-content: space-between;
+}
+
+.phoneEsub {
+    width: 45%;
+}
+
+.textbox {
+    font-size: 16px;
+}

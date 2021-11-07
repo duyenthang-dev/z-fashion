@@ -1,0 +1,13 @@
+.home_nav {
+    display: flex;
+    margin-top: 35px;
+    margin-left: 207px;
+}
+
+.home_nav Link {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+}

@@ -1,0 +1,31 @@
+.bill-frame {
+    display: flex;
+    margin-top: 75px;
+    height: 718px;
+    width: 362px;
+    background-color: #F5F5F5;
+}
+
+.bill {
+    height: 658px;
+    width: 326px;
+    margin: 30px 18px 30px 18px;
+}
+
+hr {
+    margin-top: 20px;
+    margin-left: 5%;
+    width: 90%;
+    opacity: 0.3;
+}
+
+li {
+    font-size: 16px;
+    padding-top: 26px;
+    list-style: none;
+}
+
+.bill h2 {
+    margin-top: 20px;
+}
+
