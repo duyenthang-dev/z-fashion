@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 // import Container from "@mui/material/Container";
 import React, { Component } from "react";
 import { BsShare } from "react-icons/bs";
-import { FaRegHeart } from "react-icons/fa";
+import { FaRegHeart,FaTimes } from "react-icons/fa";
 import Slider from "react-slick";
 import { shirtMale } from "./../../../imageSource";
 import ProductRating from "./../productRating";
@@ -29,24 +29,26 @@ const settings = {
     arrows: true,
 };
 
-const ProductModal = ({ isShowing, hide }) => {
+const ProductModal = (props) => {
     return (
         <div
-            className="modal overlay hidden backdrop"
+            className="modal1 hidden backdrop"
             role="dialog"
             aria-modal="true"
             tabIndex="-1"
             style={{ display: "block" }}
         >
-            <div className="modal-dialog" role="dialog">
-                <div className="modal-content">
+            <div className="modal1-dialog" role="dialog">
+                <div className="modal1-content">
                     <div className="modal-header">
                         <button
                             className="close"
                             data-dismiss="modal"
                             aria-label="Close"
+                            onClick={props.action}
                         >
-                            <span aria-hidden="true">x</span>
+                            <FaTimes fontSize='2rem'/>
+                            {/* <span aria-hidden="true">x</span> */}
                         </button>
                     </div>
                     <div className="modal-body">

@@ -8,15 +8,35 @@ import { FaRegHeart } from "react-icons/fa";
 import React, { Fragment, useState } from "react";
 import PropTypes from "prop-types";
 import ProductModal from "./product-modal/productModal";
-import useModal from './../../hook/useModal';
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
 const ProductItem = (props) => {
     const status = props.status;
     let clasStatus = "";
     if (status === "New") clasStatus = "new";
     else if (status === "") clasStatus = "hidden";
     else clasStatus = "sale";
-    // const {isShowing, toggle} = useModal();
-    
+    const [open, setOpen] = React.useState(false);
+    const [scroll, setScroll] = React.useState("paper");
+
+    const handleClickOpen = (scrollType) => () => {
+        setOpen(true);
+        setScroll(scrollType);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const descriptionElementRef = React.useRef(null);
+    React.useEffect(() => {
+        if (open) {
+            const { current: descriptionElement } = descriptionElementRef;
+            if (descriptionElement !== null) {
+                descriptionElement.focus();
+            }
+        }
+    }, [open]);
     return (
         <div className="product-item center">
             <div className="product-item__img">
@@ -39,13 +59,21 @@ const ProductItem = (props) => {
                     <div className="product-action__view">
                         <MdZoomOutMap
                             style={{ fontSize: "1.8rem" }}
-                            // onClick={toggle}
-
+                            onClick={handleClickOpen("body")}
                         />
-                        {/* <ProductModal 
-                            isShowing={isShowing}
-                            hide={toggle}
-                        /> */}
+                        <Dialog
+                            open={open}
+                            onClose={handleClose}
+                            scroll={scroll}
+                            aria-labelledby="scroll-dialog-title"
+                            aria-describedby="scroll-dialog-description"
+                            maxWidth="lg"
+                            keepMounted
+                        >
+                            <DialogContent dividers={scroll === "body"}>
+                                <ProductModal action={handleClose} />
+                            </DialogContent>
+                        </Dialog>
                     </div>
                 </div>
             </div>

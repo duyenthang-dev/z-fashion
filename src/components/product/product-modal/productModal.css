@@ -1,13 +1,10 @@
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+.modal1 {
+    
+    /* background-color: rgba(0, 0, 0, 0.6); */
     backdrop-filter: blur(3px);
     z-index: 5;
     font-size: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 .modal-content {
@@ -21,9 +18,8 @@
     padding-bottom: 5rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    overflow: scroll;
 }
-.modal-dialog {
+.modal1-dialog {
     margin-top: 3rem;
     width: 90rem;
     margin: auto;
