@@ -5,15 +5,38 @@ import { MdZoomOutMap } from "react-icons/md";
 import { BsCartPlusFill } from "react-icons/bs";
 import ProductRating from "./productRating";
 import { FaRegHeart } from "react-icons/fa";
+import React, { Fragment, useState } from "react";
 import PropTypes from "prop-types";
+import ProductModal from "./product-modal/productModal";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
 const ProductItem = (props) => {
     const status = props.status;
-    let clasStatus = '';
-    if(status === 'New')
-        clasStatus = 'new'
-    else if(status === '')
-        clasStatus = 'hidden';
-    else clasStatus = 'sale';
+    let clasStatus = "";
+    if (status === "New") clasStatus = "new";
+    else if (status === "") clasStatus = "hidden";
+    else clasStatus = "sale";
+    const [open, setOpen] = React.useState(false);
+    const [scroll, setScroll] = React.useState("paper");
+
+    const handleClickOpen = (scrollType) => () => {
+        setOpen(true);
+        setScroll(scrollType);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const descriptionElementRef = React.useRef(null);
+    React.useEffect(() => {
+        if (open) {
+            const { current: descriptionElement } = descriptionElementRef;
+            if (descriptionElement !== null) {
+                descriptionElement.focus();
+            }
+        }
+    }, [open]);
     return (
         <div className="product-item center">
             <div className="product-item__img">
@@ -25,14 +48,32 @@ const ProductItem = (props) => {
                         alt="chân váy nữ hồng"
                     />
                 </Link>
-                <span className={`product-status ${clasStatus}`}>{props.status}</span>
+                <span className={`product-status ${clasStatus}`}>
+                    {props.status}
+                </span>
                 <div className="product-action">
                     <div className="product-action__add">
                         <BsCartPlusFill style={{ fontSize: "1.8rem" }} />
                         <span>Thêm vào giỏ</span>
                     </div>
                     <div className="product-action__view">
-                        <MdZoomOutMap style={{ fontSize: "1.8rem" }} />
+                        <MdZoomOutMap
+                            style={{ fontSize: "1.8rem" }}
+                            onClick={handleClickOpen("body")}
+                        />
+                        <Dialog
+                            open={open}
+                            onClose={handleClose}
+                            scroll={scroll}
+                            aria-labelledby="scroll-dialog-title"
+                            aria-describedby="scroll-dialog-description"
+                            maxWidth="lg"
+                            keepMounted
+                        >
+                            <DialogContent dividers={scroll === "body"}>
+                                <ProductModal action={handleClose} />
+                            </DialogContent>
+                        </Dialog>
                     </div>
                 </div>
             </div>

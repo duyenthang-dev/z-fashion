@@ -1,4 +1,4 @@
-//* file luu tat ca hinh anh
+//* file import tất cả ảnh của trang web
 //* Banners
 import BANNER from "./assets/images/banner/banner-1.jpg";
 //* áo len nam
