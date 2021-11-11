@@ -71,7 +71,13 @@ const ProductItem = (props) => {
                             keepMounted
                         >
                             <DialogContent dividers={scroll === "body"}>
-                                <ProductModal action={handleClose} />
+                                <ProductModal action={handleClose}
+                                    title={props.title}
+                                    src={props.src}
+                                    price={props.price}
+                                    rate={props.rate}
+                                    desc={props.desc}
+                                />
                             </DialogContent>
                         </Dialog>
                     </div>
@@ -102,5 +108,6 @@ ProductItem.propTypes = {
     src: PropTypes.string,
     price: PropTypes.number,
     rate: PropTypes.number,
+    desc: PropTypes.string,
 };
 export default ProductItem;

@@ -1,97 +1,112 @@
 import React from "react";
 import "./ShopCart.css";
-
+import Breadcrumb from "./breadcrumb";
+import "./breadcrumb.css";
+import "./../../utility/css/utility.css";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+import { skirtFemale } from "./../../imageSource";
+import { FaTimes } from "react-icons/fa";
 function ShopCart() {
     return (
-        <div className="container">
-            <div className="link">
-                <a href="./" className="title0">
-                    {" "}
-                    Home
-                </a>
-                <span className="title"> &gt; Shopping cart</span>
+        <>
+            <div className="breadcrumb pt-5">
+                <Breadcrumb />
             </div>
-            <div className="table_cart">
-                <div className="table-container">
-                    <ul className="responsive-table">
-                        <li className="table-header row">
-                            <div className="col-1"> PRODUCT</div>
-                            <div className="col-2"> PRICE</div>
-                            <div className="col-3"> QUANTITY</div>
-                            <div className="col-4"> TOTAL</div>
-                            <div className="col-5"></div>
-                        </li>
-                        <li className="table-row row">
-                            <div className="col-1"> Áo thun</div>
-                            <div className="col-2">500.000 vnd</div>
-                            <div className="col-3">
-                                <input type="text" value="1"></input>
+            <section className="cart-container">
+                <Container className="cart-wrapper">
+                    <h3>Giỏ hàng của bạn</h3>
+                    <Grid container>
+                        <Grid item lg={12} md={12} sm={12} xs={12}>
+                            <div className="shop-cart__table table-responsive">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Ảnh</th>
+                                            <th>Tên sản phẩm</th>
+                                            <th>Đơn giá</th>
+                                            <th>Số lượng</th>
+                                            <th>Thành tiền</th>
+                                            <th>Xoá</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th className="product-thumbnail">
+                                                <a
+                                                    href="/"
+                                                    className="product-link"
+                                                >
+                                                    <img
+                                                        src={skirtFemale.CARO}
+                                                        alt="váy"
+                                                        width="100%"
+                                                    />
+                                                </a>
+                                            </th>
+                                            <th className="product-name">
+                                                <a href="/product/1">
+                                                    Lorem ipsum jacket
+                                                </a>
+                                                <div class="cart-item-variation">
+                                                    <span>Color: white</span>
+                                                    <span>Size: x</span>
+                                                </div>
+                                            </th>
+                                            <th className="product-price">
+                                                <span class="amount old">
+                                                    150.000 VNĐ
+                                                </span>
+                                                <span class="amount">
+                                                    100.000 VNĐ
+                                                </span>
+                                            </th>
+                                            <th className="product-quantity">
+                                                <div className="shopcart-plus-minus">
+                                                    <div className="decrease">
+                                                        -
+                                                    </div>
+                                                    <input
+                                                        type="text"
+                                                        className="quantity-box"
+                                                        name="qtybutton"
+                                                        value="1"
+                                                    />
+                                                    <div className="increase">
+                                                        +
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <th className="product-subtotal">
+                                                300.000 VNĐ
+                                            </th>
+                                            <th className="product-remove">
+                                                <button>
+                                                    <FaTimes fontSize="2rem" />
+                                                </button>
+                                            </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div className="col-4">500.000 vnd</div>
-                            <div className="col-5"></div>
-                        </li>
-                        <li className="table-row row">
-                            <div className="col-1"> Áo khoác</div>
-                            <div className="col-2">400.000 vnd</div>
-                            <div className="col-3">
-                                <input type="text" value="1"></input>
+                        </Grid>
+                    </Grid>
+                    <Grid container className="pt-5">
+                        <Grid item lg={12}>
+                            <div className="cart-shipping-action">
+                                <div className="cart-shipping__continue">
+                                    <a href="/catalog">Tiếp tục mua</a>
+                                </div>
+                                <div className="cart-shipping__update">
+                                    <button>Cập nhật giỏ</button>
+                                    <a href="/">Xoá tất cả</a>
+                                </div>
                             </div>
-                            <div className="col-4">900.000 vnd</div>
-                            <div className="col-5"></div>
-                        </li>
-                        <li className="table-row row">
-                            <div className="col-1"> Balo</div>
-                            <div className="col-2">300.000 vnd</div>
-                            <div className="col-3">
-                                <input type="text" value="1"></input>
-                            </div>
-                            <div className="col-4">1.200.000 vnd</div>
-                            <div className="col-5"></div>
-                        </li>
-                        <li className="table-row row">
-                            <div className="col-1"> Áo sơ mi</div>
-                            <div className="col-2">500.000 vnd</div>
-                            <div className="col-3">
-                                <input type="text" value="1"></input>
-                            </div>
-                            <div className="col-4">1.700.000 vnd</div>
-                            <div className="col-5"></div>
-                        </li>
-                        <li className="table-row row">
-                            <div className="col-1"> Áo vest</div>
-                            <div className="col-2">500.000 vnd</div>
-                            <div className="col-3">
-                                <input type="text" value="1"></input>
-                            </div>
-                            <div className="col-4">2.200.000 vnd</div>
-                            <div className="col-5"></div>
-                        </li>
-                        <li className="table-row row">
-                            <div className="col-x">
-                                <button className="but">
-                                    Continue Shopping{" "}
-                                </button>
-                            </div>
-                            <div className="col-y">
-                                <button className="but"> Update Cart </button>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div className="fill_out">
-                <div className="footer__newsletter">
-                    <p>Discount Code</p>
-                    <form action="#">
-                        <input type="text" placeholder="enter code" />
-                        <button type="submit" className="btn">
-                            Subscribe
-                        </button>
-                    </form>
-                </div>
-                <div className="abc"></div>
-            </div>
-        </div>
+                        </Grid>
+                    </Grid>
+                </Container>
+            </section>
+        </>
     );
 }
 
