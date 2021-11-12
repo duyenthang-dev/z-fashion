@@ -124,42 +124,42 @@ function ShopLeftBar() {
                     <h4>Lọc theo size</h4>
                 </div>
                 <div className="size__list">
-                    <label for="xxs">
+                    <label htmlFor="xxs">
                         xxs
                         <input type="checkbox" id="xxs"></input>
                         <span className="checkmark"></span>
                     </label>
-                    <label for="xs">
+                    <label htmlFor="xs">
                         xs
                         <input type="checkbox" id="xs"></input>
                         <span className="checkmark"></span>
                     </label>
-                    <label for="xss">
+                    <label htmlFor="xss">
                         xs-s
                         <input type="checkbox" id="xss"></input>
                         <span className="checkmark"></span>
                     </label>
-                    <label for="s">
+                    <label htmlFor="s">
                         s
                         <input type="checkbox" id="s"></input>
                         <span className="checkmark"></span>
                     </label>
-                    <label for="m">
+                    <label htmlFor="m">
                         m
                         <input type="checkbox" id="m"></input>
                         <span className="checkmark"></span>
                     </label>
-                    <label for="ml">
+                    <label htmlFor="ml">
                         m-l
                         <input type="checkbox" id="ml"></input>
                         <span className="checkmark"></span>
                     </label>
-                    <label for="l">
+                    <label htmlFor="l">
                         l
                         <input type="checkbox" id="l"></input>
                         <span className="checkmark"></span>
                     </label>
-                    <label for="xl">
+                    <label htmlFor="xl">
                         xl
                         <input type="checkbox" id="xl"></input>
                         <span className="checkmark"></span>
@@ -171,42 +171,42 @@ function ShopLeftBar() {
                     <h4>Lọc theo màu</h4>
                 </div>
                 <div className="size__list color__list">
-                    <label for="black">
+                    <label htmlFor="black">
                         Blacks
                         <input type="checkbox" id="black"></input>
                         <span className="checkmark"></span>
                     </label>
-                    <label for="whites">
+                    <label htmlFor="whites">
                         Whites
                         <input type="checkbox" id="whites"></input>
                         <span className="checkmark"></span>
                     </label>
-                    <label for="reds">
+                    <label htmlFor="reds">
                         Reds
                         <input type="checkbox" id="reds"></input>
                         <span className="checkmark"></span>
                     </label>
-                    <label for="greys">
+                    <label htmlFor="greys">
                         Greys
                         <input type="checkbox" id="greys"></input>
                         <span className="checkmark"></span>
                     </label>
-                    <label for="blues">
+                    <label htmlFor="blues">
                         Blues
                         <input type="checkbox" id="blues"></input>
                         <span className="checkmark"></span>
                     </label>
-                    <label for="beige">
+                    <label htmlFor="beige">
                         Beige Tones
                         <input type="checkbox" id="beige"></input>
                         <span className="checkmark"></span>
                     </label>
-                    <label for="greens">
+                    <label htmlFor="greens">
                         Greens
                         <input type="checkbox" id="greens"></input>
                         <span className="checkmark"></span>
                     </label>
-                    <label for="yellows">
+                    <label htmlFor="yellows">
                         Yellows
                         <input type="checkbox" id="yellows"></input>
                         <span className="checkmark"></span>

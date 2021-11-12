@@ -7,8 +7,17 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Badge from "@mui/material/Badge";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link, NavLink } from "react-router-dom";
+import { connect } from "react-redux";
+import { useState, useEffect } from "react";
+function Header({ cart }) {
+    // console.log(cart);
+    const [cartCount, setCartCount] = useState(0);
+    useEffect(() => {
+        let count = 0;
+        cart.forEach(() => count++);
+        setCartCount(count);
+    }, [cart]);
 
-function Header() {
     return (
         <div className="header">
             <Grid container>
@@ -79,7 +88,11 @@ function Header() {
                                 <SearchIcon fontSize="large" />
                             </div>
                             <div className="cart">
-                                <Badge badgeContent={4} color="error">
+                                <Badge
+                                    badgeContent={cartCount}
+                                    color="error"
+                                    showZero
+                                >
                                     <ShoppingCartIcon fontSize="large" />
                                 </Badge>
                             </div>
@@ -91,9 +104,14 @@ function Header() {
                         </div>
                     </div>
                 </Grid>
-            </Grid>
+            </Grid> 
             <div className="container"></div>
         </div>
     );
 }
-export default Header;
+const mapStateToProps = (state) => {
+    return {
+        cart: state.products.cart,
+    };
+};
+export default connect(mapStateToProps)(Header);

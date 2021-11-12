@@ -1,98 +1,91 @@
 import React from "react";
 import "./ShopCart.css";
+import Breadcrumb from "./breadcrumb";
+import "./breadcrumb.css";
+import "./../../utility/css/utility.css";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+import CartItem from "./cartItem";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+function ShopCart({ cart }) {
+    //* calculate total price
+    const [totalPrice, setTotalPrice] = useState(0);
+    useEffect(() => {
+        let sum = 0;
+        cart.forEach((item) => {
+            sum += item.qty * item.price;
+        });
+        setTotalPrice(sum);
+    }, [cart]);
+    console.log("TotalPrice: ", totalPrice);
 
-function ShopCart() {
+    //* render list item cart
+    const renderListCart = cart.map((item, i) => {
+        return (
+            <CartItem
+                key={item.id}
+                id={item.id}
+                imgSrc={item.src}
+                title={item.title}
+                price={item.price}
+                qty={item.qty}
+                subtotal={item.qty * item.price}
+            />
+        );
+    });
     return (
-        <div className="container">
-            <div className="link">
-                <a href="./" className="title0">
-                    {" "}
-                    Home
-                </a>
-                <span className="title"> &gt; Shopping cart</span>
+        <>
+            <div className="breadcrumb pt-5">
+                <Container maxWidth="lg">
+                    <Breadcrumb />
+                </Container>
             </div>
-            <div className="table_cart">
-                <div className="table-container">
-                    <ul className="responsive-table">
-                        <li className="table-header row">
-                            <div className="col-1"> PRODUCT</div>
-                            <div className="col-2"> PRICE</div>
-                            <div className="col-3"> QUANTITY</div>
-                            <div className="col-4"> TOTAL</div>
-                            <div className="col-5"></div>
-                        </li>
-                        <li className="table-row row">
-                            <div className="col-1"> Áo thun</div>
-                            <div className="col-2">500.000 vnd</div>
-                            <div className="col-3">
-                                <input type="text" value="1"></input>
+            <section className="cart-container">
+                <Container className="cart-wrapper">
+                    <h3>Giỏ hàng của bạn</h3>
+                    <Grid container>
+                        <Grid item lg={12} md={12} sm={12} xs={12}>
+                            <div className="shop-cart__table table-responsive">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Ảnh</th>
+                                            <th>Tên sản phẩm</th>
+                                            <th>Đơn giá</th>
+                                            <th>Số lượng</th>
+                                            <th>Thành tiền</th>
+                                            <th>Xoá</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>{renderListCart}</tbody>
+                                </table>
                             </div>
-                            <div className="col-4">500.000 vnd</div>
-                            <div className="col-5"></div>
-                        </li>
-                        <li className="table-row row">
-                            <div className="col-1"> Áo khoác</div>
-                            <div className="col-2">400.000 vnd</div>
-                            <div className="col-3">
-                                <input type="text" value="1"></input>
+                        </Grid>
+                    </Grid>
+                    <Grid container className="pt-5">
+                        <Grid item lg={12}>
+                            <div className="cart-shipping-action">
+                                <div className="cart-shipping__continue">
+                                    <Link to="/catalog">Tiếp tục mua</Link>
+                                </div>
+                                <div className="cart-shipping__update">
+                                    <button>Cập nhật giỏ</button>
+                                    <Link to="/">Xoá tất cả</Link>
+                                </div>
                             </div>
-                            <div className="col-4">900.000 vnd</div>
-                            <div className="col-5"></div>
-                        </li>
-                        <li className="table-row row">
-                            <div className="col-1"> Balo</div>
-                            <div className="col-2">300.000 vnd</div>
-                            <div className="col-3">
-                                <input type="text" value="1"></input>
-                            </div>
-                            <div className="col-4">1.200.000 vnd</div>
-                            <div className="col-5"></div>
-                        </li>
-                        <li className="table-row row">
-                            <div className="col-1"> Áo sơ mi</div>
-                            <div className="col-2">500.000 vnd</div>
-                            <div className="col-3">
-                                <input type="text" value="1"></input>
-                            </div>
-                            <div className="col-4">1.700.000 vnd</div>
-                            <div className="col-5"></div>
-                        </li>
-                        <li className="table-row row">
-                            <div className="col-1"> Áo vest</div>
-                            <div className="col-2">500.000 vnd</div>
-                            <div className="col-3">
-                                <input type="text" value="1"></input>
-                            </div>
-                            <div className="col-4">2.200.000 vnd</div>
-                            <div className="col-5"></div>
-                        </li>
-                        <li className="table-row row">
-                            <div className="col-x">
-                                <button className="but">
-                                    Continue Shopping{" "}
-                                </button>
-                            </div>
-                            <div className="col-y">
-                                <button className="but"> Update Cart </button>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div className="fill_out">
-                <div className="footer__newsletter">
-                    <p>Discount Code</p>
-                    <form action="#">
-                        <input type="text" placeholder="enter code" />
-                        <button type="submit" className="btn">
-                            Subscribe
-                        </button>
-                    </form>
-                </div>
-                <div className="abc"></div>
-            </div>
-        </div>
+                        </Grid>
+                    </Grid>
+                </Container>
+            </section>
+        </>
     );
 }
 
-export default ShopCart;
+const mapStateToProps = (state) => {
+    return {
+        cart: state.products.cart,
+    };
+};
+export default connect(mapStateToProps)(ShopCart);

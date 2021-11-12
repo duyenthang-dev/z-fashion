@@ -1,7 +1,8 @@
 import "./productModal.css";
 import Grid from "@mui/material/Grid";
+import PropTypes from "prop-types";
 // import Container from "@mui/material/Container";
-import React, { Component } from "react";
+import React from "react";
 import { BsShare } from "react-icons/bs";
 import { FaRegHeart,FaTimes } from "react-icons/fa";
 import Slider from "react-slick";
@@ -30,6 +31,7 @@ const settings = {
 };
 
 const ProductModal = (props) => {
+ 
     return (
         <div
             className="modal1 hidden backdrop"
@@ -48,7 +50,6 @@ const ProductModal = (props) => {
                             onClick={props.action}
                         >
                             <FaTimes fontSize='2rem'/>
-                            {/* <span aria-hidden="true">x</span> */}
                         </button>
                     </div>
                     <div className="modal-body">
@@ -56,7 +57,7 @@ const ProductModal = (props) => {
                             <Grid item lg={5} md={6} sm={12}>
                                 <div className="product-large-img">
                                     <img
-                                        src={shirtMale.LARGE_1}
+                                        src={props.src}
                                         alt="large"
                                         width="100%"
                                         height="100%"
@@ -68,11 +69,11 @@ const ProductModal = (props) => {
                             </Grid>
                             <Grid item lg={7} md={6} sm={12}>
                                 <div className="product-details-content">
-                                    <h2>Áo thun nam</h2>
+                                    <h2>{props.title}</h2>
 
                                     <div className="product-details__rating">
                                         <ProductRating
-                                            ratingValue={4}
+                                            ratingValue={props.rate}
                                             size={"1.3rem"}
                                         />
                                         <div className="product-details__order">
@@ -89,7 +90,7 @@ const ProductModal = (props) => {
                                         </p>
                                     </div>
                                     <div className="prodcut-details__price">
-                                        <span>300.000 VNĐ</span>
+                                        <span>{props.price}</span>
                                     </div>
                                     <div className="product-details__color">
                                         <span>Màu sắc:</span>
@@ -136,7 +137,7 @@ const ProductModal = (props) => {
                                                 type="text"
                                                 className="quantity-box"
                                                 name="qtybutton"
-                                                value="1"
+                                                defaultValue="1"
                                             />
                                             <div className="increase">+</div>
                                         </div>
@@ -177,5 +178,13 @@ const ProductModal = (props) => {
         </div>
     );
 };
-
+ProductModal.propTypes = {
+   
+    title: PropTypes.string,
+   
+    src: PropTypes.string,
+    price: PropTypes.number,
+    rate: PropTypes.number,
+    desc: PropTypes.string,
+};
 export default ProductModal;
