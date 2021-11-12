@@ -38,7 +38,8 @@
     width: 100%;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 500ms linear, visibility 0s linear 500ms;
+    transition: opacity 0.75s ease-in-out, visibility 0s ease-in 0.75s;
+    
     font-size: 1.5rem;
 }
 

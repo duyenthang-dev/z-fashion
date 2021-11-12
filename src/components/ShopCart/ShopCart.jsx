@@ -5,13 +5,42 @@ import "./breadcrumb.css";
 import "./../../utility/css/utility.css";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-import { skirtFemale } from "./../../imageSource";
-import { FaTimes } from "react-icons/fa";
-function ShopCart() {
+import CartItem from "./cartItem";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+function ShopCart({ cart }) {
+    //* calculate total price
+    const [totalPrice, setTotalPrice] = useState(0);
+    useEffect(() => {
+        let sum = 0;
+        cart.forEach((item) => {
+            sum += item.qty * item.price;
+        });
+        setTotalPrice(sum);
+    }, [cart]);
+    console.log("TotalPrice: ", totalPrice);
+
+    //* render list item cart
+    const renderListCart = cart.map((item, i) => {
+        return (
+            <CartItem
+                key={item.id}
+                id={item.id}
+                imgSrc={item.src}
+                title={item.title}
+                price={item.price}
+                qty={item.qty}
+                subtotal={item.qty * item.price}
+            />
+        );
+    });
     return (
         <>
             <div className="breadcrumb pt-5">
-                <Breadcrumb />
+                <Container maxWidth="lg">
+                    <Breadcrumb />
+                </Container>
             </div>
             <section className="cart-container">
                 <Container className="cart-wrapper">
@@ -30,63 +59,7 @@ function ShopCart() {
                                             <th>Xoá</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th className="product-thumbnail">
-                                                <a
-                                                    href="/"
-                                                    className="product-link"
-                                                >
-                                                    <img
-                                                        src={skirtFemale.CARO}
-                                                        alt="váy"
-                                                        width="100%"
-                                                    />
-                                                </a>
-                                            </th>
-                                            <th className="product-name">
-                                                <a href="/product/1">
-                                                    Lorem ipsum jacket
-                                                </a>
-                                                <div class="cart-item-variation">
-                                                    <span>Color: white</span>
-                                                    <span>Size: x</span>
-                                                </div>
-                                            </th>
-                                            <th className="product-price">
-                                                <span class="amount old">
-                                                    150.000 VNĐ
-                                                </span>
-                                                <span class="amount">
-                                                    100.000 VNĐ
-                                                </span>
-                                            </th>
-                                            <th className="product-quantity">
-                                                <div className="shopcart-plus-minus">
-                                                    <div className="decrease">
-                                                        -
-                                                    </div>
-                                                    <input
-                                                        type="text"
-                                                        className="quantity-box"
-                                                        name="qtybutton"
-                                                        value="1"
-                                                    />
-                                                    <div className="increase">
-                                                        +
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <th className="product-subtotal">
-                                                300.000 VNĐ
-                                            </th>
-                                            <th className="product-remove">
-                                                <button>
-                                                    <FaTimes fontSize="2rem" />
-                                                </button>
-                                            </th>
-                                        </tr>
-                                    </tbody>
+                                    <tbody>{renderListCart}</tbody>
                                 </table>
                             </div>
                         </Grid>
@@ -95,11 +68,11 @@ function ShopCart() {
                         <Grid item lg={12}>
                             <div className="cart-shipping-action">
                                 <div className="cart-shipping__continue">
-                                    <a href="/catalog">Tiếp tục mua</a>
+                                    <Link to="/catalog">Tiếp tục mua</Link>
                                 </div>
                                 <div className="cart-shipping__update">
                                     <button>Cập nhật giỏ</button>
-                                    <a href="/">Xoá tất cả</a>
+                                    <Link to="/">Xoá tất cả</Link>
                                 </div>
                             </div>
                         </Grid>
@@ -110,4 +83,9 @@ function ShopCart() {
     );
 }
 
-export default ShopCart;
+const mapStateToProps = (state) => {
+    return {
+        cart: state.products.cart,
+    };
+};
+export default connect(mapStateToProps)(ShopCart);

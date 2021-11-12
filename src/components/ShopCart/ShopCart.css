@@ -8,10 +8,6 @@
 .cart-wrapper > *:first-child {
     margin-top: 4rem;
 }
-.breadcrumb {
-    max-width: 1170px;
-    margin: 0 auto;
-}
 
 .product-link {
     width: 10rem;
@@ -34,7 +30,6 @@
 .shop-cart__table table thead > tr {
     background-color: #cfe8fc;
     border: 1px solid #cfe8fc;
-    /* color: #fff; */
 }
 
 .shop-cart__table table thead > tr th:not(:first-child) {
@@ -130,7 +125,7 @@
 .product-remove button:hover {
     color: #ff2f2f;
 }
-.cart-shipping-action{
+.cart-shipping-action {
     display: flex;
     justify-content: space-between;
 }
@@ -149,11 +144,11 @@
 .cart-shipping-action button {
     font-family: "Montserrat", sans-serif;
 }
-.cart-shipping__update >*{
+.cart-shipping__update > * {
     margin-left: 5rem;
 }
 .cart-shipping-action a:hover,
-.cart-shipping-action button:hover{
+.cart-shipping-action button:hover {
     color: #fff;
     background-color: #ff2f2f;
 }

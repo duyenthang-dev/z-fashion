@@ -2,7 +2,7 @@ import "./productModal.css";
 import Grid from "@mui/material/Grid";
 import PropTypes from "prop-types";
 // import Container from "@mui/material/Container";
-import React, { Component } from "react";
+import React from "react";
 import { BsShare } from "react-icons/bs";
 import { FaRegHeart,FaTimes } from "react-icons/fa";
 import Slider from "react-slick";
@@ -137,7 +137,7 @@ const ProductModal = (props) => {
                                                 type="text"
                                                 className="quantity-box"
                                                 name="qtybutton"
-                                                value="1"
+                                                defaultValue="1"
                                             />
                                             <div className="increase">+</div>
                                         </div>

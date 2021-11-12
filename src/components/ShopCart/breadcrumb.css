@@ -1,21 +1,19 @@
-.breadcrumb * {
+.cart-breadcrumb * {
     font-size: 1.6rem;
     color: #333;
     text-align: center;
 }
-.breadcrum span{
+.cart-breadcrumb span {
     font-size: 1.6rem;
-    
 }
-.breadcrumb > *:first-child {
+.cart-breadcrumb > *:first-child {
     font-weight: 600;
 }
-.breadcrum .link:hover {
+.cart-breadcrumb .link:hover {
     text-decoration: none;
 }
-.breadcrumb-container{
+.breadcrumb-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }

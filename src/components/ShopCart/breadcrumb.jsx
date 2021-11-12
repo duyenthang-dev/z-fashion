@@ -35,7 +35,7 @@ export default function Breadcrumb() {
             <Breadcrumbs
                 separator={<NavigateNextIcon fontSize="large" />}
                 aria-label="breadcrumb"
-                className="breadcrumb"
+                className="cart-breadcrumb"
             >
                 {breadcrumbs}
             </Breadcrumbs>

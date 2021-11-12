@@ -5,12 +5,20 @@ import { MdZoomOutMap } from "react-icons/md";
 import { BsCartPlusFill } from "react-icons/bs";
 import ProductRating from "./productRating";
 import { FaRegHeart } from "react-icons/fa";
-import React, { Fragment, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import ProductModal from "./product-modal/productModal";
 import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
+import { connect } from "react-redux";
+import { addToCart } from "./../../redux/action/productAction";
 const ProductItem = (props) => {
+    const prod = {
+        id: props.id,
+        img: props.src,
+        title: props.title,
+        price: props.price,
+    }
     const status = props.status;
     let clasStatus = "";
     if (status === "New") clasStatus = "new";
@@ -52,7 +60,10 @@ const ProductItem = (props) => {
                     {props.status}
                 </span>
                 <div className="product-action">
-                    <div className="product-action__add">
+                    <div
+                        className="product-action__add"
+                        onClick={() => props.addToCart(prod)}
+                    >
                         <BsCartPlusFill style={{ fontSize: "1.8rem" }} />
                         <span>Thêm vào giỏ</span>
                     </div>
@@ -71,7 +82,8 @@ const ProductItem = (props) => {
                             keepMounted
                         >
                             <DialogContent dividers={scroll === "body"}>
-                                <ProductModal action={handleClose}
+                                <ProductModal
+                                    action={handleClose}
                                     title={props.title}
                                     src={props.src}
                                     price={props.price}
@@ -110,4 +122,9 @@ ProductItem.propTypes = {
     rate: PropTypes.number,
     desc: PropTypes.string,
 };
-export default ProductItem;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addToCart: (id) => dispatch(addToCart(id)),
+    };
+};
+export default connect(null, mapDispatchToProps)(ProductItem);

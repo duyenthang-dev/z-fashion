@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import Test from "./test";
+// import Test from "./test";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import "./index.css";
