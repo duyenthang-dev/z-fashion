@@ -12,13 +12,21 @@ import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
 import { connect } from "react-redux";
 import { addToCart } from "./../../redux/action/productAction";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from '@mui/material/Alert';
+import Grow from "@mui/material/Grow";
+import Slide from '@mui/material/Slide';
+
+function TransitionLeft(props) {
+    return <Slide {...props} direction="right" />;
+}
 const ProductItem = (props) => {
     const prod = {
         id: props.id,
         img: props.src,
         title: props.title,
         price: props.price,
-    }
+    };
     const status = props.status;
     let clasStatus = "";
     if (status === "New") clasStatus = "new";
@@ -27,13 +35,28 @@ const ProductItem = (props) => {
     const [open, setOpen] = React.useState(false);
     const [scroll, setScroll] = React.useState("paper");
 
+    //* open modal
     const handleClickOpen = (scrollType) => () => {
         setOpen(true);
         setScroll(scrollType);
     };
-
     const handleClose = () => {
         setOpen(false);
+    };
+
+    //* open toast
+    const [transition, setTransition] = React.useState(undefined);
+    const [openToast, setOpenToast] = React.useState(false);
+    const handleClickToast = (Transition) => {
+        setTransition(() => Transition);
+        setOpenToast(true);
+    };
+    const handleCloseToast = (event, reason) => {
+        console.log('close');
+        if (reason === "clickaway") {
+            return;
+        }
+        setOpenToast(false);
     };
 
     const descriptionElementRef = React.useRef(null);
@@ -45,6 +68,7 @@ const ProductItem = (props) => {
             }
         }
     }, [open]);
+
     return (
         <div className="product-item center">
             <div className="product-item__img">
@@ -62,7 +86,10 @@ const ProductItem = (props) => {
                 <div className="product-action">
                     <div
                         className="product-action__add"
-                        onClick={() => props.addToCart(prod)}
+                        onClick={() => {
+                            props.addToCart(prod.id, "trắng", "M");
+                            handleClickToast(TransitionLeft);
+                        }}
                     >
                         <BsCartPlusFill style={{ fontSize: "1.8rem" }} />
                         <span>Thêm vào giỏ</span>
@@ -79,16 +106,25 @@ const ProductItem = (props) => {
                             aria-labelledby="scroll-dialog-title"
                             aria-describedby="scroll-dialog-description"
                             maxWidth="lg"
-                            keepMounted
+                            // keepMounted
+                            transition={Grow}
+                            transitionDuration={500}
                         >
                             <DialogContent dividers={scroll === "body"}>
                                 <ProductModal
                                     action={handleClose}
+                                    id={props.id}
                                     title={props.title}
                                     src={props.src}
                                     price={props.price}
                                     rate={props.rate}
+                                    color={props.color}
+                                    size={props.size}
                                     desc={props.desc}
+                                    addToCart={props.addToCart}
+                                    openToast = {handleClickToast}
+                                    closeToase ={handleCloseToast}
+
                                 />
                             </DialogContent>
                         </Dialog>
@@ -109,6 +145,21 @@ const ProductItem = (props) => {
                     <FaRegHeart fontSize="1.8rem" fontWeight="100" />
                 </div>
             </div>
+            <Snackbar
+                open={openToast}
+                autoHideDuration={3000}
+                onClose={handleCloseToast}
+                TransitionComponent={transition}
+            >
+                <Alert
+                    onClose={handleCloseToast}
+                    severity="success"
+                    sx={{ width: "100%" }}
+                    fontSize="3rem"
+                >
+                    <p style={{fontSize: "1.5rem", fontFamily: "\"Montserrat\", sans-serif", fontWeight: "500"}}>Đã thêm sản phẩm vào giỏ</p>
+                </Alert>
+            </Snackbar>
         </div>
     );
 };
@@ -124,7 +175,8 @@ ProductItem.propTypes = {
 };
 const mapDispatchToProps = (dispatch) => {
     return {
-        addToCart: (id) => dispatch(addToCart(id)),
+        addToCart: (id, color, size, qty) =>
+            dispatch(addToCart(id, color, size, qty)),
     };
 };
 export default connect(null, mapDispatchToProps)(ProductItem);

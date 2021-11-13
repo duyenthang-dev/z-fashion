@@ -14,10 +14,12 @@ const CartItem = (props) => {
         img: props.imgSrc,
         title: props.title,
         price: props.price,
+        color: props.color,
+        size: props.size,
         qty: props.qty,
         subtotal: props.subtotal,
     };
-
+    console.log(prod.id, prod.color, prod.size);
     return (
         <Fragment>
             <tr>
@@ -29,8 +31,8 @@ const CartItem = (props) => {
                 <th className="product-name">
                     <a href="/product/1">{prod.title}</a>
                     <div className="cart-item-variation">
-                        <span>Color: white</span>
-                        <span>Size: x</span>
+                        <span>Color: {prod.color}</span>
+                        <span>Size: {prod.size}</span>
                     </div>
                 </th>
                 <th className="product-price">
@@ -50,6 +52,7 @@ const CartItem = (props) => {
                             className="quantity-box"
                             name="qtybutton"
                             value={prod.qty}
+                            readOnly
                         />
                         <div
                             className="increase"
@@ -61,7 +64,7 @@ const CartItem = (props) => {
                 </th>
                 <th className="product-subtotal">{prod.subtotal} VNĐ</th>
                 <th className="product-remove">
-                    <button onClick={() => props.deleteCart(prod)}>
+                    <button onClick={() => props.deleteCart(prod.id, prod.color, prod.size)}>
                         <FaTimes fontSize="2rem" />
                     </button>
                 </th>
@@ -75,12 +78,14 @@ CartItem.propsTypes = {
     imgSrc: PropTypes.string,
     title: PropTypes.string,
     price: PropTypes.number,
+    color: PropTypes.string,
+    size: PropTypes.string,
     qty: PropTypes.number,
     subtotal: PropTypes.number,
 };
 const mapDispatchToProps = (dispatch) => {
     return {
-        deleteCart: (id) => dispatch(deleteCart(id)),
+        deleteCart: (id, color, size) => dispatch(deleteCart(id, color, size)),
         decreaseQuantity: (id) => dispatch(decreaseQuantity(id)),
         increaseQuantity: (id) => dispatch(increaseQuantity(id)),
     };

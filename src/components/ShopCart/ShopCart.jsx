@@ -30,6 +30,8 @@ function ShopCart({ cart }) {
                 imgSrc={item.src}
                 title={item.title}
                 price={item.price}
+                color={item.color}
+                size={item.size}
                 qty={item.qty}
                 subtotal={item.qty * item.price}
             />

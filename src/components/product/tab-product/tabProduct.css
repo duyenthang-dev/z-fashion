@@ -36,7 +36,7 @@
     left: 0;
     bottom: 0;
 }
-.active{
+.tab-product__active{
     border-bottom: 3px solid #ff2f2f;
 }
 
