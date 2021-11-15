@@ -11,7 +11,7 @@ const Blog = () => {
     return (
         <Fragment>
             <MetaTags>
-            <title> Z Fashion | Refined Life</title>
+            <title> Z Fashion | Blog </title>
             </MetaTags>
             <Header />
             <Breadcrumb />
@@ -23,3 +23,4 @@ const Blog = () => {
 };
 
 export default Blog;
+
