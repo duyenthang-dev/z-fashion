@@ -1,28 +1,31 @@
-import React, { Fragment } from "react";
-import MetaTags from "react-meta-tags";
-import "./../../utility/css/utility.css";
+
+import React, { Fragment } from 'react';
+import './checkout.css';
 import Header from "./../../container/header/index";
 import Footer from "./../../container/footer/index";
-import Bill from "./../../container/checkout/bill/index";
-import CusInfo from "./../../container/checkout/cusInfo/index";
+import Cusinfo from './CusInfo/CusInfo';
+import Bill from './bill/Bill';
+import CustomSeparator from './homenav/CustomSeparator';
+import Grid from '@mui/material/Grid';
 
-const Chekout = () => {
+function Checkout() {
     return (
         <Fragment>
-            <MetaTags>
-                <title>Z Fashion | Refined Life</title>
-            </MetaTags>
             <Header />
-            <div
-                className="checkout-area"
-                style={{ display: "flex", justifyContent: "space-between" }}
-            >
-                <CusInfo />
-                <Bill />
-            </div>
+            <Grid container>
+                <Grid item lg={1} md={1}></Grid>
+                <Grid item lg={6} md={6} xs={12}>
+                    <CustomSeparator />
+                    <Cusinfo />
+                </Grid>
+                <Grid item lg={1} md={1}></Grid>
+                <Grid item lg={3} md={4} xs={12}>
+                    <Bill />
+                </Grid>
+            </Grid>
             <Footer />
         </Fragment>
-    );
-};
+    )
+}
 
-export default Chekout;
+export default Checkout;

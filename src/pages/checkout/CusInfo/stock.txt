@@ -1,0 +1,79 @@
+<div className="top">
+    <div className="lin"></div>
+    <h2>THÔNG TIN KHÁCH HÀNG</h2>
+</div>
+<hr />
+<form>
+    <div className="textbox">
+        <label htmlFor="name">Họ và tên<br />
+            <input type="text" placeholder="Nhập họ và tên" id="name" name="name" required />
+        </label>
+    </div>
+    <div className="textbox phoneE">
+        <div className="phoneEsub">
+            <label htmlFor="phone">Điện thoại<br />
+                <input type="text" placeholder="Nhập số điện thoại" id="phone" name="phone" required />
+            </label>
+        </div>
+        <div className="phoneEsub">
+            <label htmlFor="email">Email<br />
+                <input type="text" placeholder="Nhập email" id="email" name="email" required />
+            </label>
+        </div>
+    </div>
+    <div className="textbox">
+        <label htmlFor="address">Địa chỉ<br />
+            <input type="text" placeholder="Nhập địa chỉ giao hàng" id="address" name="address" required />
+        </label>
+    </div>
+</form>
+
+
+
+bill.css
+.bill-frame {
+    display: flex;
+    margin-top: 75px;
+    height: 718px;
+    width: 362px;
+    background-color: #F5F5F5;
+}
+
+.bill {
+    height: 658px;
+    width: 326px;
+    margin: 30px 18px 30px 18px;
+}
+
+.bill-frame hr {
+    margin-top: 20px;
+    margin-left: 5%;
+    width: 90%;
+    opacity: 0.3; 
+}
+
+li {
+    font-size: 16px;
+    padding-top: 26px;
+    list-style: none;
+}
+
+.bill h2 {
+    margin-top: 20px;
+}
+
+import * as React from 'react';
+import Grid from '@mui/material/Grid';
+import './paymentMethod.css'
+
+function ImageAvatars() {
+    return (
+        <div>
+            <h2>Phương thức thanh toán</h2>
+          
+            <button>Đặt đơn</button>
+        </div>
+  );
+}
+
+export default ImageAvatars;
