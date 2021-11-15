@@ -1,0 +1,26 @@
+.cart-breadcrumb * {
+    font-size: 1.6rem;
+    color: #333;
+    text-align: center;
+}
+.cart-breadcrumb span {
+    font-size: 1.6rem;
+}
+.cart-breadcrumb > *:first-child {
+    font-weight: 600;
+}
+.cart-breadcrumb .link:hover {
+    text-decoration: none;
+}
+.breadcrumb-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    padding-left: 6rem;
+}
+.whole {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
