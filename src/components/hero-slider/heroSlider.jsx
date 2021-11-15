@@ -4,6 +4,7 @@ import "./heroSlider.css";
 import "./../../utility/css/utility.css";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
+import { Link } from "react-router-dom";
 const HeroSlider = () => {
     return (
         <div className="hero">
@@ -14,9 +15,9 @@ const HeroSlider = () => {
                             <span className="category">Ưu đãi tháng 11</span>
                             <h2 className="title-1">Giảm giá tới</h2>
                             <h2 className="title-2">50%</h2>
-                            <a href="/" className="btn btn-l">
+                            <Link to="/catalog" className="btn btn-l">
                                 Mua ngay
-                            </a>
+                            </Link>
                         </div>
                     </Grid>
 
@@ -29,7 +30,9 @@ const HeroSlider = () => {
                                 <div className="hero__sale__content">
                                     <div className="title">Áo khoác nam</div>
                                     <div className="price">300000 VNĐ</div>
-                                    <a href="/" className="shop-link">Mua ngay</a>
+                                    <Link to="/catalog" className="shop-link">
+                                        Mua ngay
+                                    </Link>
                                 </div>
                                 <div className="hero__sale__img">
                                     <img src={saleImage} alt="sale" />
