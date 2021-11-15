@@ -7,6 +7,7 @@ import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Container from "@mui/material/Container";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import Grid from "@mui/material/Grid";
 
 function handleClick(event) {
     event.preventDefault();
@@ -33,7 +34,7 @@ export default function ShopBreadCrumb() {
     return (
         <div className="breadcrumb">
             <Container maxWidth="lg">
-                <grid>
+                <Grid>
                     <Stack spacing={2}>
                         <Breadcrumbs
                             separator={<NavigateNextIcon fontSize="small" />}
@@ -42,7 +43,7 @@ export default function ShopBreadCrumb() {
                             {breadcrumbs}
                         </Breadcrumbs>
                     </Stack>
-                </grid>
+                </Grid>
             </Container>
         </div>
     );

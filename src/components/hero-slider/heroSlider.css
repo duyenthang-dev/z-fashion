@@ -4,32 +4,33 @@
     color: #333;
     text-align: left;
 }
+
 .hero-animate .category {
-    animation-duration: 3s;
+    animation-duration: 12s;
     animation-fill-mode: both;
     animation-name: fadeOutUp;
-    animation-iteration-count: 1;
+    animation-iteration-count: infinite;
     animation-delay: 0.5s;
 }
 .hero-animate .title-1 {
-    animation-duration: 3s;
+    animation-duration: 12s;
     animation-fill-mode: both;
     animation-name: fadeOutUp;
-    animation-iteration-count: 1;
+    animation-iteration-count: infinite;
     animation-delay: 1s;
 }
 .hero-animate .title-2 {
-    animation-duration: 3s;
+    animation-duration: 12s;
     animation-fill-mode: both;
     animation-name: fadeOutUp;
-    animation-iteration-count: 1;
+    animation-iteration-count: infinite;
     animation-delay: 1.5s;
 }
 .hero-animate .btn {
-    animation-duration: 3s;
+    animation-duration: 12s;
     animation-fill-mode: both;
     animation-name: fadeOutUp;
-    animation-iteration-count: 1;
+    animation-iteration-count: infinite;
     animation-delay: 2s;
 }
 .align-self {
@@ -63,11 +64,11 @@
 }
 
 .hero__image {
-    animation-duration: 3s;
+    animation-duration: 12s;
     animation-fill-mode: both;
     animation-name: fadeOutUp;
-    animation-iteration-count: 1;
-    animation-delay: 1.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
 }
 .btn-l {
     padding-top: 1.5rem;
@@ -100,10 +101,10 @@
     border-radius: 5px;
     gap: 1.5rem;
     font-weight: 500;
-    animation-duration: 3s;
+    animation-duration: 12s;
     animation-fill-mode: both;
     animation-name: fadeOutUp;
-    animation-iteration-count: 1;
+    animation-iteration-count: infinite;
     animation-delay: 1.5s;
 }
 .hero__sale__content > *:not(:last-child) {
@@ -116,11 +117,18 @@
 @keyframes fadeOutUp {
     0% {
         opacity: 0;
-        transform: translateY(5rem);
+        transform: translateY(20rem);
     }
-
-    100% {
+   
+    20% {
         opacity: 1;
         transform: translateY(0rem);
+    }
+    70% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+    100% {
+        opacity: 0;
     }
 }

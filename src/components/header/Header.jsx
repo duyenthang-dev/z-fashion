@@ -7,8 +7,18 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Badge from "@mui/material/Badge";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link, NavLink } from "react-router-dom";
+import { connect } from "react-redux";
+import { useState, useEffect } from "react";
+import './../../utility/css/utility.css';
+function Header({ cart }) {
+    // console.log(cart);
+    const [cartCount, setCartCount] = useState(0);
+    useEffect(() => {
+        let count = 0;
+        cart.forEach(() => count++);
+        setCartCount(count);
+    }, [cart]);
 
-function Header() {
     return (
         <div className="header">
             <Grid container>
@@ -26,10 +36,10 @@ function Header() {
                                 <NavLink to="/home">Trang chủ</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/catalog">Cửa hàng</NavLink>
+                                <NavLink to="/catalog" className="bar-effect">Cửa hàng</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/blog">Blog</NavLink>
+                                <NavLink to="/blog" className="bar-effect">Blog</NavLink>
                             </li>
                             <li className="dropdown">
                                 <NavLink to="/blog">Điều hướng</NavLink>
@@ -79,14 +89,22 @@ function Header() {
                                 <SearchIcon fontSize="large" />
                             </div>
                             <div className="cart">
-                                <Badge badgeContent={4} color="error">
-                                    <ShoppingCartIcon fontSize="large" />
-                                </Badge>
+                                <Link to="/cart">
+                                    <Badge
+                                        badgeContent={cartCount}
+                                        color="error"
+                                        showZero
+                                    >
+                                        <ShoppingCartIcon fontSize="large" />
+                                    </Badge>
+                                </Link>
                             </div>
                             <div className="heart">
-                                <Badge badgeContent={4} color="error">
-                                    <FavoriteBorderIcon fontSize="large" />
-                                </Badge>
+                                <Link to="/whishlist">
+                                    <Badge badgeContent={4} color="error">
+                                        <FavoriteBorderIcon fontSize="large" />
+                                    </Badge>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -96,4 +114,9 @@ function Header() {
         </div>
     );
 }
-export default Header;
+const mapStateToProps = (state) => {
+    return {
+        cart: state.products.cart,
+    };
+};
+export default connect(mapStateToProps)(Header);
