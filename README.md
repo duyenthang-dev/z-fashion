@@ -59,4 +59,4 @@ Các trang hoàn thiện của web, là tập hợp của các container compone
     để tải các node modules của project
 3. Tiếp tục chạy lệnh <br />
 	`npm start` <br /> để chạy project	
-4. Mở [http://localhost:3000](http://localhost:3000) bằng trình duyệt của bạn để xem kết quả
+4. Mở [http://localhost:3000](http://localhost:3000) bằng trình duyệt để xem kết quả
