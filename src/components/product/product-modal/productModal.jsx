@@ -107,7 +107,7 @@ const ProductModal = (props) => {
                                         <p>{props.desc}</p>
                                     </div>
                                     <div className="prodcut-details__price">
-                                        <span>{props.price}</span>
+                                        <span>{props.price.toLocaleString('it-IT', {style : 'currency', currency : 'VND'})}</span>
                                     </div>
                                     <div className="product-details__color">
                                         <span>Màu sắc:</span>
@@ -213,7 +213,17 @@ const ProductModal = (props) => {
                                                 if (color !== "" && size !== "")
                                                 {
                                                     props.addToCart(prod.id, color, size,qty);
-                                                    props.openToast(TransitionLeft);
+                                                    props.openToastSuccess(TransitionLeft);
+                                                }
+                                                else{
+                                                    let msg = "";
+                                                    if(color === "" && size === "")
+                                                        msg="Bạn chưa chọn màu và size";
+                                                    else if(color === "")
+                                                        msg = "Bạn chưa chọn màu";
+                                                    else msg = "Bạn chưa chọn size";
+
+                                                    props.openToastError(TransitionLeft, msg);
                                                 }
                                                 
                                             }}
@@ -248,5 +258,6 @@ ProductModal.propTypes = {
     size: PropTypes.array,
     desc: PropTypes.string,
     addToCart: PropTypes.func,
+
 };
 export default ProductModal;

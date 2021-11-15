@@ -37,7 +37,7 @@ const TabProduct = ({ productList }) => {
 
                     <Grid item lg={8} md={8} className="tab-product__filter">
                         <ul>
-                            <li className="tab-product__active">Tẩt cả</li>
+                            <li className="tab-product__active">Tất cả</li>
                             <li>Nam</li>
                             <li>Nữ</li>
                             <li>Phụ kiện</li>

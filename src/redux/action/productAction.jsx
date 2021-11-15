@@ -11,8 +11,6 @@ export const addToCart = (productId, color, size, qty =1) => {
     };
 };
 
-
-
 export const deleteCart = (productId, color, size) => {
     return {
         type: actionType.DELETE_CART,

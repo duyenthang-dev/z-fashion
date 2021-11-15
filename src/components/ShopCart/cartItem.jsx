@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment} from "react";
 import { FaTimes } from "react-icons/fa";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -7,6 +7,11 @@ import {
     decreaseQuantity,
     increaseQuantity,
 } from "./../../redux/action/productAction";
+import Slide from "@mui/material/Slide";
+function TransitionLeft(props) {
+    return <Slide {...props} direction="right" />;
+}
+
 const CartItem = (props) => {
     // const { id, imgSrc, title, price, qty, subtotal } = props;
     const prod = {
@@ -20,6 +25,8 @@ const CartItem = (props) => {
         subtotal: props.subtotal,
     };
     console.log(prod.id, prod.color, prod.size);
+
+   
     return (
         <Fragment>
             <tr>
@@ -36,8 +43,18 @@ const CartItem = (props) => {
                     </div>
                 </th>
                 <th className="product-price">
-                    <span className="amount old">{prod.price} VNĐ</span>
-                    <span className="amount">{prod.price}</span>
+                    <span className="amount old">
+                        {props.price.toLocaleString("it-IT", {
+                            style: "currency",
+                            currency: "VND",
+                        })}
+                    </span>
+                    <span className="amount">
+                        {props.price.toLocaleString("it-IT", {
+                            style: "currency",
+                            currency: "VND",
+                        })}
+                    </span>
                 </th>
                 <th className="product-quantity">
                     <div className="shopcart-plus-minus">
@@ -62,13 +79,25 @@ const CartItem = (props) => {
                         </div>
                     </div>
                 </th>
-                <th className="product-subtotal">{prod.subtotal} VNĐ</th>
+                <th className="product-subtotal">
+                    {props.subtotal.toLocaleString("it-IT", {
+                        style: "currency",
+                        currency: "VND",
+                    })}
+                </th>
                 <th className="product-remove">
-                    <button onClick={() => props.deleteCart(prod.id, prod.color, prod.size)}>
+                    <button
+                        onClick={() => {
+                            props.openToastSuccess(TransitionLeft);
+                            props.deleteCart(prod.id, prod.color, prod.size);
+                            
+                        }}
+                    >
                         <FaTimes fontSize="2rem" />
                     </button>
                 </th>
             </tr>
+            
         </Fragment>
     );
 };

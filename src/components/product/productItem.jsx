@@ -44,14 +44,14 @@ const ProductItem = (props) => {
         setOpen(false);
     };
 
-    //* open toast
+    //*  toast success
     const [transition, setTransition] = React.useState(undefined);
     const [openToast, setOpenToast] = React.useState(false);
-    const handleClickToast = (Transition) => {
+    const handleClickToastSuccess = (Transition) => {
         setTransition(() => Transition);
         setOpenToast(true);
     };
-    const handleCloseToast = (event, reason) => {
+    const handleCloseToastSuccess = (event, reason) => {
         console.log('close');
         if (reason === "clickaway") {
             return;
@@ -59,6 +59,21 @@ const ProductItem = (props) => {
         setOpenToast(false);
     };
 
+    //* toast error
+    const [msgError, setMsgError] = React.useState("");
+    const [openToastError, setOpenToastError] = React.useState(false);
+    const handleClickToastError = (Transition, message) => {
+        setMsgError(message);
+        setTransition(() => Transition);
+        setOpenToastError(true);
+    };
+    const handleCloseToastError = (reason, message) => {
+        console.log('close');
+        if (reason === "clickaway") {
+            return;
+        }
+        setOpenToastError(false);
+    };
     const descriptionElementRef = React.useRef(null);
     React.useEffect(() => {
         if (open) {
@@ -88,7 +103,7 @@ const ProductItem = (props) => {
                         className="product-action__add"
                         onClick={() => {
                             props.addToCart(prod.id, "trắng", "M");
-                            handleClickToast(TransitionLeft);
+                            handleClickToastSuccess(TransitionLeft);
                         }}
                     >
                         <BsCartPlusFill style={{ fontSize: "1.8rem" }} />
@@ -122,9 +137,9 @@ const ProductItem = (props) => {
                                     size={props.size}
                                     desc={props.desc}
                                     addToCart={props.addToCart}
-                                    openToast = {handleClickToast}
-                                    closeToase ={handleCloseToast}
-
+                                    openToastSuccess = {handleClickToastSuccess}
+                                    openToastError ={handleClickToastError}
+                                    
                                 />
                             </DialogContent>
                         </Dialog>
@@ -138,7 +153,7 @@ const ProductItem = (props) => {
                         <ProductRating ratingValue={props.rate} size="1.4rem" />
                     </div>
                     <div className="product-item__price">
-                        <span>{props.price} VNĐ</span>
+                        <span>{props.price.toLocaleString('it-IT', {style : 'currency', currency : 'VND'})}</span>
                     </div>
                 </div>
                 <div className="product-content-right">
@@ -148,16 +163,32 @@ const ProductItem = (props) => {
             <Snackbar
                 open={openToast}
                 autoHideDuration={3000}
-                onClose={handleCloseToast}
+                onClose={handleCloseToastSuccess}
                 TransitionComponent={transition}
             >
                 <Alert
-                    onClose={handleCloseToast}
+                    onClose={handleCloseToastSuccess}
                     severity="success"
                     sx={{ width: "100%" }}
                     fontSize="3rem"
                 >
                     <p style={{fontSize: "1.5rem", fontFamily: "\"Montserrat\", sans-serif", fontWeight: "500"}}>Đã thêm sản phẩm vào giỏ</p>
+                </Alert>
+            </Snackbar>
+
+            <Snackbar
+                open={openToastError}
+                autoHideDuration={3000}
+                onClose={handleCloseToastError}
+                TransitionComponent={transition}
+            >
+                <Alert
+                    onClose={handleCloseToastError}
+                    severity="error"
+                    sx={{ width: "100%" }}
+                    fontSize="3rem"
+                >
+                    <p style={{fontSize: "1.5rem", fontFamily: "\"Montserrat\", sans-serif", fontWeight: "500"}}>{msgError}</p>
                 </Alert>
             </Snackbar>
         </div>

@@ -9,6 +9,12 @@ import CartItem from "./cartItem";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
+import Slide from "@mui/material/Slide";
+function TransitionLeft(props) {
+    return <Slide {...props} direction="right" />;
+}
 function ShopCart({ cart }) {
     //* calculate total price
     const [totalPrice, setTotalPrice] = useState(0);
@@ -20,7 +26,21 @@ function ShopCart({ cart }) {
         setTotalPrice(sum);
     }, [cart]);
     console.log("TotalPrice: ", totalPrice);
-
+    //* toast
+    const [transition, setTransition] = React.useState(undefined);
+    const [openToast, setOpenToast] = React.useState(false);
+    const handleClickToastSuccess = (Transition) => {
+        console.log("Xoá");
+        setTransition(() => Transition);
+        setOpenToast(true);
+    };
+    const handleCloseToastSuccess = (event, reason) => {
+        console.log("close");
+        if (reason === "clickaway") {
+            return;
+        }
+        setOpenToast(false);
+    };
     //* render list item cart
     const renderListCart = cart.map((item, i) => {
         return (
@@ -34,9 +54,11 @@ function ShopCart({ cart }) {
                 size={item.size}
                 qty={item.qty}
                 subtotal={item.qty * item.price}
+                openToastSuccess={handleClickToastSuccess}
             />
         );
     });
+
     return (
         <>
             <div className="breadcrumb pt-5">
@@ -81,6 +103,30 @@ function ShopCart({ cart }) {
                     </Grid>
                 </Container>
             </section>
+
+            <Snackbar
+                open={openToast}
+                autoHideDuration={3000}
+                onClose={handleCloseToastSuccess}
+                TransitionComponent={transition}
+            >
+                <Alert
+                    onClose={handleCloseToastSuccess}
+                    severity="success"
+                    sx={{ width: "100%" }}
+                    fontSize="3rem"
+                >
+                    <p
+                        style={{
+                            fontSize: "1.5rem",
+                            fontFamily: '"Montserrat", sans-serif',
+                            fontWeight: "500",
+                        }}
+                    >
+                        Đã xoá sản phẩm khỏi giỏ hàng
+                    </p>
+                </Alert>
+            </Snackbar>
         </>
     );
 }
