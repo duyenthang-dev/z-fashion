@@ -9,6 +9,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { Link, NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
+import './../../utility/css/utility.css';
 function Header({ cart }) {
     // console.log(cart);
     const [cartCount, setCartCount] = useState(0);
@@ -35,10 +36,10 @@ function Header({ cart }) {
                                 <NavLink to="/home">Trang chủ</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/catalog">Cửa hàng</NavLink>
+                                <NavLink to="/catalog" className="bar-effect">Cửa hàng</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/blog">Blog</NavLink>
+                                <NavLink to="/blog" className="bar-effect">Blog</NavLink>
                             </li>
                             <li className="dropdown">
                                 <NavLink to="/blog">Điều hướng</NavLink>
@@ -88,23 +89,27 @@ function Header({ cart }) {
                                 <SearchIcon fontSize="large" />
                             </div>
                             <div className="cart">
-                                <Badge
-                                    badgeContent={cartCount}
-                                    color="error"
-                                    showZero
-                                >
-                                    <ShoppingCartIcon fontSize="large" />
-                                </Badge>
+                                <Link to="/cart">
+                                    <Badge
+                                        badgeContent={cartCount}
+                                        color="error"
+                                        showZero
+                                    >
+                                        <ShoppingCartIcon fontSize="large" />
+                                    </Badge>
+                                </Link>
                             </div>
                             <div className="heart">
-                                <Badge badgeContent={4} color="error">
-                                    <FavoriteBorderIcon fontSize="large" />
-                                </Badge>
+                                <Link to="/whishlist">
+                                    <Badge badgeContent={4} color="error">
+                                        <FavoriteBorderIcon fontSize="large" />
+                                    </Badge>
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </Grid>
-            </Grid> 
+            </Grid>
             <div className="container"></div>
         </div>
     );

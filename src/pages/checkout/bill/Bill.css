@@ -1,0 +1,39 @@
+.bill-frame {
+    background-color: #F5F5F5;
+}
+
+.bill {
+    margin: 30px 18px 30px 18px;
+    font-style: normal;
+}
+
+.bill-frame hr {
+    margin-top: 20px;
+    margin-left: 5%;
+    width: 90%;
+    opacity: 0.3; 
+}
+
+.bill li {
+    font-size: 16px;
+    padding-top: 26px;
+    list-style-position: inside;
+}
+
+.left-list li {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.right-list li {
+    text-align: right;
+    margin-right: 15px;
+}
+
+.bill h2 {
+    margin-top: 20px;
+}
+
+.price {
+    color: red;
+}

@@ -4,7 +4,6 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import "./../../../utility/css/utility.css";
 import ProductItem from "./../../../components/product/productItem";
-
 import {
     khakiMale,
     sweaterFemale,

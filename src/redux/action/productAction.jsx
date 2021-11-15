@@ -1,22 +1,24 @@
 import * as actionType from "./../constants/actionType";
-export const addToCart = (product) => {
+export const addToCart = (productId, color, size, qty =1) => {
     return {
         type: actionType.ADD_CART,
-        payload: product,
+        payload: {
+            productId,
+            color,
+            size,
+            qty,
+        },
     };
 };
 
-export const updateCart = (product) => {
-    return {
-        type: actionType.UPDATE_CART,
-        payload: product,
-    };
-};
-
-export const deleteCart = (product) => {
+export const deleteCart = (productId, color, size) => {
     return {
         type: actionType.DELETE_CART,
-        payload: product,
+        payload: {
+            productId,
+            color,
+            size,
+        },
     };
 };
 
@@ -48,3 +50,14 @@ export function GetNumberCart() {
     };
 }
 
+export const updateCart = (product, color, size, qty =1) => {
+    return {
+        type: actionType.UPDATE_CART,
+        payload: {
+            product: product,
+            color,
+            size,
+            qty
+        },
+    };
+};

@@ -6,28 +6,28 @@
 }
 
 .hero-animate .category {
-    animation-duration: 10s;
+    animation-duration: 12s;
     animation-fill-mode: both;
     animation-name: fadeOutUp;
     animation-iteration-count: infinite;
     animation-delay: 0.5s;
 }
 .hero-animate .title-1 {
-    animation-duration: 10s;
+    animation-duration: 12s;
     animation-fill-mode: both;
     animation-name: fadeOutUp;
     animation-iteration-count: infinite;
     animation-delay: 1s;
 }
 .hero-animate .title-2 {
-    animation-duration: 10s;
+    animation-duration: 12s;
     animation-fill-mode: both;
     animation-name: fadeOutUp;
     animation-iteration-count: infinite;
     animation-delay: 1.5s;
 }
 .hero-animate .btn {
-    animation-duration: 10s;
+    animation-duration: 12s;
     animation-fill-mode: both;
     animation-name: fadeOutUp;
     animation-iteration-count: infinite;
@@ -64,7 +64,7 @@
 }
 
 .hero__image {
-    animation-duration: 10s;
+    animation-duration: 12s;
     animation-fill-mode: both;
     animation-name: fadeOutUp;
     animation-iteration-count: infinite;
@@ -101,7 +101,7 @@
     border-radius: 5px;
     gap: 1.5rem;
     font-weight: 500;
-    animation-duration: 10s;
+    animation-duration: 12s;
     animation-fill-mode: both;
     animation-name: fadeOutUp;
     animation-iteration-count: infinite;
@@ -117,13 +117,14 @@
 @keyframes fadeOutUp {
     0% {
         opacity: 0;
-        transform: translateY(30rem);
+        transform: translateY(20rem);
     }
-    50% {
+   
+    20% {
         opacity: 1;
         transform: translateY(0rem);
     }
-    80% {
+    70% {
         opacity: 1;
         transform: translateY(0rem);
     }

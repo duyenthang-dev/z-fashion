@@ -82,6 +82,9 @@
 .product-item__price {
     font-size: 1.7rem;
 }
+.product-item__price > span{
+    font-weight: 500;
+}
 .sale{
     background-color: #ff2f2f;
 }

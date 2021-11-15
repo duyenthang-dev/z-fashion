@@ -35,9 +35,6 @@
     left: 0;
     bottom: 0;
 }
-.active{
-    border-bottom: 3px solid #ff2f2f;
-}
 
 .tab-product li{
     cursor: pointer;

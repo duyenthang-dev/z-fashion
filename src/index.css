@@ -10,4 +10,5 @@ html {
     margin: 0 auto;
     width: 100%;
     line-height: 1.2;
+    scroll-behavior: smooth;
 }

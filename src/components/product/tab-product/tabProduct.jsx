@@ -6,7 +6,7 @@ import "./../../../utility/css/utility.css";
 import ProductItem from "./../productItem";
 import { connect } from "react-redux";
 
-const TabProduct = ({productList}) => {
+const TabProduct = ({ productList }) => {
     const renderListProduct = productList.map((item, i) => {
         return (
             <Grid item lg={3} md={4} sm={6} key={i + 1}>
@@ -18,6 +18,8 @@ const TabProduct = ({productList}) => {
                     src={item.src}
                     price={item.price}
                     rate={item.rate}
+                    color={item.color}
+                    size={item.size}
                     desc={item.desc}
                 />
             </Grid>
@@ -35,7 +37,7 @@ const TabProduct = ({productList}) => {
 
                     <Grid item lg={8} md={8} className="tab-product__filter">
                         <ul>
-                            <li className="active">Tẩt cả</li>
+                            <li className="tab-product__active">Tất cả</li>
                             <li>Nam</li>
                             <li>Nữ</li>
                             <li>Phụ kiện</li>
@@ -44,6 +46,7 @@ const TabProduct = ({productList}) => {
                 </Grid>
                 <Grid container>{renderListProduct}</Grid>
             </Container>
+            
         </section>
     );
 };

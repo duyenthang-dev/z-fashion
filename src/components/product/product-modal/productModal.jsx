@@ -1,13 +1,19 @@
 import "./productModal.css";
 import Grid from "@mui/material/Grid";
 import PropTypes from "prop-types";
-// import Container from "@mui/material/Container";
+import { useState } from "react";
 import React from "react";
 import { BsShare } from "react-icons/bs";
-import { FaRegHeart,FaTimes } from "react-icons/fa";
+import { FaRegHeart, FaTimes } from "react-icons/fa";
 import Slider from "react-slick";
 import { shirtMale } from "./../../../imageSource";
 import ProductRating from "./../productRating";
+import { AiOutlineCheck } from "react-icons/ai";
+import Slide from "@mui/material/Slide";
+
+function TransitionLeft(props) {
+    return <Slide {...props} direction="right" />;
+}
 let list = [];
 for (let i = 0; i < 6; i++) {
     list.push(
@@ -21,6 +27,7 @@ for (let i = 0; i < 6; i++) {
         </div>
     );
 }
+
 const settings = {
     dots: false,
     infinite: true,
@@ -31,7 +38,22 @@ const settings = {
 };
 
 const ProductModal = (props) => {
- 
+    const prod = {
+        id: props.id,
+        img: props.src,
+        title: props.title,
+        price: props.price,
+        func: props.func,
+    };
+
+    const listColor = props.color;
+    const listSize = props.size;
+    const [color, setColor] = useState("");
+    const [colorIndex, setcolorIndex] = useState(null);
+    const [size, setSize] = useState("");
+    const [sizeIndex, setSizeIndex] = useState(null);
+    const [qty, setQty] = useState(1);
+
     return (
         <div
             className="modal1 hidden backdrop"
@@ -49,7 +71,7 @@ const ProductModal = (props) => {
                             aria-label="Close"
                             onClick={props.action}
                         >
-                            <FaTimes fontSize='2rem'/>
+                            <FaTimes fontSize="2rem" />
                         </button>
                     </div>
                     <div className="modal-body">
@@ -82,64 +104,92 @@ const ProductModal = (props) => {
                                         </div>
                                     </div>
                                     <div className="product-details__desc">
-                                        <p>
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Iste
-                                            minus assumenda consectetur
-                                            reprehenderit deleniti facilis,
-                                        </p>
+                                        <p>{props.desc}</p>
                                     </div>
                                     <div className="prodcut-details__price">
-                                        <span>{props.price}</span>
+                                        <span>{props.price.toLocaleString('it-IT', {style : 'currency', currency : 'VND'})}</span>
                                     </div>
                                     <div className="product-details__color">
                                         <span>Màu sắc:</span>
                                         <ul>
-                                            <li className="dolly">
-                                                <a href="/">dolly</a>
-                                            </li>
-                                            <li className="white">
-                                                <a href="/">white</a>
-                                            </li>
-                                            <li className="navy">
-                                                <a href="/">navy</a>
-                                            </li>
-                                            <li className="lisa">
-                                                <a href="/">lisa</a>
-                                            </li>
-                                            <li className="orange">
-                                                <a href="/">orange</a>
-                                            </li>
+                                            {listColor.map((color, idx) => {
+                                                return (
+                                                    <li
+                                                        className={color}
+                                                        onClick={() => {
+                                                            setcolorIndex(idx);
+                                                            setColor(color);
+                                                        }}
+                                                        key={idx}
+                                                    >
+                                                        <div
+                                                            className={
+                                                                colorIndex ===
+                                                                idx
+                                                                    ? "icon-check"
+                                                                    : "icon-check hidden-check"
+                                                            }
+                                                        >
+                                                            <AiOutlineCheck fontSize="3rem" />
+                                                        </div>
+                                                    </li>
+                                                );
+                                            })}
                                         </ul>
                                     </div>
                                     <div className="product-details__size">
                                         <span>Size:</span>
                                         <ul>
-                                            <li>
-                                                <a href="/">S</a>
-                                            </li>
-                                            <li>
-                                                <a href="/">M</a>
-                                            </li>
-                                            <li>
-                                                <a href="/">L</a>
-                                            </li>
-                                            <li>
-                                                <a href="/">XL</a>
-                                            </li>
+                                            {listSize.map((size, idx) => {
+                                                return (
+                                                    <li
+                                                        key={idx}
+                                                        onClick={() => {
+                                                            setSize(size);
+                                                            setSizeIndex(idx);
+                                                        }}
+                                                        className={
+                                                            sizeIndex === idx
+                                                                ? "size-check"
+                                                                : ""
+                                                        }
+                                                    >
+                                                        <span>{size}</span>
+                                                    </li>
+                                                );
+                                            })}
                                         </ul>
                                     </div>
                                     <div className="product-details__quantity">
                                         <span>Số lượng</span>
                                         <div className="cart-plus-minus">
-                                            <div className="decrease">-</div>
+                                            <div
+                                                className="decrease"
+                                                onClick={() =>
+                                                    setQty((prev) =>
+                                                        prev === 1
+                                                            ? 1
+                                                            : prev - 1
+                                                    )
+                                                }
+                                            >
+                                                -
+                                            </div>
                                             <input
                                                 type="text"
                                                 className="quantity-box"
                                                 name="qtybutton"
-                                                defaultValue="1"
+                                                value={qty}
+                                                readOnly
                                             />
-                                            <div className="increase">+</div>
+                                            <div
+                                                className="increase"
+                                                onClick={() =>
+                                                    setQty((prev) => prev + 1)
+                                                }
+                                            >
+                                                +
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="product-details__meta">
@@ -157,7 +207,27 @@ const ProductModal = (props) => {
                                         </ul>
                                     </div>
                                     <div className="product-details__action">
-                                        <div className="pro-details__add">
+                                        <div
+                                            className="pro-details__add"
+                                            onClick={() => {
+                                                if (color !== "" && size !== "")
+                                                {
+                                                    props.addToCart(prod.id, color, size,qty);
+                                                    props.openToastSuccess(TransitionLeft);
+                                                }
+                                                else{
+                                                    let msg = "";
+                                                    if(color === "" && size === "")
+                                                        msg="Bạn chưa chọn màu và size";
+                                                    else if(color === "")
+                                                        msg = "Bạn chưa chọn màu";
+                                                    else msg = "Bạn chưa chọn size";
+
+                                                    props.openToastError(TransitionLeft, msg);
+                                                }
+                                                
+                                            }}
+                                        >
                                             <a href="/">Thêm vào giỏ</a>
                                         </div>
                                         <div className="pro-details__action">
@@ -179,12 +249,15 @@ const ProductModal = (props) => {
     );
 };
 ProductModal.propTypes = {
-   
+    id: PropTypes.number,
     title: PropTypes.string,
-   
     src: PropTypes.string,
     price: PropTypes.number,
     rate: PropTypes.number,
+    color: PropTypes.array,
+    size: PropTypes.array,
     desc: PropTypes.string,
+    addToCart: PropTypes.func,
+
 };
 export default ProductModal;

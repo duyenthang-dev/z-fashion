@@ -1,0 +1,43 @@
+.cusinfo {
+    margin-top: 30px;
+}
+
+.top {
+    width: 750px;
+    display: flex;
+}
+
+.top h2 {
+    margin-left: 5px;
+}
+
+.lin {
+    height: 22px;
+    width: 5px;
+    background-color: #EF5DA8;
+}
+
+.cusinfo hr {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    opacity: 0.3; 
+}
+
+
+input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 40px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+
+.required {
+    color: red;
+}
+
+.form label {
+    font-size: 16px;
+}
