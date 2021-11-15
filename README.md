@@ -14,6 +14,10 @@ Tất cả code được viết trong thư mục src
 			   |__footer.css
      |__/container
      |__/data
+     |__/redux
+     	     |__/action
+	     |__/constant
+	     |__/reducer
      |__/pages
 	     |__/home
 	     |__/shop
@@ -43,6 +47,16 @@ Thư mục chứa các component xử lí logic cho các UI components. Đây l�
 ### `data`
 Các file json dữ liệu cho trang web như thông tin sản phẩm, bài blog, ...
 
+### `redux`
+Quản lí trạng thái của trang web
+
 ### `page`
 Các trang hoàn thiện của web, là tập hợp của các container components ghép thành
-
+# Cách dùng
+1. Clone source code về máy, đảm bảo máy tính của bạn đã cài Node JS
+2. Vào thư mục src, mở terminal (Linux, MacOS) hoặc Command Prompt (Window) và chạy lệnh <br />
+    `npm install` <br />
+    để tải các node modules của project
+3. Tiếp tục chạy lệnh <br />
+	`npm start` <br /> để chạy project	
+4. Mở [http://localhost:3000](http://localhost:3000) bằng trình duyệt của bạn để xem kết quả
