@@ -1,14 +1,19 @@
-
-.discount p {
+.discount-cart-wrapper,
+.bill-cart-wrapper{
+    width: 70%;
+}
+.discount-cart p {
     font-size: 1.7rem;
     text-transform: uppercase;
     font-weight: 600;
     text-align: left;
+    padding-top: 0;
+    margin-bottom: 2rem;
 }
-.discount form {
+.discount-cart form {
     position: relative;
 }
-.discount input {
+.discount-cart input {
     /* outline: none; */
     border: 1 px solid #333;
     width: 100%;
@@ -17,24 +22,27 @@
     display: inline-block;
     padding-left: 1rem;
 }
-.discount button {
+.discount-cart button {
     position: absolute;
     top: 5px;
     right: 5px;
     cursor: pointer;
 }
-.bill {
+.bill-cart {
     align-items: right;
     padding: 1rem 3rem;
 }
-.bill button {
+.bill-cart button {
     top: 5px;
     right: 5px;
     border-radius: 5rem;
     cursor: pointer;
-    width: 100%;
+    width: 70%;
 }
-.bill p {
+.bill-cart button span {
+    color: #fff;
+}
+.bill-cart p {
     font-size: 1.3rem;
     text-transform: uppercase;
     font-weight: 600;
@@ -56,22 +64,27 @@
     color: blue;
 }
 .price {
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
 }
-.paper {
+.bill-cart-wrapper {
     
     border: 1px solid #f2f2f2;
     padding: 3rem 2rem 4rem 2rem;
     background-color: #f2f2f2;
 }
-.span1{
-    padding-left: 140px;
-    font-size: 1.3rem;
-}
-.span2 {
-    padding-left: 167px;
-    font-size: 1.3rem;
-}
-.bill span {
+
+.bill-cart > span {
     color: red;
+}
+.bill-cart{
+    display: flex;
+    justify-content: flex-end;
+}
+.bill-cart-wrapper >*:last-child{
+    text-align: center;
+}
+.bill-cart-wrapper > .price > *{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
 }

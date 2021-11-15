@@ -172,7 +172,7 @@ const ProductItem = (props) => {
                     sx={{ width: "100%" }}
                     fontSize="3rem"
                 >
-                    <p style={{fontSize: "1.5rem", fontFamily: "\"Montserrat\", sans-serif", fontWeight: "500"}}>Đã thêm sản phẩm vào giỏ</p>
+                    <p style={{fontSize: "1.5rem", fontFamily: "\"Poppins\", sans-serif", fontWeight: "500"}}>Đã thêm sản phẩm vào giỏ</p>
                 </Alert>
             </Snackbar>
 
@@ -188,7 +188,7 @@ const ProductItem = (props) => {
                     sx={{ width: "100%" }}
                     fontSize="3rem"
                 >
-                    <p style={{fontSize: "1.5rem", fontFamily: "\"Montserrat\", sans-serif", fontWeight: "500"}}>{msgError}</p>
+                    <p style={{fontSize: "1.5rem", fontFamily: "\"Poppins\", sans-serif", fontWeight: "500"}}>{msgError}</p>
                 </Alert>
             </Snackbar>
         </div>

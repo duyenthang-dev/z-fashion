@@ -60,7 +60,7 @@ function Header({ cart }) {
                                     </li>
                                     <li className="sub-menu--4">
                                         <NavLink to="/product-detail">
-                                            Mục ưu thích
+                                            Chi tiết sản phẩm
                                         </NavLink>
                                     </li>
                                     <li className="sub-menu--5">
