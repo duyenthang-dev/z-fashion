@@ -1,6 +1,8 @@
 import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
+
+
 // root, only footer and header
 const Root = lazy(() => import("./pages/root/root"));
 // home pages
@@ -23,6 +25,8 @@ const Whishlist = lazy(() => import("./pages/whishlist/whishlist"));
 const MyAccount = lazy(() => import("./pages/my-account/myAccount"));
 //Login pages
 const Login = lazy(() => import("./pages/login-register/login"));
+
+
 function App() {
     return (
         <div className="App">
@@ -40,6 +44,7 @@ function App() {
                         <Route path="/my-account" component={MyAccount} />
                         <Route path="/login" component={Login} />
                         <Route path="/" component={Root} />
+
                         {/* <Route exact component={NotFound} /> */}
                     </Switch>
                 </Suspense>
