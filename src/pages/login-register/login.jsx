@@ -16,10 +16,7 @@ import Login_compo from "../../components/login/login";
 const Login = () => {
     return (
         <Fragment>
-            
-            <Header />
             <Login_compo />
-            <Footer />
         </Fragment>
     );
 };
