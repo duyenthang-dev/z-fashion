@@ -1,0 +1,77 @@
+
+.discount p {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: left;
+}
+.discount form {
+    position: relative;
+}
+.discount input {
+    /* outline: none; */
+    border: 1 px solid #333;
+    width: 100%;
+    height: 5rem;
+    border-radius: 5rem;
+    display: inline-block;
+    padding-left: 1rem;
+}
+.discount button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+.bill {
+    align-items: right;
+    padding: 1rem 3rem;
+}
+.bill button {
+    top: 5px;
+    right: 5px;
+    border-radius: 5rem;
+    cursor: pointer;
+    width: 100%;
+}
+.bill p {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: left;
+    padding-bottom: 5px;
+}
+.title {
+    font-size: 1.7rem;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 2rem;
+}
+.link {
+    text-decoration: none;
+    color: white;
+}
+.link:hover{
+    color: blue;
+}
+.price {
+    padding-bottom: 5rem;
+}
+.paper {
+    
+    border: 1px solid #f2f2f2;
+    padding: 3rem 2rem 4rem 2rem;
+    background-color: #f2f2f2;
+}
+.span1{
+    padding-left: 140px;
+    font-size: 1.3rem;
+}
+.span2 {
+    padding-left: 167px;
+    font-size: 1.3rem;
+}
+.bill span {
+    color: red;
+}
