@@ -2,8 +2,29 @@ import './shopLeftBar.css';
 
 
 import * as React from "react";
+import { func } from 'prop-types';
 // import Grid from "@mui/material/Grid";
 // import Container from "@mui/material/Container";
+import ExpandMore from '@mui/icons-material/ExpandMore';
+
+function expand()
+{
+    var dropdown = document.getElementsByClassName("card-heading");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") 
+            {
+                dropdownContent.style.display = "none";
+            } else 
+            {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+};
 
 function ShopLeftBar() {
     return (
@@ -13,89 +34,92 @@ function ShopLeftBar() {
                     <h4>Danh mục</h4>
                 </div>
                 <div className="categories__accordion">
-                    <div className="accordion" id="accordionExample">
-                        <div className="card">
-                            <div className="card-heading active">
-                                <a href="/" data-toggle="collapse" data-target="#collapseOne">Nữ</a>
-                            </div>
-                            <div id="collapseOne" className="collapse show" data-parent="#accordionExample">
-                                <div className="card-body">
-                                    <ul>
-                                        <li><a href="/">Áo khoác</a></li>
-                                        <li><a href="/">Jackets</a></li>
-                                        <li><a href="/">Váy</a></li>
-                                        <li><a href="/">Áo thun</a></li>
-                                        <li><a href="/">Quần Jeans</a></li>
-                                    </ul>
-                                </div>
+                    <div className="card">
+                        <div className="card-heading" onClick={expand}>
+                            <a >Nữ</a>
+                            <i ><ExpandMore /></i>
+                        </div>
+                        <div className="dropdown__container">
+                            <div className="card-body">
+                                <ul>
+                                    <li><a href="/">Áo khoác</a></li>
+                                    <li><a href="/">Jackets</a></li>
+                                    <li><a href="/">Váy</a></li>
+                                    <li><a href="/">Áo thun</a></li>
+                                    <li><a href="/">Quần Jeans</a></li>
+                                </ul>
                             </div>
                         </div>
-                        <div className="card">
-                            <div className="card-heading">
-                                <a href="/" data-toggle="collapse" data-target="#collapseTwo">Nam</a>
-                            </div>
-                            <div id="collapseTwo" className="collapse" data-parent="#accordionExample">
-                                <div className="card-body">
-                                    <ul>
-                                        <li><a href="/">Áo khoác</a></li>
-                                        <li><a href="/">Jackets</a></li>
-                                        <li><a href="/">Dresses</a></li>
-                                        <li><a href="/">Shirts</a></li>
-                                        <li><a href="/">T-shirts</a></li>
-                                        <li><a href="/">Jeans</a></li>
-                                    </ul>
-                                </div>
+                    </div>
+                    <div className="card">
+                        <div className="card-heading" onClick={expand}>
+                            <a>Nam</a>
+                            <i ><ExpandMore /></i>
+                        </div>
+                        <div className="dropdown__container" >
+                            <div className="card-body">
+                                <ul>
+                                    <li><a href="/">Áo khoác</a></li>
+                                    <li><a href="/">Jackets</a></li>
+                                    <li><a href="/">Dresses</a></li>
+                                    <li><a href="/">Shirts</a></li>
+                                    <li><a href="/">T-shirts</a></li>
+                                    <li><a href="/">Jeans</a></li>
+                                </ul>
                             </div>
                         </div>
-                        <div className="card">
-                            <div className="card-heading">
-                                <a href="/" data-toggle="collapse" data-target="#collapseThree">Trẻ em</a>
-                            </div>
-                            <div id="collapseThree" className="collapse" data-parent="#accordionExample">
-                                <div className="card-body">
-                                    <ul>
-                                        <li><a href="/">Coats</a></li>
-                                        <li><a href="/">Jackets</a></li>
-                                        <li><a href="/">Dresses</a></li>
-                                        <li><a href="/">Shirts</a></li>
-                                        <li><a href="/">T-shirts</a></li>
-                                        <li><a href="/">Jeans</a></li>
-                                    </ul>
-                                </div>
+                    </div>
+                    <div className="card">
+                        <div className="card-heading" onClick={expand}>
+                            <a >Trẻ em</a>
+                            <i ><ExpandMore /></i>
+                        </div>
+                        <div className="dropdown__container" >
+                            <div className="card-body">
+                                <ul>
+                                    <li><a href="/">Coats</a></li>
+                                    <li><a href="/">Jackets</a></li>
+                                    <li><a href="/">Dresses</a></li>
+                                    <li><a href="/">Shirts</a></li>
+                                    <li><a href="/">T-shirts</a></li>
+                                    <li><a href="/">Jeans</a></li>
+                                </ul>
                             </div>
                         </div>
-                        <div className="card">
-                            <div className="card-heading">
-                                <a href="/" data-toggle="collapse" data-target="#collapseFour">Phụ kiện</a>
-                            </div>
-                            <div id="collapseFour" className="collapse" data-parent="#accordionExample">
-                                <div className="card-body">
-                                    <ul>
-                                        <li><a href="/">Coats</a></li>
-                                        <li><a href="/">Jackets</a></li>
-                                        <li><a href="/">Dresses</a></li>
-                                        <li><a href="/">Shirts</a></li>
-                                        <li><a href="/">T-shirts</a></li>
-                                        <li><a href="/">Jeans</a></li>
-                                    </ul>
-                                </div>
+                    </div>
+                    <div className="card">
+                        <div className="card-heading" onClick={expand}>
+                            <a>Phụ kiện</a>
+                            <i ><ExpandMore /></i>
+                        </div>
+                        <div id="collapseFour" className="collapse" >
+                            <div className="card-body">
+                                <ul>
+                                    <li><a href="/">Coats</a></li>
+                                    <li><a href="/">Jackets</a></li>
+                                    <li><a href="/">Dresses</a></li>
+                                    <li><a href="/">Shirts</a></li>
+                                    <li><a href="/">T-shirts</a></li>
+                                    <li><a href="/">Jeans</a></li>
+                                </ul>
                             </div>
                         </div>
-                        <div className="card">
-                            <div className="card-heading">
-                                <a href="/" data-toggle="collapse" data-target="#collapseFive">Cosmetic</a>
-                            </div>
-                            <div id="collapseFive" className="collapse" data-parent="#accordionExample">
-                                <div className="card-body">
-                                    <ul>
-                                        <li><a href="/">Coats</a></li>
-                                        <li><a href="/">Jackets</a></li>
-                                        <li><a href="/">Dresses</a></li>
-                                        <li><a href="/">Shirts</a></li>
-                                        <li><a href="/">T-shirts</a></li>
-                                        <li><a href="/">Jeans</a></li>
-                                    </ul>
-                                </div>
+                    </div>
+                    <div className="card">
+                        <div className="card-heading" onClick={expand}>
+                            <a>Cosmetic</a>
+                            <i ><ExpandMore /></i>
+                        </div>
+                        <div id="collapseFive" className="collapse" >
+                            <div className="card-body">
+                                <ul>
+                                    <li><a href="/">Coats</a></li>
+                                    <li><a href="/">Jackets</a></li>
+                                    <li><a href="/">Dresses</a></li>
+                                    <li><a href="/">Shirts</a></li>
+                                    <li><a href="/">T-shirts</a></li>
+                                    <li><a href="/">Jeans</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -215,7 +239,9 @@ function ShopLeftBar() {
             </div>
         </div>
     );
-    
 };
+
+
+
 
 export default ShopLeftBar;
