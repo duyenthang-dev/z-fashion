@@ -25,13 +25,13 @@ function Login_compo() {
                         <input
                             className="username"
                             type="text"
-                            placeholder="    Email/Số điện thoại/User name"
+                            placeholder="   Email/Số điện thoại/User name"
                         />
                         <br />
                         <input
                             className="pass"
                             type="password"
-                            placeholder="    Mật khẩu"
+                            placeholder="   Mật khẩu"
                         />
                     </div>
 
