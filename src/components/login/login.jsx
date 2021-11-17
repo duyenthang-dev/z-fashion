@@ -12,8 +12,8 @@ function Login_compo() {
                 <img
                     src={logo_img}
                     alt="z_fashion"
-                    width="628px"
-                    height="320px"
+                    width="412px"
+                    height="213px"
                 />
             </div>
 
@@ -25,13 +25,12 @@ function Login_compo() {
                         <input
                             className="username"
                             type="text"
-                            placeholder="   Email/Số điện thoại/User name"
-                        />
+                            placeholder="     Email/Số điện thoại/User name"/>
                         <br />
                         <input
                             className="pass"
                             type="password"
-                            placeholder="   Mật khẩu"
+                            placeholder="     Mật khẩu"
                         />
                     </div>
 
@@ -54,8 +53,8 @@ function Login_compo() {
                                 src={fb_logo}
                                 alt="facebook"
                                 border="0"
-                                width="150px"
-                                height="29.1px"
+                                width="100px"
+                                height="20px"
                             />
                         </a>
 
@@ -64,8 +63,8 @@ function Login_compo() {
                                 src={gg_logo}
                                 alt="google"
                                 border="0"
-                                width="150px"
-                                height="50px"
+                                width="100px"
+                                height="33px"
                             />
                         </a>
                     </div>

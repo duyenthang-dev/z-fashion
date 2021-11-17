@@ -4,14 +4,14 @@
     width: 1440px;
     height: 700px;
     margin: auto;
-    margin-top: 120px;
+    margin-top: 115px;
 
 }
 
 .logo_zf
 {
-    margin-left: 44px;
-    margin-top: 169px;
+    margin-left: 120px;
+    margin-top: 100px;
     float: left;
     text-align: center;
 
@@ -30,7 +30,7 @@
 .Login_frame
 {
     width: 568px;
-    height: 400px;
+    height: 300px;
     margin-top: 16px;
     margin-left: 79px;
 }
@@ -39,7 +39,7 @@
 
 h1
 {
-  font-size: 30px;
+  font-size: 26px;
   margin-top: 44px;
   font-family: sans-serif;
   height: 35px;
@@ -49,15 +49,15 @@ h1
 .login_box
 {
     width: 568px;
-    height: 217px;
-    margin-top: 37px;
+    height: 154px;
+    margin-top: 8px;
 }
 
 
 .username
 {
-    width: 527px;
-    height: 72px;
+    width: 450px;
+    height: 50px;
     margin-top: 12px;
     border-radius: 30px;
     background-color: #DFDCDC;
@@ -67,9 +67,9 @@ h1
 
 .pass
 {
-    width: 527px;
-    height: 72px;
-    margin-top: 32px;
+    width: 450px;
+    height: 50px;
+    margin-top: 16px;
     border-radius: 30px;
     background-color: #DFDCDC;
     border: none;
@@ -78,18 +78,20 @@ h1
 .pass::placeholder
 {
     color: #A8A7A7;
-    font-size: 30px;
+    font-size: 20px;
     text-align: left;
     font-family: "Montserrat", sans-serif !important;
+    margin-top: 5px;
     
 }
 
 .username::placeholder
 {
         color: #A8A7A7;
-        font-size: 30px;
+        font-size: 20px;
         text-align: left;
         font-family: "Montserrat", sans-serif !important;
+        
     
 }
 
@@ -103,21 +105,21 @@ h1
     border: none;
     border-radius: 4px;
     font-family: "Montserrat", sans-serif !important;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .lostpasstext
 {
     font-family: "Montserrat", sans-serif !important;
-    font-size: 20px;
+    font-size: 16px;
     color: #245AE4;
     font-weight: bold;
 }
 
 .lostpass
 {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 hr
@@ -127,14 +129,14 @@ hr
 
 .Another_way_to_login
 {
-    margin-top: 42px;
+    margin-top: 16px;
     
 }
 
 .login2text
 {
     font-family: "Montserrat", sans-serif !important;
-    font-size: 30px;
+    font-size: 22px;
     font-weight: bold;
 }
 
@@ -142,23 +144,23 @@ hr
 {
  
     width: 355px;
-    height: 88px;
+    height: 38px;
     margin: 0 auto;
 }
 
 .fb_link
 
 {
-    margin-top: 20px;
-    margin-left: 12px;
+    margin-top: 15px;
+    margin-left: 70px;
     float: left;
     text-align: center;
 }
 
 .gg_link
 {
-    margin-top: 16px;
-    margin-right: 12px;
+    margin-top: 12.5px;
+    margin-right: 70px;
     float: right;
     text-align: center;
 }
@@ -167,25 +169,29 @@ hr
 
 {
     width: 454px;
-    height: 94px;
+    height: 60px;
     margin: 0 auto;
 }
 
 .signuptext
 {
     font-family: "Montserrat", sans-serif !important;
-    font-size: 30px;
+    font-size: 15px;
     color: #5B5959;
     float: left;
     text-align: center;
+    margin-left: 100px;
+    margin-top: 12.5px;
 }
 
 .signuplink
 {
     font-family: "Montserrat", sans-serif !important;
-    font-size: 30px;
+    font-size: 20px;
     color: #245AE4;
     float: right;
     text-align: center;
+    margin-right: 107px;
+    margin-top: 10px;
 }
 

@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import MetaTags from "react-meta-tags";
-import Header from "./../../container/header/index";
-import Footer from "./../../container/footer/index";
+import Header from "../../container/header/index";
+import Footer from "../../container/footer/index";
 import Login_compo from '../../components/login/login';
 
 
