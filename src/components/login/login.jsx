@@ -5,7 +5,7 @@ import fb_logo from "./../../assets/images/logo/fb.png";
 import gg_logo from "./../../assets/images/logo/gg.png";
 import "./login.css";
 
-function Login_compo() {
+function LoginCompo() {
     return (
         <div className="Login_compo">
             <div className="logo_zf">
@@ -38,7 +38,7 @@ function Login_compo() {
 
                     <br />
                     <div className="lostpass">
-                        <a className="lostpasstext" href="">
+                        <a className="lostpasstext" href="/">
                             Quên mật khẩu
                         </a>
                     </div>
@@ -48,7 +48,7 @@ function Login_compo() {
                     <h3 className="login2text">Hoặc có thể đăng nhập bằng</h3>
 
                     <div className="login3rd">
-                        <a className="fb_link" href="" target="_blank">
+                        <a className="fb_link" href="/" target="_blank">
                             <img
                                 src={fb_logo}
                                 alt="facebook"
@@ -58,7 +58,7 @@ function Login_compo() {
                             />
                         </a>
 
-                        <a className="gg_link" href="" target="_blank">
+                        <a className="gg_link" href="/" target="_blank">
                             <img
                                 src={gg_logo}
                                 alt="google"
@@ -73,7 +73,7 @@ function Login_compo() {
 
                 <div className="SignUp">
                     <p className="signuptext">Chưa có tài khoản?</p>
-                    <a className="signuplink" href="">
+                    <a className="signuplink" href="/">
                         Đăng ký
                     </a>
                 </div>
@@ -81,4 +81,4 @@ function Login_compo() {
         </div>
     );
 }
-export default Login_compo;
+export default LoginCompo;

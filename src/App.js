@@ -23,6 +23,7 @@ const Whishlist = lazy(() => import("./pages/whishlist/whishlist"));
 const MyAccount = lazy(() => import("./pages/my-account/myAccount"));
 //Login pages
 const Login = lazy(() => import("./pages/login-register/login"));
+const Register = lazy(() => import("./pages/login-register/register"))
 function App() {
     return (
         <div className="App">
@@ -39,6 +40,7 @@ function App() {
                         <Route path="/whishlist" component={Whishlist} />
                         <Route path="/my-account" component={MyAccount} />
                         <Route path="/login" component={Login} />
+                        <Route path="/register" component={Register} />
                         <Route path="/" component={Root} />
                         {/* <Route exact component={NotFound} /> */}
                     </Switch>

@@ -1,25 +1,22 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from "react";
 import MetaTags from "react-meta-tags";
 import Header from "../../container/header/index";
 import Footer from "../../container/footer/index";
-import LoginCompo from '../../components/login/login';
-
-
+import Register from "./../../components/register/register";
 
 const Login = () => {
     return (
         <Fragment>
             <MetaTags>
-            <title> Z Fashion | Blog </title>
+                <title> Z Fashion | Blog </title>
             </MetaTags>
             <Header />
-           
-            <LoginCompo />
-          
+
+            <Register />
+
             <Footer />
         </Fragment>
     );
 };
 
 export default Login;
-

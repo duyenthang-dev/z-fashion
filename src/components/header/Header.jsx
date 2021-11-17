@@ -79,9 +79,9 @@ function Header({ cart }) {
                 <Grid item lg={3} className="item3">
                     <div className="header__right">
                         <div className="header__auth">
-                            <a href="/">Đăng nhập</a>
+                            <a href="/login">Đăng nhập</a>
                             <span>/</span>
-                            <a href="/">Đăng kí</a>
+                            <a href="/register">Đăng kí</a>
                         </div>
 
                         <div className="header__widget">
