@@ -1,0 +1,191 @@
+.Login_compo
+{
+   
+    width: 1440px;
+    height: 700px;
+    margin: auto;
+    margin-top: 120px;
+
+}
+
+.logo_zf
+{
+    margin-left: 44px;
+    margin-top: 169px;
+    float: left;
+    text-align: center;
+
+}
+
+.login_page
+{
+    width: 716px;
+    height: 824px;
+    margin-left: 0px;
+    margin-top: 0px;
+    float: right;
+    text-align: center;
+}
+
+.Login_frame
+{
+    width: 568px;
+    height: 400px;
+    margin-top: 16px;
+    margin-left: 79px;
+}
+
+
+
+h1
+{
+  font-size: 30px;
+  margin-top: 44px;
+  font-family: sans-serif;
+  height: 35px;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.login_box
+{
+    width: 568px;
+    height: 217px;
+    margin-top: 37px;
+}
+
+
+.username
+{
+    width: 527px;
+    height: 72px;
+    margin-top: 12px;
+    border-radius: 30px;
+    background-color: #DFDCDC;
+    border: none;
+    
+}
+
+.pass
+{
+    width: 527px;
+    height: 72px;
+    margin-top: 32px;
+    border-radius: 30px;
+    background-color: #DFDCDC;
+    border: none;
+    
+}
+.pass::placeholder
+{
+    color: #A8A7A7;
+    font-size: 30px;
+    text-align: left;
+    font-family: "Montserrat", sans-serif !important;
+    
+}
+
+.username::placeholder
+{
+        color: #A8A7A7;
+        font-size: 30px;
+        text-align: left;
+        font-family: "Montserrat", sans-serif !important;
+    
+}
+
+
+
+.login_text
+{
+    width: 205px;
+    height: 54px;
+    color: D6D6D6;
+    border: none;
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.lostpasstext
+{
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 20px;
+    color: #245AE4;
+    font-weight: bold;
+}
+
+.lostpass
+{
+    margin-top: 20px;
+}
+
+hr
+{
+    margin-left: 18px;
+}
+
+.Another_way_to_login
+{
+    margin-top: 42px;
+    
+}
+
+.login2text
+{
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.login3rd
+{
+ 
+    width: 355px;
+    height: 88px;
+    margin: 0 auto;
+}
+
+.fb_link
+
+{
+    margin-top: 20px;
+    margin-left: 12px;
+    float: left;
+    text-align: center;
+}
+
+.gg_link
+{
+    margin-top: 16px;
+    margin-right: 12px;
+    float: right;
+    text-align: center;
+}
+
+.SignUp
+
+{
+    width: 454px;
+    height: 94px;
+    margin: 0 auto;
+}
+
+.signuptext
+{
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 30px;
+    color: #5B5959;
+    float: left;
+    text-align: center;
+}
+
+.signuplink
+{
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 30px;
+    color: #245AE4;
+    float: right;
+    text-align: center;
+}
+
