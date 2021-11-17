@@ -12,6 +12,7 @@ import { useState, useEffect } from "react";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Slide from "@mui/material/Slide";
+import Discount from "../ShopCart_discount/ShopCart_discount";
 function TransitionLeft(props) {
     return <Slide {...props} direction="right" />;
 }
@@ -30,7 +31,6 @@ function ShopCart({ cart }) {
     const [transition, setTransition] = React.useState(undefined);
     const [openToast, setOpenToast] = React.useState(false);
     const handleClickToastSuccess = (Transition) => {
-        console.log("Xoá");
         setTransition(() => Transition);
         setOpenToast(true);
     };
@@ -102,6 +102,9 @@ function ShopCart({ cart }) {
                         </Grid>
                     </Grid>
                 </Container>
+                <Container className="mt-5">
+                    <Discount totalPrice = {totalPrice} />
+                </Container>
             </section>
 
             <Snackbar
@@ -119,7 +122,7 @@ function ShopCart({ cart }) {
                     <p
                         style={{
                             fontSize: "1.5rem",
-                            fontFamily: '"Montserrat", sans-serif',
+                            fontFamily: '"Poppins", sans-serif',
                             fontWeight: "500",
                         }}
                     >

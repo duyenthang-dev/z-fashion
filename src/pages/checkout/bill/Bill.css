@@ -5,6 +5,7 @@
 .bill {
     margin: 30px 18px 30px 18px;
     font-style: normal;
+    color: #111;
 }
 
 .bill-frame hr {
@@ -36,4 +37,11 @@
 
 .price {
     color: red;
+}
+.bill h1{
+    padding-top: 2rem;
+    font-weight: 600;
+}
+b{
+    font-weight: 600;
 }
