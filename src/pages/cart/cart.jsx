@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import MetaTags from "react-meta-tags";
 import Header from "./../../container/header/index";
 import Footer from "./../../container/footer/index";
-import Discount from './../../components/ShopCart_discount/ShopCart_discount';
+// import Discount from './../../components/ShopCart_discount/ShopCart_discount';
 import Gallery from "./../../components/gallery/gallery";
 
 
@@ -15,7 +15,6 @@ const Cart = () => {
             </MetaTags>
             <Header />
             <ShopCart />
-            <Discount />
             <Gallery />
             <Footer />
         </Fragment>

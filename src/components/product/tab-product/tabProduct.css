@@ -4,6 +4,7 @@
 }
 .tab-product__filter {
     display: flex;
+    color: #111;
 }
 .tab-product__filter ul {
     display: flex;
@@ -25,6 +26,7 @@
     position: relative;
     padding-bottom: 1rem;
     display: inline-block;
+    color: #111;
     
 }
 .tab-product h3:after {

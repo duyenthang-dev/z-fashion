@@ -1,41 +1,55 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container";
 import "./ShopCart_discount.css";
-
-function Discount() {
-     return (
+import { Link } from "react-router-dom";
+function Discount(props) {
+    return (
         <div>
-              <Container className="container pt-5">
-                  <Grid container >
-                      <Grid item className="discount" lg={4} md={4} sm={4} xs={4} >
-                         <p>Discount Code</p>
+            <Grid container spacing={10}>
+                <Grid item className="discount-cart" lg={6} md={6} sm={4} xs={4}>
+                    <div className="discount-cart-wrapper">
+                        <p>Mã giảm giá</p>
                         <form action="#">
                             <input type="text" placeholder="enter code" />
                             <button type="submit" className="btn">
-                                Apply
+                                <span>Áp dụng</span>
                             </button>
                         </form>
-                      </Grid>
-                      <Grid item lg={4} md={4} sm={4} xs={4}> </Grid>
-                      <Grid item className="bill" lg={4} md={4} sm={4} xs={4} >
-                               <div className="paper">
-                               <div className="title"> cart total</div>
-                               <div className="price"> 
-                                   <p>subtotal  <span className="span1">$750.0</span></p>
-                                   <p>total  <span className="span2">$750.0</span></p>
-                               </div>
-                               <div > 
-                                   <button type="submit" className="btn">  
-                                   <a className="link" href="#">proceed to check out</a> 
-                                   </button>
-                               </div>
-                               </div>
-                      </Grid>
-                  </Grid>
-              </Container>
+                    </div>
+                </Grid>
+                <Grid item className="bill-cart" lg={6} md={6} sm={4} xs={4}>
+                    <div className="bill-cart-wrapper">
+                        <div className="title">tóm tắt</div>
+                        <div className="price">
+                            <p>
+                                <span>tạm tính</span>
+                                <span className="span2">
+                                    {props.totalPrice.toLocaleString("it-IT", {style: "currency",currency: "VND",})}
+                                </span>
+                            </p>
+                            <p>
+                                <span>giảm giá</span>
+                                <span className="span2">0 VND</span>
+                            </p>
+                            <p>
+                                <span>tổng cộng</span>
+                                <span className="span2">
+                                    {props.totalPrice.toLocaleString("it-IT", {style: "currency",currency: "VND",})}
+                                </span>
+                            </p>
+                        </div>
+                        <div>
+                            <button type="submit" className="btn">
+                                <Link className="link" to="/check-out">
+                                    <span>Thanh toán</span>
+                                </Link>
+                            </button>
+                        </div>
+                    </div>
+                </Grid>
+            </Grid>
         </div>
-     );
-};
+    );
+}
 
 export default Discount;
