@@ -1,0 +1,81 @@
+.Regist_compo
+{   width: 1440px;
+    height: 1500px;
+    margin: auto;
+    margin-top: 115px;
+    
+    
+}
+
+.Info_frame
+
+{
+    width: 1350px;
+    height: 350px;
+    align-content: center;
+}
+
+.Info_frame_left
+{
+    width: 675px;
+    height: 350px;
+    float: left;
+    text-align: center;
+}
+
+.Info_frame_right
+{
+    width: 675;
+    height: 350px;
+    float: right;
+    text-align: center;
+}
+
+.input_box
+{
+    width: 675px;
+    height: 70px;
+}
+
+.input_box_left
+{
+    float: left;
+    text-align: center;
+}
+
+.input_box_right
+{
+    float: right;
+    text-align: center;
+}
+
+.redflag
+{
+    text-align: left;
+    color: crimson;
+}
+
+.info
+{
+    text-align: left;
+    color: black;
+}
+
+.input_box_right
+{
+    width: 240px;
+    height: 30px;
+    
+    border-radius: 30px;
+    background-color: #DFDCDC;
+    border: none;
+}
+
+.Signup_text
+{
+    font-size: 26px;
+
+  font-family: sans-serif;
+  height: 35px;
+  font-family: "Montserrat", sans-serif !important;
+}
