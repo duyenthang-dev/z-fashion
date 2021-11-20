@@ -10,12 +10,7 @@ const Register = () =>{
         <div className="Regist_compo">
                 <div className="Signup_text">Đăng Ký</div>
 
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+                
                 <div className="Info_frame">
 
                         <div className="Info_frame_left">
@@ -128,9 +123,11 @@ const Register = () =>{
 
 
                 </div>
-                <div className="Condition"></div>
-                <button className="Sign_up_text">Đăng nhập</button>
-                <hr />
+
+                
+
+                <button className="Sign_up_text">Đăng Ký</button>
+                <hr className="hr_signin"></hr>
                 <div className="Another_way_to_login">Hoặc có thể đăng ký bằng</div>
 
                 <div className="login3rd">
@@ -156,9 +153,9 @@ const Register = () =>{
                     </div>
 
                     <div className="LoginIn">
-                    <p className="LoginIn_text">Đã có tài khoản?</p>
-                    <a className="LoginIn_link" href="/">Đăng nhập</a>
-                </div>
+                        <p className="Login_text">Đã có tài khoản?</p>
+                        <a className="Login_link" href="/">Đăng nhập</a>
+                    </div>
 
         </div>
     )
