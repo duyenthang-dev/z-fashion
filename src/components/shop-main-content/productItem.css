@@ -67,6 +67,13 @@
     transition: opacity 500ms linear, visibility 0s linear;
 }
 
+.product-item__img img{
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+
+}
+
 .product-action * {
     cursor: pointer;
 }

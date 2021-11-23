@@ -12,7 +12,7 @@ function shopMainContent()
     return (
         <section className="shop spad">
             <Container>
-                <Grid container spacing={0} >
+                <Grid container spacing={2} >
                     <Grid item xs={4} md={3} lg={3} className="left__side">
                         <ShopLeftBar />
                     </Grid>

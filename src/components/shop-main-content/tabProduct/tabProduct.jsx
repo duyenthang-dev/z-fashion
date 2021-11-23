@@ -3,7 +3,7 @@ import * as React from "react";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import "./../../../utility/css/utility.css";
-import ProductItem from "./../../../components/product/productItem";
+import ProductItem from "./../productItem";
 import {
     khakiMale,
     sweaterFemale,
@@ -85,7 +85,7 @@ const listProduct = [
 ];
 const renderListProduct = listProduct.map((item, i) => {
     return (
-        <Grid item lg={4} md={4} sm={6} key={i + 1}>
+        <Grid item lg={4} sm={6} key={i + 1}>
             <ProductItem
                 key={item.id}
                 id={item.id}
