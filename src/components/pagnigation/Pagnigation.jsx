@@ -10,8 +10,8 @@ export default function PaginationControlled() {
   };
 
   return (
-    <Stack spacing={2} className="container" style={{ fontSize: "20px"}}>
-      <Pagination count={5} page={page} onChange={handleChange} />
+    <Stack spacing={2} className="container">
+      <Pagination className="pagination__item" size="large" variant="outlined" color="primary" count={5} page={page} onChange={handleChange} />
     </Stack>
   );
 }

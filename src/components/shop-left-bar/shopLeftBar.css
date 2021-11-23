@@ -37,11 +37,18 @@
 	cursor: pointer;
 }
 
-.categories__accordion .card-heading a {
+.categories__accordion .card-heading span {
 	font-size: 15px;
 	font-weight: 500;
 	color: #111111;
-	display: block;
+	width: 90%;
+	display: inline-block;
+}
+
+.expandmore{
+	display:inline-block;
+	width: 10%;
+	margin-top: 0.5rem;;
 }
 
 .categories__accordion .card-body {
@@ -119,7 +126,7 @@ i {
 
 .sidebar__filter {
 	position: relative;
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 }
 
 .sidebar__filter .section-title {

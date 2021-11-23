@@ -2,9 +2,7 @@ import './shopLeftBar.css';
 
 
 import * as React from "react";
-import { func } from 'prop-types';
-// import Grid from "@mui/material/Grid";
-// import Container from "@mui/material/Container";
+
 import ExpandMore from '@mui/icons-material/ExpandMore';
 
 function expand()
@@ -36,8 +34,8 @@ function ShopLeftBar() {
                 <div className="categories__accordion">
                     <div className="card">
                         <div className="card-heading" onClick={expand}>
-                            <a >Nữ</a>
-                            <i ><ExpandMore /></i>
+                            <span >Nữ</span>
+                            <i className="expandmore"><ExpandMore /></i>
                         </div>
                         <div className="dropdown__container">
                             <div className="card-body">
@@ -46,6 +44,7 @@ function ShopLeftBar() {
                                     <li><a href="/">Jackets</a></li>
                                     <li><a href="/">Váy</a></li>
                                     <li><a href="/">Áo thun</a></li>
+                                    <li><a href="/">Đầm</a></li>
                                     <li><a href="/">Quần Jeans</a></li>
                                 </ul>
                             </div>
@@ -53,15 +52,14 @@ function ShopLeftBar() {
                     </div>
                     <div className="card">
                         <div className="card-heading" onClick={expand}>
-                            <a>Nam</a>
-                            <i ><ExpandMore /></i>
+                            <span>Nam</span>
+                            <i className="expandmore"><ExpandMore /></i>
                         </div>
                         <div className="dropdown__container" >
                             <div className="card-body">
                                 <ul>
                                     <li><a href="/">Áo khoác</a></li>
                                     <li><a href="/">Jackets</a></li>
-                                    <li><a href="/">Dresses</a></li>
                                     <li><a href="/">Shirts</a></li>
                                     <li><a href="/">T-shirts</a></li>
                                     <li><a href="/">Jeans</a></li>
@@ -71,54 +69,36 @@ function ShopLeftBar() {
                     </div>
                     <div className="card">
                         <div className="card-heading" onClick={expand}>
-                            <a >Trẻ em</a>
-                            <i ><ExpandMore /></i>
+                            <span >Trẻ em</span>
+                            <i className="expandmore"><ExpandMore /></i>
                         </div>
                         <div className="dropdown__container" >
                             <div className="card-body">
                                 <ul>
-                                    <li><a href="/">Coats</a></li>
-                                    <li><a href="/">Jackets</a></li>
-                                    <li><a href="/">Dresses</a></li>
-                                    <li><a href="/">Shirts</a></li>
-                                    <li><a href="/">T-shirts</a></li>
-                                    <li><a href="/">Jeans</a></li>
+                                    <li><a href="/">Áo</a></li>
+                                    <li><a href="/">Quần</a></li>
+                                    <li><a href="/">Nón</a></li>
+                                    <li><a href="/">Giày dép</a></li>
+                                    <li><a href="/">Bao tay</a></li>
+                                    <li><a href="/">Bao chân</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div className="card">
                         <div className="card-heading" onClick={expand}>
-                            <a>Phụ kiện</a>
-                            <i ><ExpandMore /></i>
+                            <span>Phụ kiện</span>
+                            <i className="expandmore"><ExpandMore /></i>
                         </div>
                         <div id="collapseFour" className="collapse" >
                             <div className="card-body">
                                 <ul>
-                                    <li><a href="/">Coats</a></li>
-                                    <li><a href="/">Jackets</a></li>
-                                    <li><a href="/">Dresses</a></li>
-                                    <li><a href="/">Shirts</a></li>
-                                    <li><a href="/">T-shirts</a></li>
-                                    <li><a href="/">Jeans</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <div className="card-heading" onClick={expand}>
-                            <a>Cosmetic</a>
-                            <i ><ExpandMore /></i>
-                        </div>
-                        <div id="collapseFive" className="collapse" >
-                            <div className="card-body">
-                                <ul>
-                                    <li><a href="/">Coats</a></li>
-                                    <li><a href="/">Jackets</a></li>
-                                    <li><a href="/">Dresses</a></li>
-                                    <li><a href="/">Shirts</a></li>
-                                    <li><a href="/">T-shirts</a></li>
-                                    <li><a href="/">Jeans</a></li>
+                                    <li><a href="/">Túi xách</a></li>
+                                    <li><a href="/">Vòng tay</a></li>
+                                    <li><a href="/">Bông tai</a></li>
+                                    <li><a href="/">Đồng hồ</a></li>
+                                    <li><a href="/">Kính mắt</a></li>
+                                    <li><a href="/">Cài áo</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -129,7 +109,7 @@ function ShopLeftBar() {
                 <div className="section-title">
                     <h4>Lọc theo giá</h4>
                 </div>
-                <div className="filter-range-wrap">
+                <div style={{marginTop: "-15px"}}>
                     <input type="range" class="form-range" min="0" max="10" id="customRange2"></input>
 
                     <div className="range-slider">
@@ -192,42 +172,38 @@ function ShopLeftBar() {
                 </div>
                 <div className="size__list color__list">
                     <label htmlFor="black">
-                        Blacks
+                        Đen
                         <input type="checkbox" id="black"></input>
                         <span className="checkmark"></span>
                     </label>
                     <label htmlFor="whites">
-                        Whites
+                        Trắng
                         <input type="checkbox" id="whites"></input>
                         <span className="checkmark"></span>
                     </label>
                     <label htmlFor="reds">
-                        Reds
+                        Đỏ
                         <input type="checkbox" id="reds"></input>
                         <span className="checkmark"></span>
                     </label>
                     <label htmlFor="greys">
-                        Greys
+                        Xám
                         <input type="checkbox" id="greys"></input>
                         <span className="checkmark"></span>
                     </label>
                     <label htmlFor="blues">
-                        Blues
+                        Xanh da trời
                         <input type="checkbox" id="blues"></input>
                         <span className="checkmark"></span>
                     </label>
-                    <label htmlFor="beige">
-                        Beige Tones
-                        <input type="checkbox" id="beige"></input>
-                        <span className="checkmark"></span>
-                    </label>
+                   
                     <label htmlFor="greens">
-                        Greens
+                        Xanh lá
                         <input type="checkbox" id="greens"></input>
                         <span className="checkmark"></span>
                     </label>
                     <label htmlFor="yellows">
-                        Yellows
+                        Vàng
                         <input type="checkbox" id="yellows"></input>
                         <span className="checkmark"></span>
                     </label>
