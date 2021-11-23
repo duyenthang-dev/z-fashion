@@ -130,18 +130,14 @@ function ShopLeftBar() {
                     <h4>Lọc theo giá</h4>
                 </div>
                 <div className="filter-range-wrap">
-                    <div className="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                    data-min="33" data-max="99"></div>
+                    <input type="range" class="form-range" min="0" max="10" id="customRange2"></input>
+
                     <div className="range-slider">
                         <div className="price-input">
-                            <p>Price:</p>
-                            <input type="text" id="minamount"></input>
-                            <input type="text" id="maxamount"></input>
+                            <p>Giá: 100.000 - 600.000đ</p>
                         </div>
                     </div>
                 </div>
-
-                <a href="/">Filter</a>
             </div>
             <div className="sidebar__sizes">
                 <div className="section-title">
@@ -237,6 +233,7 @@ function ShopLeftBar() {
                     </label>
                 </div>
             </div>
+            <a className="filter__btn" href="/">Lọc</a>
         </div>
     );
 };

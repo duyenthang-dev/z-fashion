@@ -113,7 +113,6 @@ i {
 
 .dropdown__container {
 	display: none;
-
 }
 
 
@@ -131,19 +130,18 @@ i {
 	font-size: 18px;
 }
 
-.sidebar__filter a {
+.filter__btn {
 	font-size: 14px;
 	color: #0d0d0d;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: 700;
-	display: inline-block;
+	display: block;
 	padding: 5px 16px 5px 24px;
 	border: 2px solid #ff0000;
-	position: absolute;
-	right: 0;
-	bottom: -5px;
 	border-radius: 2px;
+	text-align: center;
+	align-self: center;
 }
 
 .section-title {
@@ -168,11 +166,75 @@ i {
 	content: "";
 }
 
-.filter-range-wrap .range-slider .price-input {
-	position: relative;
+.form-range{
+	width:100%;height:1.5rem;
+	padding:0;
+	background-color:transparent;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none
 }
 
-.filter-range-wrap .range-slider .price-input p {
+.form-range:focus{
+	outline:0
+}
+.form-range:focus::-webkit-slider-thumb{
+	box-shadow:0 0 0 1px #fff,0 0 0 .25rem rgba(13,110,253,.25)
+}
+.form-range:focus::-moz-range-thumb{
+	box-shadow:0 0 0 1px #fff,0 0 0 .25rem rgba(13,110,253,.25)
+}
+
+.form-range::-webkit-slider-thumb{
+	width:1.5rem;
+	height:1.5rem;
+	margin-top:-0.5rem;
+	background-color:#ca1515;
+	border:0;
+	border-radius:1rem;
+	-webkit-transition:background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	transition:background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	-webkit-appearance:none;
+	appearance:none
+}
+@media (prefers-reduced-motion:reduce){
+	.form-range::-webkit-slider-thumb{
+		-webkit-transition:none;transition:none
+	}
+}
+.form-range::-webkit-slider-thumb:active{
+	background-color:#FF751f;
+}
+.form-range::-webkit-slider-runnable-track{
+	width:100%;
+	height:.5rem;
+	color:transparent;
+	cursor:pointer;
+	background-color:#CA1515;
+	border-color:transparent;
+	border-radius:1rem
+}
+
+@media (prefers-reduced-motion:reduce){
+	.form-range::-moz-range-thumb{
+		-moz-transition:none;
+		transition:none
+	}
+}
+.form-range::-moz-range-thumb:active{
+	background-color:#b6d4fe
+}
+.form-range::-moz-range-track{
+	width:100%;
+	height:.5rem;
+	color:transparent;
+	cursor:pointer;
+	background-color:#dee2e6;
+	border-color:transparent;
+	border-radius:1rem
+}
+
+ .price-input p {
 	font-size: 16px;
 	color: #0d0d0d;
 	font-weight: 500;
@@ -180,7 +242,7 @@ i {
 	margin-bottom: 0;
 }
 
-.filter-range-wrap .range-slider .price-input:after {
+ .price-input:after {
 	position: absolute;
 	left: 81px;
 	top: 12px;
@@ -190,41 +252,16 @@ i {
 	content: "";
 }
 
-.filter-range-wrap .range-slider .price-input input {
+.price-input input {
 	font-size: 16px;
 	color: #0d0d0d;
 	max-width: 16%;
 	border: none;
 }
 
-.filter-range-wrap .range-slider .price-input input:nth-child(1) {
-	margin-right: 28px;
-}
-
-.filter-range-wrap .price-range {
+ .price-range {
 	border-radius: 0;
 	margin-bottom: 28px;
-}
-
-.filter-range-wrap .price-range.ui-widget-content {
-	border: none;
-	background: rgba(0, 0, 0, 0.1);
-	height: 5px;
-}
-
-.filter-range-wrap .price-range.ui-widget-content .ui-slider-handle {
-	height: 14px;
-	width: 14px;
-	border-radius: 50%;
-	background: #ca1515;
-	border: none;
-	outline: none;
-	cursor: pointer;
-}
-
-.filter-range-wrap .price-range .ui-slider-range {
-	background: #ca1515;
-	border-radius: 0;
 }
 
 .sidebar__sizes .size__list label,
