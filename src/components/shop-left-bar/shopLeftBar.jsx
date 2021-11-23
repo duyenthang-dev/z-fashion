@@ -2,9 +2,7 @@ import './shopLeftBar.css';
 
 
 import * as React from "react";
-import { func } from 'prop-types';
-// import Grid from "@mui/material/Grid";
-// import Container from "@mui/material/Container";
+
 import ExpandMore from '@mui/icons-material/ExpandMore';
 
 function expand()
@@ -36,8 +34,8 @@ function ShopLeftBar() {
                 <div className="categories__accordion">
                     <div className="card">
                         <div className="card-heading" onClick={expand}>
-                            <a >Nữ</a>
-                            <i ><ExpandMore /></i>
+                            <span >Nữ</span>
+                            <i className="expandmore"><ExpandMore /></i>
                         </div>
                         <div className="dropdown__container">
                             <div className="card-body">
@@ -54,8 +52,8 @@ function ShopLeftBar() {
                     </div>
                     <div className="card">
                         <div className="card-heading" onClick={expand}>
-                            <a>Nam</a>
-                            <i ><ExpandMore /></i>
+                            <span>Nam</span>
+                            <i className="expandmore"><ExpandMore /></i>
                         </div>
                         <div className="dropdown__container" >
                             <div className="card-body">
@@ -71,8 +69,8 @@ function ShopLeftBar() {
                     </div>
                     <div className="card">
                         <div className="card-heading" onClick={expand}>
-                            <a >Trẻ em</a>
-                            <i ><ExpandMore /></i>
+                            <span >Trẻ em</span>
+                            <i className="expandmore"><ExpandMore /></i>
                         </div>
                         <div className="dropdown__container" >
                             <div className="card-body">
@@ -89,8 +87,8 @@ function ShopLeftBar() {
                     </div>
                     <div className="card">
                         <div className="card-heading" onClick={expand}>
-                            <a>Phụ kiện</a>
-                            <i ><ExpandMore /></i>
+                            <span>Phụ kiện</span>
+                            <i className="expandmore"><ExpandMore /></i>
                         </div>
                         <div id="collapseFour" className="collapse" >
                             <div className="card-body">

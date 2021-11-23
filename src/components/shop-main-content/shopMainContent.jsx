@@ -13,10 +13,10 @@ function shopMainContent()
         <section className="shop spad">
             <Container>
                 <Grid container spacing={2} >
-                    <Grid item xs={4} md={3} lg={3} className="left__side">
+                    <Grid item xs={12} md={3} lg={3} className="left__side">
                         <ShopLeftBar />
                     </Grid>
-                    <Grid item xs={8} md={9} lg={9} className="main__menu">
+                    <Grid item xs={12} md={9} lg={9} className="main__menu">
                         <TabProduct />
                         <PaginationControlled />
                     </Grid>
