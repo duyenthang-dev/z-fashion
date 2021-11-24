@@ -4,10 +4,36 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import "./../../../utility/css/utility.css";
 import ProductItem from "./../productItem";
-import { connect } from "react-redux";
+import productApi from "./../../../api/productApi";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setAllProduct } from "./../../../redux/action/productAction";
 
-const TabProduct = ({ productList }) => {
-    const renderListProduct = productList.map((item, i) => {
+const TabProduct = () => {
+    const products = useSelector((state) => state.products.products);
+    const dispatch = useDispatch();
+    const fetchProduct = async () => {
+        const response = await productApi.getAll();
+        const data = response.data.data.products.map((item) => {
+            return {
+                id: Number(item.id),
+                title: item.title,
+                status: item.status,
+                imgSrc: item.imgSrc,
+                price: Number(item.price),
+                color: item.color.split(","),
+                size: item.size.split(","),
+                desc: item.description,
+                rate: Number(item.rate),
+            };
+        });
+        dispatch(setAllProduct(data));
+    };
+    useEffect(() => {
+        fetchProduct();
+    }, []);
+    // console.log(products);
+    const renderListProduct = products.map((item, i) => {
         return (
             <Grid item lg={3} md={4} sm={6} key={i + 1}>
                 <ProductItem
@@ -15,7 +41,7 @@ const TabProduct = ({ productList }) => {
                     id={item.id}
                     title={item.title}
                     status={item.status}
-                    src={item.src}
+                    src={item.imgSrc}
                     price={item.price}
                     rate={item.rate}
                     color={item.color}
@@ -46,14 +72,8 @@ const TabProduct = ({ productList }) => {
                 </Grid>
                 <Grid container>{renderListProduct}</Grid>
             </Container>
-            
         </section>
     );
 };
 
-const mapStateToProps = (state) => {
-    return {
-        productList: state.products.products,
-    };
-};
-export default connect(mapStateToProps)(TabProduct);
+export default TabProduct;

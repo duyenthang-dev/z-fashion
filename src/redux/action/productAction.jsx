@@ -42,7 +42,12 @@ export function GetAllProduct(product) {
         product,
     };
 }
-
+export function setAllProduct(products) {
+    return {
+        type: "SET_ALL_PRODUCT",
+        payload: products,
+    }
+}
 /*GET NUMBER CART*/
 export function GetNumberCart() {
     return {

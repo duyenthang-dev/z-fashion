@@ -11,11 +11,9 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
-import Slide from "@mui/material/Slide";
 import Discount from "../ShopCart_discount/ShopCart_discount";
-function TransitionLeft(props) {
-    return <Slide {...props} direction="right" />;
-}
+// import { CSSTransition } from "react-transition-group";
+
 function ShopCart({ cart }) {
     //* calculate total price
     const [totalPrice, setTotalPrice] = useState(0);
@@ -103,7 +101,7 @@ function ShopCart({ cart }) {
                     </Grid>
                 </Container>
                 <Container className="mt-5">
-                    <Discount totalPrice = {totalPrice} />
+                    <Discount totalPrice={totalPrice} />
                 </Container>
             </section>
 
