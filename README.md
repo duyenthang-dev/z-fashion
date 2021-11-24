@@ -26,11 +26,11 @@ Tất cả code được viết trong thư mục src
      |__App.js
      |__index.js
 </pre>
-## Giải thích 1 số thư mục trong project
+## Cấu trúc thư mục
 
 ### `api`
 
-Thư mục này chứac các api như userApi...
+Thư mục này chứac các api của trang web như userApi, product api, bill api... Sử dụng axios để gửi resquest lên server.
 
 ### `assets`
 
