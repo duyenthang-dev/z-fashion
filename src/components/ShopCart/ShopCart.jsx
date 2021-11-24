@@ -45,7 +45,7 @@ function ShopCart({ cart }) {
             <CartItem
                 key={item.id}
                 id={item.id}
-                imgSrc={item.src}
+                imgSrc={item.imgSrc}
                 title={item.title}
                 price={item.price}
                 color={item.color}

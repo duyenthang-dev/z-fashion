@@ -1,48 +1,57 @@
-import React from 'react';
-import Grid from '@mui/material/Grid';
-import ImageAvatars from './paymentMethod';
-import './Bill.css';
-
+import React from "react";
+import Grid from "@mui/material/Grid";
+import ImageAvatars from "./paymentMethod";
+import "./Bill.css";
+import { useSelector } from "react-redux";
 function Bill() {
+    const cart = useSelector((state) => state.products.cart);
+    console.log(cart);
+    const totalPrice = cart.reduce((acc, item) =>acc + item.price*item.qty, 0);
     return (
         <div className="bill-frame">
             <div className="bill">
                 <h1>HÓA ĐƠN</h1>
                 <hr />
-                <Grid container>
-                    <Grid item xs={4}>
-                        <h2>Sản Phẩm</h2>
+                <Grid container className="info-bill">
+                    <Grid item >
+                        <h2 className="h2_1">Sản Phẩm</h2>
                         <ol className="left-list">
-                            <li>Bag</li>
-                            <li>Shirt</li>
-                            <li>Jean</li>
+                            {cart.map((item, idx) => {
+                                return <li key={idx}>{item.title} x {item.qty}</li>;
+                            })}
                         </ol>
                     </Grid>
-                    <Grid item xs={4}></Grid>
-                    <Grid item xs={4}>
-                        <h2>Tổng</h2>
+                    <Grid item >
+                        <h2 className="h2_2">Tổng</h2>
                         <ul className="right-list">
-                            <li> <b>200.000 đ</b> </li>
-                            <li> <b>200.000 đ</b> </li>
-                            <li> <b>200.000 đ</b> </li>
+                            {cart.map((item, idx) => {
+                                return <li key={idx}>{(item.price*item.qty).toLocaleString("it-IT", {style: "currency",currency: "VND",})}</li>;
+                            })}
                         </ul>
                     </Grid>
                 </Grid>
                 <hr />
-                <Grid container>
-                    <Grid item xs={4}>
+                <Grid container className="info-bill">
+                    <Grid items>
                         <ul className="left-list">
-                            <li> <b>Tổng</b> </li>
-                            <li> <b>Giảm giá</b> </li>
-                            <li> <b>Còn</b> </li>
+                            <li>
+                                <b>Tổng</b>
+                            </li>
+                            <li>
+                                <b>Giảm giá</b>
+                            </li>
+                            <li>
+                                <b>Còn</b>
+                            </li>
                         </ul>
                     </Grid>
-                    <Grid item xs={4}></Grid>
-                    <Grid item xs={4}>
+                    <Grid item>
                         <ul className="right-list price">
-                            <li>600.000 đ</li>
-                            <li>100.000 đ</li>
-                            <li> <b>500.000 đ</b> </li>
+                            <li>{totalPrice.toLocaleString("it-IT", {style: "currency",currency: "VND",})}</li>
+                            <li>{(0).toLocaleString("it-IT", {style: "currency",currency: "VND",})}</li>
+                            <li>
+                                <b>{totalPrice.toLocaleString("it-IT", {style: "currency",currency: "VND",})}</b>
+                            </li>
                         </ul>
                     </Grid>
                 </Grid>
@@ -50,7 +59,7 @@ function Bill() {
                 <ImageAvatars />
             </div>
         </div>
-    )
+    );
 }
 
 export default Bill;
