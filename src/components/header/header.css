@@ -149,3 +149,31 @@ a {
     transform-origin: center top;
     transform: scaleY(1);
 }
+.search{
+    position: relative;
+}
+.search-wrap{
+    z-index: 100;
+    position: absolute;
+    top:40%;
+    left: -17rem;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: 1px solid #e2dcdc;
+    transition: all 0.3s ease 0s;
+    
+}
+.search-wrap form{
+    display: flex;  
+    height: 3rem;
+}
+.search-wrap form input{
+    display: inline-block;
+    flex: 8;
+
+}
+.close-search{
+    display: inline-block;
+    z-index: 99;
+    flex:2;
+}

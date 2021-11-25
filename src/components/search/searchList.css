@@ -1,0 +1,8 @@
+.search-list__title h3{
+    font-size: 1.8rem;
+    text-transform: none;
+    font-weight: 600;
+}
+.search-list__title span{
+    text-transform: none;
+}

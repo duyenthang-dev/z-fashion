@@ -1,10 +1,13 @@
 import * as ActionType from "./../constants/actionType";
+import {removeVietnameseTones} from './../../helper/convertVie';
 //TODO: fetch api to get data here
 
 const initialState = {
     products: [],
     cart: [],
     currentItem: null,
+    searchItem: [],
+    keyword: null,
 };
 
 export const ProductReducer = (state = initialState, action) => {
@@ -83,6 +86,18 @@ export const ProductReducer = (state = initialState, action) => {
                 ...state,
                 products: action.payload,
             };
+        case ActionType.SEARCH_PRODUCT:
+            const keywords = removeVietnameseTones(action.payload).toLowerCase();
+            return {
+                ...state,
+                keyword: action.payload,
+                searchItem: state.products.map(item =>{
+                    const title = removeVietnameseTones(item.title).toLowerCase();
+                    if(title.includes(keywords) === true)
+                        return item;
+                    else return null;
+                }).filter(item => item !== null)
+            }
         default:
             return { ...state };
     }

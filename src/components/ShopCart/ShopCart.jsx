@@ -24,7 +24,6 @@ function ShopCart({ cart }) {
         });
         setTotalPrice(sum);
     }, [cart]);
-    console.log("TotalPrice: ", totalPrice);
     //* toast
     const [transition, setTransition] = React.useState(undefined);
     const [openToast, setOpenToast] = React.useState(false);

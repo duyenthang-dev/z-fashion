@@ -54,7 +54,12 @@ export function GetNumberCart() {
         type: "GET_NUMBER_CART",
     };
 }
-
+export function searchProduct(key){
+    return {
+        type: "SEARCH_PRODUCT",
+        payload: key,
+    }
+}
 export const updateCart = (product, color, size, qty =1) => {
     return {
         type: actionType.UPDATE_CART,

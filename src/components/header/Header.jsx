@@ -9,9 +9,13 @@ import SearchIcon from "@mui/icons-material/Search";
 import { Link, NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
-import './../../utility/css/utility.css';
+import { useDispatch} from "react-redux";
+import { FaTimes } from "react-icons/fa";
+import "./../../utility/css/utility.css";
+import { searchProduct } from "./../../redux/action/productAction";
+import { useHistory } from "react-router-dom";
 function Header({ cart }) {
-    // console.log(cart);
+    const dispatch = useDispatch();
     const [cartCount, setCartCount] = useState(0);
     useEffect(() => {
         let count = 0;
@@ -19,6 +23,13 @@ function Header({ cart }) {
         setCartCount(count);
     }, [cart]);
 
+    const [term, setTerm] = useState("");
+    const submitHandler = (e) => {
+        e.preventDefault();
+        console.log(term);
+        dispatch(searchProduct(term));
+    };
+    let history = useHistory();
     return (
         <div className="header">
             <Grid container>
@@ -36,10 +47,14 @@ function Header({ cart }) {
                                 <NavLink to="/home">Trang chủ</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/catalog" className="bar-effect">Cửa hàng</NavLink>
+                                <NavLink to="/catalog" className="bar-effect">
+                                    Cửa hàng
+                                </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/blog" className="bar-effect">Blog</NavLink>
+                                <NavLink to="/blog" className="bar-effect">
+                                    Blog
+                                </NavLink>
                             </li>
                             <li className="dropdown">
                                 <NavLink to="/blog">Điều hướng</NavLink>
@@ -85,8 +100,30 @@ function Header({ cart }) {
                         </div>
 
                         <div className="header__widget">
-                            <div className="serch">
+                            <div className="search ">
                                 <SearchIcon fontSize="large" />
+                                <div className="search-wrap">
+                                    <form action="#" onSubmit={(e) => {
+                                        submitHandler(e);
+                                        history.push('/search');
+                                    }}>
+                                        <input
+                                            type="text"
+                                            placeholder="Tìm kiếm ..."
+                                            onKeyDown={(e) => {
+                                                if (e.key === "Enter") {
+                                                    setTerm(e.target.value);
+                                                    
+                                                }
+                                            }}
+                                        />
+                                        <FaTimes
+                                            fontSize="2rem"
+                                            className="close-search"
+                                        />
+                                        {/* <SearchIcon fontSize="2rem" /> */}
+                                    </form>
+                                </div>
                             </div>
                             <div className="cart">
                                 <Link to="/cart">
