@@ -32,7 +32,6 @@ function ShopCart({ cart }) {
         setOpenToast(true);
     };
     const handleCloseToastSuccess = (event, reason) => {
-        console.log("close");
         if (reason === "clickaway") {
             return;
         }
