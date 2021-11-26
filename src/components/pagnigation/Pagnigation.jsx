@@ -11,7 +11,7 @@ export default function PaginationControlled() {
 
   return (
     <div style={{width: "100%"}}>
-      <Stack spacing={4} className="container">
+      <Stack spacing={4} className="container" >
         <Pagination size="large" variant="outlined" color="primary" count={5} page={page} onChange={handleChange} />
       </Stack>
     </div>
