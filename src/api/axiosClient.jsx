@@ -1,6 +1,7 @@
 import axios from "axios";
 const axiosClient = axios.create({
     baseUrl: "http://localhost/dev/backend_zfashion",
+    headers: { "Content-Type": "application/json" },
     // headers: {
     //     "Content-Type": "application/json",
     // },

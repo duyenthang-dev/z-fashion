@@ -1,6 +1,5 @@
 import * as ActionType from "./../constants/actionType";
 import {removeVietnameseTones} from './../../helper/convertVie';
-//TODO: fetch api to get data here
 
 const initialState = {
     products: [],
