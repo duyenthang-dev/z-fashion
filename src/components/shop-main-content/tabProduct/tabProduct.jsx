@@ -8,6 +8,7 @@ import {
     sweaterFemale,
     skirtFemale,
 } from "./../../../imageSource";
+
 const listProduct = [
     {
         id: 1,
