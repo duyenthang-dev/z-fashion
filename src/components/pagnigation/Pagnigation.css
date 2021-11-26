@@ -1,12 +1,8 @@
 .container {
-    display: block;
+    display:block;
+    justify-content: center;
     align-items: center;
+    margin:auto;
     width: auto;
-
-}
-
-.pagnigation__text:hover {
-    background-color: #000;
-    color: #fff;
 }
 

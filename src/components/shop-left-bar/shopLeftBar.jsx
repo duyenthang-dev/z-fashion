@@ -115,6 +115,8 @@ function ShopLeftBar() {
                     <div className="range-slider">
                         <div className="price-input">
                             <p>Giá: 100.000 - 600.000đ</p>
+                            <a className="filter__btn" href="/">Lọc</a>
+
                         </div>
                     </div>
                 </div>
@@ -209,7 +211,6 @@ function ShopLeftBar() {
                     </label>
                 </div>
             </div>
-            <a className="filter__btn" href="/">Lọc</a>
         </div>
     );
 };
