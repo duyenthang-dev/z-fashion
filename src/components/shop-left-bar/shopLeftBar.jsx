@@ -110,7 +110,7 @@ function ShopLeftBar() {
                     <h4>Lọc theo giá</h4>
                 </div>
                 <div style={{marginTop: "-15px"}}>
-                    <input type="range" class="form-range" min="0" max="10" id="customRange2"></input>
+                    <input type="range" className="form-range" min="0" max="10" id="customRange2"></input>
 
                     <div className="range-slider">
                         <div className="price-input">
