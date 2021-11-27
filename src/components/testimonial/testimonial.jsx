@@ -32,7 +32,7 @@ let list = [
 ];
 const renderListTesti = list.map((item, index) => {
     return (
-        <Grid item lg={4} key={index} >
+        <Grid item lg={4} key={index} data-aos="zoom-in" data-aos-delay="300" data-aos-anchor-placement="top-center">
             <TestiCard
                 rating={item.rate}
                 content={item.content}

@@ -35,8 +35,9 @@ let list = [
 ];
 
 const renderListBlog = list.map((item, index) => {
+    const delayTime = 100 + index*100 + "";
     return (
-        <Grid item lg={4} md={6} key={item.id}>
+        <Grid item lg={4} md={6} key={item.id} data-aos="flip-left" data-aos-delay={delayTime} data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center">
             <BlogSingle
                 id={item.id}
                 src={item.src}
