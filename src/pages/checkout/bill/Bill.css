@@ -16,7 +16,7 @@
 }
 
 .bill li {
-    font-size: 16px;
+    font-size: 1.5rem;
     padding-top: 26px;
     list-style-position: inside;
 }
@@ -30,11 +30,21 @@
     text-align: right;
     margin-right: 15px;
 }
-
+.info-bill{
+    display: flex;
+    justify-content: space-between;
+}
 .bill h2 {
     margin-top: 20px;
 }
-
+.h2_1{
+    text-align: left;
+    margin-left: 2rem;
+}
+.h2_2{
+    text-align: right;
+    margin-right: 1.5rem;
+}
 .price {
     color: red;
 }

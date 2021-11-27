@@ -1,9 +1,11 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import ImageAvatars from "./paymentMethod";
+
 import "./Bill.css";
 
 function Bill() {
+
     return (
         <div className="bill-frame">
             <div className="bill">

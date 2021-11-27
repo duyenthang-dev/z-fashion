@@ -42,14 +42,24 @@ export function GetAllProduct(product) {
         product,
     };
 }
-
+export function setAllProduct(products) {
+    return {
+        type: "SET_ALL_PRODUCT",
+        payload: products,
+    }
+}
 /*GET NUMBER CART*/
 export function GetNumberCart() {
     return {
         type: "GET_NUMBER_CART",
     };
 }
-
+export function searchProduct(key){
+    return {
+        type: "SEARCH_PRODUCT",
+        payload: key,
+    }
+}
 export const updateCart = (product, color, size, qty =1) => {
     return {
         type: actionType.UPDATE_CART,

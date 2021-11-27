@@ -14,7 +14,9 @@ const Checkout = lazy(() => import("./pages/checkout/checkout"));
 //contact pages
 const Contact = lazy(() => import("./pages/contact/contact"));
 //product details pages
-const ProductDetail = lazy(() =>import("./pages/product-details/productDetail"));
+const ProductDetail = lazy(() =>
+    import("./pages/product-details/productDetail")
+);
 //blog pages
 const Blog = lazy(() => import("./pages/blog/blog"));
 //whishlist pages
@@ -23,7 +25,8 @@ const Whishlist = lazy(() => import("./pages/whishlist/whishlist"));
 const MyAccount = lazy(() => import("./pages/my-account/myAccount"));
 //Login pages
 const Login = lazy(() => import("./pages/login-register/login"));
-const Register = lazy(() => import("./pages/login-register/register"))
+const Register = lazy(() => import("./pages/login-register/register"));
+const Search = lazy(() => import("./pages/search/search"));
 function App() {
     return (
         <div className="App">
@@ -35,12 +38,16 @@ function App() {
                         <Route path="/cart" component={Cart} />
                         <Route path="/check-out" component={Checkout} />
                         <Route path="/contact" component={Contact} />
-                        <Route path="/product-detail" component={ProductDetail}/>
+                        <Route
+                            path="/product-detail"
+                            component={ProductDetail}
+                        />
                         <Route path="/blog" component={Blog} />
                         <Route path="/whishlist" component={Whishlist} />
                         <Route path="/my-account" component={MyAccount} />
                         <Route path="/login" component={Login} />
                         <Route path="/register" component={Register} />
+                        <Route path="/search" component={Search} />
                         <Route path="/" component={Root} />
                         {/* <Route exact component={NotFound} /> */}
                     </Switch>

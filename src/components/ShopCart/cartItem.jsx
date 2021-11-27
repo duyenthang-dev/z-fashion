@@ -24,8 +24,6 @@ const CartItem = (props) => {
         qty: props.qty,
         subtotal: props.subtotal,
     };
-    console.log(prod.id, prod.color, prod.size);
-
    
     return (
         <Fragment>

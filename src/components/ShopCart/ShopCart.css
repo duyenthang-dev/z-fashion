@@ -114,6 +114,9 @@
     text-align: center;
     color: #ff2f2f;
 }
+.shop-cart__table tbody > tr{
+    transition:  all 0.75s ease;
+}
 .product-remove {
     text-align: center;
 }

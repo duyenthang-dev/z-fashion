@@ -13,6 +13,7 @@ import Discount from "./../../container/discount/index";
 import Gallery from "./../../components/gallery/gallery";
 
 const Home = () => {
+    
     return (
         <Fragment>
             <MetaTags>

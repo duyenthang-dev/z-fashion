@@ -11,11 +11,9 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
-import Slide from "@mui/material/Slide";
 import Discount from "../ShopCart_discount/ShopCart_discount";
-function TransitionLeft(props) {
-    return <Slide {...props} direction="right" />;
-}
+// import { CSSTransition } from "react-transition-group";
+
 function ShopCart({ cart }) {
     //* calculate total price
     const [totalPrice, setTotalPrice] = useState(0);
@@ -26,7 +24,6 @@ function ShopCart({ cart }) {
         });
         setTotalPrice(sum);
     }, [cart]);
-    console.log("TotalPrice: ", totalPrice);
     //* toast
     const [transition, setTransition] = React.useState(undefined);
     const [openToast, setOpenToast] = React.useState(false);
@@ -35,7 +32,6 @@ function ShopCart({ cart }) {
         setOpenToast(true);
     };
     const handleCloseToastSuccess = (event, reason) => {
-        console.log("close");
         if (reason === "clickaway") {
             return;
         }
@@ -47,7 +43,7 @@ function ShopCart({ cart }) {
             <CartItem
                 key={item.id}
                 id={item.id}
-                imgSrc={item.src}
+                imgSrc={item.imgSrc}
                 title={item.title}
                 price={item.price}
                 color={item.color}
@@ -103,7 +99,7 @@ function ShopCart({ cart }) {
                     </Grid>
                 </Container>
                 <Container className="mt-5">
-                    <Discount totalPrice = {totalPrice} />
+                    <Discount totalPrice={totalPrice} />
                 </Container>
             </section>
 

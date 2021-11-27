@@ -10,7 +10,7 @@ import HomeLogo from './home-logo-icon-0.jpg';
 
 export default function CustomSeparator() {
   const breadcrumbs = [
-    <img src={HomeLogo} alt="" style={{height: 24}}/>,
+    <img src={HomeLogo} alt="" style={{height: 24}} key="-1"/>,
     <Link underline="hover" key="1" color="inherit" href="/" to={'/home'} style={{fontSize: 16}}>
       Trang chủ
     </Link>,
