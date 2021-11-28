@@ -11,34 +11,34 @@ import { useState, useEffect } from "react";
 import {Login} from './../../redux/action/userAction';
 import "./login.css";
 function LoginCompo() {
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
     const [user, setUser] = useState({
         username: "",
         password: "",
     })
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const config = {
-            headers: {
-                "Content-Type": "text/plain;charset=utf-8",
-            },
-        };
-        console.log(user);
-        const jsonData = JSON.stringify(user);
-        axios
-            .post(
-                "http://localhost/dev/backend_zfashion/sessions",
-                jsonData,
-                config
-            )
-            .then((response) => {
-                const a = response.data;
-                const a1 = a.data;
-                localStorage.setItem("user", a1);
-                dispatch(Login(a1));
-            });
-    };
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     const config = {
+    //         headers: {
+    //             "Content-Type": "text/plain;charset=utf-8",
+    //         },
+    //     };
+    //     console.log(user);
+    //     const jsonData = JSON.stringify(user);
+    //     axios
+    //         .post(
+    //             "http://localhost/dev/backend_zfashion/sessions",
+    //             jsonData,
+    //             config
+    //         )
+    //         .then((response) => {
+    //             const a = response.data;
+    //             const a1 = a.data;
+    //             localStorage.setItem("user", a1);
+    //             dispatch(Login(a1));
+    //         });
+    // };
     return (
         <Container maxWidth="lg" className="mt-5 mb-6">
             <Grid container>
@@ -57,7 +57,7 @@ function LoginCompo() {
                         <div className="Login_frame">
                             <h1>Đăng Nhập</h1>
 
-                            <form action="" onSubmit={handleSubmit}>
+                            <form action="" >
                                 <div className="login_box">
                                     <input
                                         className="username"

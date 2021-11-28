@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 import { signUp } from "./../../redux/action/userAction";
 import axios from 'axios';
 const Register = (e) => {
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     const [user, setUser] = useState({
         username: "",
         fullname: "",
@@ -17,32 +17,32 @@ const Register = (e) => {
         password: "",
         phoneNumber: "",
     });
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const config = {
-            headers: {
-                "Content-Type": "text/plain",
-            },
-        };
-        const jsonData = JSON.stringify(user);
-        console.log(user);
-        axios
-            .post(
-                "http://localhost/dev/backend_zfashion/users",
-                jsonData,
-                config
-            )
-            .then((response) => {
-                const a = response.data;
-                console.log(a.data);
-                dispatch(signUp(a.data));
-            });
-    };
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     const config = {
+    //         headers: {
+    //             "Content-Type": "text/plain",
+    //         },
+    //     };
+    //     const jsonData = JSON.stringify(user);
+    //     console.log(user);
+    //     axios
+    //         .post(
+    //             "http://localhost/dev/backend_zfashion/users",
+    //             jsonData,
+    //             config
+    //         )
+    //         .then((response) => {
+    //             const a = response.data;
+    //             console.log(a.data);
+    //             dispatch(signUp(a.data));
+    //         });
+    // };
 
     return (
         <Container maxWidth="lg" className="mt-5">
             <div className="Signup_text">Đăng Ký</div>
-            <form onSubmit={(e) => handleSubmit(e)}>
+            <form>
                 <Grid container className="mt-5" spacing={10}>
                     <Grid item lg={6}>
                         <div className="input_box mt-3">
