@@ -5,8 +5,40 @@ import fb_logo from "./../../assets/images/logo/fb.png";
 import gg_logo from "./../../assets/images/logo/gg.png";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+import {Login} from './../../redux/action/userAction';
 import "./login.css";
 function LoginCompo() {
+    const dispatch = useDispatch();
+
+    const [user, setUser] = useState({
+        username: "",
+        password: "",
+    })
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const config = {
+            headers: {
+                "Content-Type": "text/plain;charset=utf-8",
+            },
+        };
+        console.log(user);
+        const jsonData = JSON.stringify(user);
+        axios
+            .post(
+                "http://localhost/dev/backend_zfashion/sessions",
+                jsonData,
+                config
+            )
+            .then((response) => {
+                const a = response.data;
+                const a1 = a.data;
+                localStorage.setItem("user", a1);
+                dispatch(Login(a1));
+            });
+    };
     return (
         <Container maxWidth="lg" className="mt-5 mb-6">
             <Grid container>
@@ -25,21 +57,37 @@ function LoginCompo() {
                         <div className="Login_frame">
                             <h1>Đăng Nhập</h1>
 
-                            <div className="login_box">
-                                <input
-                                    className="username"
-                                    type="text"
-                                    placeholder="Email/Số điện thoại/User name"
-                                />
-                                <br />
-                                <input
-                                    className="pass"
-                                    type="password"
-                                    placeholder="Mật khẩu"
-                                />
-                            </div>
+                            <form action="" onSubmit={handleSubmit}>
+                                <div className="login_box">
+                                    <input
+                                        className="username"
+                                        type="text"
+                                        placeholder="Email/Số điện thoại/User name"
+                                        onChange={(e) =>
+                                            setUser({
+                                                ...user,
+                                                username: e.target.value,
+                                            })
+                                        }
+                                    />
+                                    <br />
+                                    <input
+                                        className="pass"
+                                        type="password"
+                                        placeholder="Mật khẩu"
+                                        onChange={(e) =>
+                                            setUser({
+                                                ...user,
+                                                password: e.target.value,
+                                            })
+                                        }
+                                    />
+                                </div>
 
-                            <button className="login_text btn-login">Đăng nhập</button>
+                                <button className="login_text btn-login">
+                                    Đăng nhập
+                                </button>
+                            </form>
 
                             <br />
                             <div className="lostpass">

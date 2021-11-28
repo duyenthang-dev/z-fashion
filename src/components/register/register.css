@@ -1,86 +1,59 @@
-.Regist_compo {
-    width: 1350px;
-    height: 800px;
-    margin: auto;
-    margin-top: 115px;
-}
-
-.input_box {
-    width: 400px;
-    height: 70px;
-}
-
 .redflag {
     text-align: left;
     color: crimson;
-    font-family: "Montserrat", sans-serif !important;
     font-size: 10px;
 }
 
 .info {
     text-align: left;
     color: black;
-    font-family: "Montserrat", sans-serif !important;
     font-size: 15px;
 }
 
+.input_box {
+    display: flex;
+    /* gap: 5rem; */
+    justify-content: space-between;
+    height: 5rem;
+}
 .input_box_right {
-    width: 240px;
-    height: 30px;
-
     border-radius: 30px;
     background-color: #dfdcdc;
     border: none;
+    flex: 5;
+    padding-left: 2rem;
 }
-
+.input_box_left {
+    flex: 3;
+}
+.input_box_left > *:first-child {
+    margin-bottom: 1rem;
+}
 .Signup_text {
-    font-size: 30px;
-    font-family: sans-serif;
-    height: 35px;
-    font-family: "Montserrat", sans-serif !important;
+    font-size: 2.5rem;
 }
 
 .Sign_up_text {
     width: 180px;
     height: 45px;
-    color: D6D6D6;
+    color: #d6d6d6;
     border: none;
     border-radius: 4px;
-    font-family: "Montserrat", sans-serif !important;
     font-size: 20px;
     margin-top: 40px;
 }
 
 .hr_signin {
     width: 850px;
-    margin-left: 250px;
-    margin-top: 10px;
 }
 
-.checkbox {
-    float: left;
+.Regist_compo >*:not(:first-child){
+    margin-top: 2rem;
 }
-
-.accept_rules_text {
-    float: left;
-}
-
-.Condition {
-    height: 30px;
-    width: 400px;
-    margin: auto;
-}
-
-.rules {
-    float: right;
-    text-align: center;
-    margin-right: 0px;
-}
-
 .login3rd {
     width: 30%;
     height: 5rem;
-    gap: 2rem;
+
     margin: 0 auto;
     display: flex;
 }
@@ -94,32 +67,22 @@
 
 .gg_link {
     margin-top: 12.5px;
-    margin-right: 70px;
-    float: right;
     text-align: center;
 }
 
-.Another_way_to_login {
-    margin-top: 26px;
-}
-
 .Login_text {
-    font-family: "Montserrat", sans-serif !important;
     font-size: 15px;
     color: #5b5959;
     float: left;
     text-align: center;
-    margin-left: 100px;
     margin-top: 12.5px;
 }
 
 .Login_link {
-    font-family: "Montserrat", sans-serif !important;
     font-size: 20px;
     color: #245ae4;
     float: right;
     text-align: center;
-    margin-right: 107px;
     margin-top: 10px;
 }
 
@@ -128,7 +91,6 @@
     height: 60px;
     margin-top: 20px;
     text-align: center;
-    margin-left: 450px;
 }
 
 .Another_way_to_login {
@@ -161,11 +123,22 @@
     transform: scaleX(0);
     transition: transform 0.25s ease-in-out;
 }
-.btn-signup:hover{
+.btn-signup:hover {
     cursor: pointer;
-   
 }
-.btn-signup:hover::before{
+.btn-signup:hover::before {
     transform-origin: center left;
     transform: scaleX(1);
+}
+.mt-5 {
+    margin-top: 5rem;
+}
+.mt-10 {
+    margin-top: 10rem;
+}
+.mt-3 {
+    margin-top: 3rem;
+}
+.LoginIn{
+    margin: 0 auto;
 }

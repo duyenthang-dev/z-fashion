@@ -27,13 +27,13 @@ function Header({ cart }) {
     const [hidden, setHidden] = useState("hidden");
     const [toggle, setToggle] = useState("");
     const submitHandler = (e = null) => {
-        if(e !== null)
-            e.preventDefault();
+        if (e !== null) e.preventDefault();
         console.log(term);
-        document.querySelector('.search-wrap form input').value = "";
+        document.querySelector(".search-wrap form input").value = "";
         dispatch(searchProduct(term));
     };
     let history = useHistory();
+    
     return (
         <div className="header">
             <Grid container>
@@ -98,24 +98,33 @@ function Header({ cart }) {
                 <Grid item lg={3} className="item3">
                     <div className="header__right">
                         <div className="header__auth">
-                            <a href="/login">Đăng nhập</a>
-                            <span>/</span>
-                            <a href="/register">Đăng kí</a>
+                            {/* {auth()} */}
+                            <div>
+                                <a href="/login">Đăng nhập</a>
+                                <span>/</span>
+                                <a href="/register">Đăng kí</a>
+                            </div>
                         </div>
 
                         <div className="header__widget">
                             <div className="search ">
-                                <GrClose fontSize="1.8rem" className={hidden}
+                                <GrClose
+                                    fontSize="1.8rem"
+                                    className={hidden}
                                     onClick={() => {
                                         setHidden("hidden");
                                         setToggle("");
-                                    }} 
+                                    }}
+                                    style={{ cursor: "pointer" }}
                                 />
-                                <BsSearch fontSize="1.8rem" className={toggle} 
-                                    onClick = {() => {
+                                <BsSearch
+                                    fontSize="1.8rem"
+                                    className={toggle}
+                                    onClick={() => {
                                         setHidden("");
                                         setToggle("hidden");
                                     }}
+                                    style={{ cursor: "pointer" }}
                                 />
                                 <div className={`search-wrap ${hidden}`}>
                                     <form
@@ -133,23 +142,24 @@ function Header({ cart }) {
                                             }}
                                         />
                                         <div className="close-search">
-                                            <BsSearch fontSize="2rem"
-                                                onClick={() =>{
-                                                    const value = document.querySelector('.search-wrap form input').value;
-                                                    if(value !== '')
-                                                    {
-                                                        console.log(typeof value);
+                                            <BsSearch
+                                                fontSize="2rem"
+                                                onClick={() => {
+                                                    const value =
+                                                        document.querySelector(
+                                                            ".search-wrap form input"
+                                                        ).value;
+                                                    if (value !== "") {
+                                                        console.log(
+                                                            typeof value
+                                                        );
                                                         setTerm(value);
                                                         submitHandler();
                                                         history.push("/search");
-                                                        
                                                     }
-                                                     
                                                 }}
-                                             />
+                                            />
                                         </div>
-
-                                        {/* <SearchIcon fontSize="2rem" /> */}
                                     </form>
                                 </div>
                             </div>

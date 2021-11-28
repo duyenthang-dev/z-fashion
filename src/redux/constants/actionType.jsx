@@ -10,3 +10,7 @@ export const ADJUST_QTY = "ADJUST_QTY";
 export const FILTER_PRODUCT_BY_GENDER = "FILTER_PRODUCT_BY_GENDER";
 export const FILTER_PRODUCT_BY_PRICE = "FILTER_PRODUCT_BY_PRICE";
 export const SEARCH_PRODUCT = "SEARCH_PRODUCT";
+
+export const LOGIN = "LOGIN";
+export const LOGOUT = "LOGOUT";
+export const SIGNUP = "SIGNUP";
