@@ -38,12 +38,7 @@ Thư mục chứa các hình ảnh, video, ...
 
 ### `components`
 
-Thư mục chứa các component của 1 trang web. Đây là những UI components, chỉ có nhiệm vụ render theo yêu cầu, không xử lí logic, state ở đây (presentational components)
-
-### `container`
-Thư mục chứa các component xử lí logic cho các UI components. Đây là những components cha, có nhiệm vụ truyền các props cho các UI components (container  components)
-
-
+Thư mục chứa các component của 1 trang web
 ### `data`
 Các file json dữ liệu cho trang web như thông tin sản phẩm, bài blog, ...
 
