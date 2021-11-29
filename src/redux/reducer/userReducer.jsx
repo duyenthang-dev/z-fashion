@@ -1,21 +1,20 @@
 import * as ActionType from "./../constants/actionType";
 const initialState = {
-    users: localStorage.getItem("user"),
+    user: [],
+    currentUser: "",
 };
+
 export const UserReducer = (state = initialState, action) => {
-    console.log(action.payload)
     switch (action.type) {
-        case ActionType.SIGNUP:
-            return{
-                ...state,
-                users: action.payload.user,
-            }
         case ActionType.LOGIN:
-            return{
+            console.log(action?.payload?.username);
+            return {
                 ...state,
-                users: action.payload.user,
-            }
+                currentUser: action.payload?.username,
+            };
         default:
-            return {...state};
+            return {
+                ...state,
+            };
     }
 };

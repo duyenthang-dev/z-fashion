@@ -6,10 +6,10 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
-import { signUp } from "./../../redux/action/userAction";
+// import { signUp } from "./../../redux/action/userAction";
 import axios from 'axios';
 const Register = (e) => {
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const [user, setUser] = useState({
         username: "",
         fullname: "",

@@ -3,7 +3,6 @@ const axiosClient = axios.create({
     // baseUrl: "http://localhost/dev/backend_zfashion",
     headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
     },
     // headers: {
     //     "Content-Type": "application/json",

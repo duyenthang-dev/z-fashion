@@ -5,40 +5,39 @@ import fb_logo from "./../../assets/images/logo/fb.png";
 import gg_logo from "./../../assets/images/logo/gg.png";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import { useState, useEffect } from "react";
-import {Login} from './../../redux/action/userAction';
 import "./login.css";
-function LoginCompo() {
-    // const dispatch = useDispatch();
 
+function LoginCompo() {
     const [user, setUser] = useState({
         username: "",
         password: "",
-    })
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     const config = {
-    //         headers: {
-    //             "Content-Type": "text/plain;charset=utf-8",
-    //         },
-    //     };
-    //     console.log(user);
-    //     const jsonData = JSON.stringify(user);
-    //     axios
-    //         .post(
-    //             "http://localhost/dev/backend_zfashion/sessions",
-    //             jsonData,
-    //             config
-    //         )
-    //         .then((response) => {
-    //             const a = response.data;
-    //             const a1 = a.data;
-    //             localStorage.setItem("user", a1);
-    //             dispatch(Login(a1));
-    //         });
-    // };
+    });
+    const handleSubmit = (e) => {
+        // e.preventDefault();
+        const config = {
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+        };
+        axios
+            .post("http://localhost/dev/backend_zfashion/sessions",JSON.stringify(user),config)
+            .then((response) => {
+                if (response?.data?.data?.access_token) {
+                    localStorage.setItem("access_token",response.data?.data?.access_token);
+                }
+                if (response?.data?.data?.refresh_token) {
+                    localStorage.setItem("refresh_token",response.data?.data?.refresh_token);
+                }
+                localStorage.setItem('username', response.data?.data?.username);
+            })
+            .catch((error) => {
+                console.log(error?.response?.data.success);
+            });
+    };
     return (
         <Container maxWidth="lg" className="mt-5 mb-6">
             <Grid container>
@@ -57,7 +56,11 @@ function LoginCompo() {
                         <div className="Login_frame">
                             <h1>Đăng Nhập</h1>
 
-                            <form action="" >
+                            <form
+                                onSubmit={(e) => {
+                                    handleSubmit(e);
+                                }}
+                            >
                                 <div className="login_box">
                                     <input
                                         className="username"
@@ -128,9 +131,9 @@ function LoginCompo() {
 
                         <div className="SignUp">
                             <p className="signuptext">Chưa có tài khoản?</p>
-                            <a className="signuplink" href="/register">
+                            <Link className="signuplink" to="/register">
                                 Đăng ký
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </Grid>

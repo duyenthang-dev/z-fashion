@@ -8,7 +8,7 @@ import Badge from "@mui/material/Badge";
 import { Link, NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./../../utility/css/utility.css";
 import { searchProduct } from "./../../redux/action/productAction";
 import { useHistory } from "react-router-dom";
@@ -33,7 +33,14 @@ function Header({ cart }) {
         dispatch(searchProduct(term));
     };
     let history = useHistory();
-    
+    //* get user name
+    const [username, setUsername] = useState(localStorage.getItem("username"));
+    const [click, setClick] = useState(false);
+    useEffect(() => {
+        console.log(username);
+        setUsername(localStorage.getItem("username"));
+    }, [click]);
+    console.log(username);
     return (
         <div className="header">
             <Grid container>
@@ -98,12 +105,18 @@ function Header({ cart }) {
                 <Grid item lg={3} className="item3">
                     <div className="header__right">
                         <div className="header__auth">
-                            {/* {auth()} */}
-                            <div>
-                                <a href="/login">Đăng nhập</a>
-                                <span>/</span>
-                                <a href="/register">Đăng kí</a>
-                            </div>
+                            {username !== null && (
+                                <div>
+                                    <Link to="/my-account">Xin chào, {username}</Link>
+                                </div>
+                            )}
+                            {username === null && (
+                                <div>
+                                    <a href="/login">Đăng nhập</a>
+                                    <span>/</span>
+                                    <a href="/register">Đăng kí</a>
+                                </div>
+                            )}
                         </div>
 
                         <div className="header__widget">
@@ -130,6 +143,7 @@ function Header({ cart }) {
                                     <form
                                         action="#"
                                         onSubmit={(e) => {
+                                            setClick(true);
                                             submitHandler(e);
                                             history.push("/search");
                                         }}
