@@ -1,214 +1,144 @@
-.Regist_compo
-{   width: 1350px;
-    height: 800px;
-    margin: auto;
-    margin-top: 115px;
-    
-    
-}
-
-.Info_frame
-
-{
-    width: 1350px;
-    height: 300px;
-    align-content: center;
-    margin-top: 75px;
-}
-
-.Info_frame_left
-{
-    width: 400px;
-    height: 300px;
-    float: left;
-    text-align: center;
-    margin-left: 250px;
-}
-
-.Info_frame_right
-{
-    width: 400px;
-    height: 300px;
-    float: right;
-    text-align: center;
-    margin-right: 250px;
-}
-
-.input_box
-{
-    width: 400px;
-    height: 70px;
-}
-
-.input_box_left
-{
-    float: left;
-    text-align: center;
-}
-
-.input_box_right
-{
-    float: right;
-    text-align: center;
-}
-
-.redflag
-{
+.redflag {
     text-align: left;
     color: crimson;
-    font-family: "Montserrat", sans-serif !important;
     font-size: 10px;
 }
 
-.info
-{
+.info {
     text-align: left;
     color: black;
-    font-family: "Montserrat", sans-serif !important;
     font-size: 15px;
 }
 
-.input_box_right
-{
-    width: 240px;
-    height: 30px;
-    
+.input_box {
+    display: flex;
+    /* gap: 5rem; */
+    justify-content: space-between;
+    height: 5rem;
+}
+.input_box_right {
     border-radius: 30px;
-    background-color: #DFDCDC;
+    background-color: #dfdcdc;
     border: none;
+    flex: 5;
+    padding-left: 2rem;
+}
+.input_box_left {
+    flex: 3;
+}
+.input_box_left > *:first-child {
+    margin-bottom: 1rem;
+}
+.Signup_text {
+    font-size: 2.5rem;
 }
 
-.Signup_text
-{
-
-
-    font-size: 30px;
-  font-family: sans-serif;
-  height: 35px;
-  font-family: "Montserrat", sans-serif !important;
-  
-}
-
-.Sign_up_text
-{
+.Sign_up_text {
     width: 180px;
     height: 45px;
-    color: D6D6D6;
+    color: #d6d6d6;
     border: none;
     border-radius: 4px;
-    font-family: "Montserrat", sans-serif !important;
     font-size: 20px;
     margin-top: 40px;
-    
 }
 
-.hr_signin
-{
-   width: 850px;
-   margin-left: 250px;
-   margin-top: 10px;
-   
+.hr_signin {
+    width: 850px;
 }
 
-.checkbox
-{
-    float: left;
-   
+.Regist_compo >*:not(:first-child){
+    margin-top: 2rem;
 }
+.login3rd {
+    width: 30%;
+    height: 5rem;
 
-
-.accept_rules_text
-{
-    float: left;
-    
-}
-
-.Condition
-{
-    height: 30px;
-    width: 400px;
-    margin: auto;
-}
-
-.rules
-{
-    float: right;
-    text-align: center;
-    margin-right: 0px;
-    
-}
-
-
-
-
-.login3rd
-{
- 
-    width: 355px;
-    height: 38px;
     margin: 0 auto;
+    display: flex;
 }
 
-.fb_link
-
-{
+.fb_link {
     margin-top: 15px;
     margin-left: 70px;
     float: left;
     text-align: center;
 }
 
-.gg_link
-{
+.gg_link {
     margin-top: 12.5px;
-    margin-right: 70px;
-    float: right;
     text-align: center;
 }
 
-.Another_way_to_login
-{
-    margin-top: 26px;
-    
-}
-
-.Login_text
-{
-    font-family: "Montserrat", sans-serif !important;
+.Login_text {
     font-size: 15px;
-    color: #5B5959;
+    color: #5b5959;
     float: left;
     text-align: center;
-    margin-left: 100px;
     margin-top: 12.5px;
 }
 
-.Login_link
-{
-    font-family: "Montserrat", sans-serif !important;
+.Login_link {
     font-size: 20px;
-    color: #245AE4;
+    color: #245ae4;
     float: right;
     text-align: center;
-    margin-right: 107px;
     margin-top: 10px;
 }
 
-.LoginIn
-{
-
+.LoginIn {
     width: 450px;
     height: 60px;
     margin-top: 20px;
     text-align: center;
-    margin-left: 450px;
-     
 }
 
-
-.Another_way_to_login
-{
+.Another_way_to_login {
     font-family: "Montserrat", sans-serif !important;
     font-size: 22px;
     font-weight: bold;
+}
+
+.btn-signup {
+    z-index: 1;
+    position: relative;
+    color: white;
+    padding: 1.5rem 3rem;
+    outline: none;
+    border: none;
+    background-color: hsl(236, 32%, 26%);
+    font-size: 1.6rem;
+}
+
+.btn-signup:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ff4938;
+    transform-origin: center right;
+    transform: scaleX(0);
+    transition: transform 0.25s ease-in-out;
+}
+.btn-signup:hover {
+    cursor: pointer;
+}
+.btn-signup:hover::before {
+    transform-origin: center left;
+    transform: scaleX(1);
+}
+.mt-5 {
+    margin-top: 5rem;
+}
+.mt-10 {
+    margin-top: 10rem;
+}
+.mt-3 {
+    margin-top: 3rem;
+}
+.LoginIn{
+    margin: 0 auto;
 }

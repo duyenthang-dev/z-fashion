@@ -5,15 +5,15 @@ import logo from "../../../src/assets/images/logo/logo.png";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Badge from "@mui/material/Badge";
-import SearchIcon from "@mui/icons-material/Search";
 import { Link, NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
-import { useDispatch} from "react-redux";
-import { FaTimes } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
 import "./../../utility/css/utility.css";
 import { searchProduct } from "./../../redux/action/productAction";
 import { useHistory } from "react-router-dom";
+import { BsSearch } from "react-icons/bs";
+import { GrClose } from "react-icons/gr";
 function Header({ cart }) {
     const dispatch = useDispatch();
     const [cartCount, setCartCount] = useState(0);
@@ -24,12 +24,23 @@ function Header({ cart }) {
     }, [cart]);
 
     const [term, setTerm] = useState("");
-    const submitHandler = (e) => {
-        e.preventDefault();
+    const [hidden, setHidden] = useState("hidden");
+    const [toggle, setToggle] = useState("");
+    const submitHandler = (e = null) => {
+        if (e !== null) e.preventDefault();
         console.log(term);
+        document.querySelector(".search-wrap form input").value = "";
         dispatch(searchProduct(term));
     };
     let history = useHistory();
+    //* get user name
+    const [username, setUsername] = useState(localStorage.getItem("username"));
+    const [click, setClick] = useState(false);
+    useEffect(() => {
+        console.log(username);
+        setUsername(localStorage.getItem("username"));
+    }, [click]);
+    console.log(username);
     return (
         <div className="header">
             <Grid container>
@@ -94,34 +105,75 @@ function Header({ cart }) {
                 <Grid item lg={3} className="item3">
                     <div className="header__right">
                         <div className="header__auth">
-                            <a href="/login">Đăng nhập</a>
-                            <span>/</span>
-                            <a href="/register">Đăng kí</a>
+                            {username !== null && (
+                                <div>
+                                    <Link to="/my-account">Xin chào, {username}</Link>
+                                </div>
+                            )}
+                            {username === null && (
+                                <div>
+                                    <a href="/login">Đăng nhập</a>
+                                    <span>/</span>
+                                    <a href="/register">Đăng kí</a>
+                                </div>
+                            )}
                         </div>
 
                         <div className="header__widget">
                             <div className="search ">
-                                <SearchIcon fontSize="large" />
-                                <div className="search-wrap">
-                                    <form action="#" onSubmit={(e) => {
-                                        submitHandler(e);
-                                        history.push('/search');
-                                    }}>
+                                <GrClose
+                                    fontSize="1.8rem"
+                                    className={hidden}
+                                    onClick={() => {
+                                        setHidden("hidden");
+                                        setToggle("");
+                                    }}
+                                    style={{ cursor: "pointer" }}
+                                />
+                                <BsSearch
+                                    fontSize="1.8rem"
+                                    className={toggle}
+                                    onClick={() => {
+                                        setHidden("");
+                                        setToggle("hidden");
+                                    }}
+                                    style={{ cursor: "pointer" }}
+                                />
+                                <div className={`search-wrap ${hidden}`}>
+                                    <form
+                                        action="#"
+                                        onSubmit={(e) => {
+                                            setClick(true);
+                                            submitHandler(e);
+                                            history.push("/search");
+                                        }}
+                                    >
                                         <input
                                             type="text"
                                             placeholder="Tìm kiếm ..."
-                                            onKeyDown={(e) => {
-                                                if (e.key === "Enter") {
-                                                    setTerm(e.target.value);
-                                                    
-                                                }
+                                            onChange={(e) => {
+                                                setTerm(e.target.value);
                                             }}
                                         />
-                                        <FaTimes
-                                            fontSize="2rem"
-                                            className="close-search"
-                                        />
-                                        {/* <SearchIcon fontSize="2rem" /> */}
+                                        <div className="close-search">
+                                            <BsSearch
+                                                fontSize="2rem"
+                                                onClick={() => {
+                                                    const value =
+                                                        document.querySelector(
+                                                            ".search-wrap form input"
+                                                        ).value;
+                                                    if (value !== "") {
+                                                        console.log(
+                                                            typeof value
+                                                        );
+                                                        setTerm(value);
+                                                        submitHandler();
+                                                        history.push("/search");
+                                                    }
+                                                }}
+                                            />
+                                        </div>
                                     </form>
                                 </div>
                             </div>

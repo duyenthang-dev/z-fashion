@@ -34,8 +34,10 @@ const TabProduct = () => {
     }, []);
     // console.log(products);
     const renderListProduct = products.map((item, i) => {
+        const animationName = ((i % 4) < 2)? "fade-right": "fade-left";
+        const delayAnimate = 100 + Math.abs(i % 4 - 1.5) * 100 + ""; 
         return (
-            <Grid item lg={3} md={4} sm={6} key={i + 1}>
+            <Grid item lg={3} md={4} sm={6} key={i + 1} data-aos={animationName} data-aos-delay={delayAnimate} data-aos-easing="ease-out">
                 <ProductItem
                     key={item.id}
                     id={item.id}

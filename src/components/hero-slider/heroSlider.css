@@ -3,6 +3,7 @@
     background-color: #fbe5d9;
     color: #333;
     text-align: left;
+    overflow: hidden;
 }
 
 .hero-animate .category {
