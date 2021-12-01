@@ -1,0 +1,800 @@
+commit f555c48377c3413707bb04a46671020c01c5b3dd
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Mon Nov 29 21:44:14 2021 +0700
+
+    login feature
+
+commit edc364d54b40b753947070f4f0dffc4be59ad3c9
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Sun Nov 28 18:33:17 2021 +0700
+
+    a
+
+commit 63b99707aa6a2a9b98bec69c1eb0725e48abd34e
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Sun Nov 28 18:25:07 2021 +0700
+
+    code login regis tẻ
+
+commit 3fce497173eb4afec6770843b7ff8143b3faba56
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Sat Nov 27 17:31:30 2021 +0700
+
+    thêm animation cho homepage
+
+commit a826591ca5b8bbc01fc8f57dcd538f22cc7c64b2
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Sat Nov 27 12:56:53 2021 +0700
+
+    fix login - sigup UI
+
+commit 35b8eaae712325480674bfd42ac2449d60393877
+Author: luanluan <dangluan15112001@gmail.com>
+Date:   Sat Nov 27 03:16:44 2021 +0700
+
+    shop
+
+commit 9f66de26db266eb8ccddc468571f54e8df9f740e
+Merge: 23afce1 73dfa8a
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Fri Nov 26 21:09:19 2021 +0700
+
+    Merge branch 'Thắng-25/11'
+
+commit 73dfa8ad513e58487ac70a472ea5832953e35c09
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Fri Nov 26 21:01:05 2021 +0700
+
+    code chức năng thannh toán qua momo
+
+commit 23afce131fad31d047414cfbae13a3b64c18a77c
+Merge: 0e60e54 28111d3
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Fri Nov 26 20:52:01 2021 +0700
+
+    Merge pull request #26 from duyenthang-dev/uoc-26-11
+    
+    update checkout button
+
+commit 28111d33842a7b0e1f3e14ebd73e5610869c3e3a
+Author: MaiUoc-hcmut <73373065+MaiUoc-hcmut@users.noreply.github.com>
+Date:   Fri Nov 26 20:36:37 2021 +0700
+
+    update checkout button
+
+commit 0e60e54eb25d41c9572c95f35a177d9dfdd3c650
+Merge: a828e6f e407d52
+Author: dangluan343 <77964843+dangluan343@users.noreply.github.com>
+Date:   Fri Nov 26 09:18:15 2021 +0700
+
+    Merge pull request #25 from duyenthang-dev/luan
+    
+    update shop
+
+commit e407d5239a612d149afd489bc6e1fe9cd256d743
+Author: luanluan <dangluan15112001@gmail.com>
+Date:   Fri Nov 26 09:17:43 2021 +0700
+
+    update shop
+
+commit a828e6fd2d6574f2715bb1969557cc1761a1976a
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Thu Nov 25 18:15:11 2021 +0700
+
+    Code chức năng tìm kiếm
+
+commit ec2e85a96057e1717212dd5a335b6e2e384a4192
+Merge: a293c47 f4342d3
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Thu Nov 25 03:49:10 2021 +0700
+
+    Merge branch 'main' of https://github.com/duyenthang-dev/z-fashion
+
+commit a293c475e598a32a74a52eb7a342fafc9cd7d71b
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Thu Nov 25 03:49:03 2021 +0700
+
+    update checkout pages
+
+commit f4342d36b0d9663ccf8952603637e3195080f03c
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Wed Nov 24 21:26:06 2021 +0700
+
+    Update README.md
+
+commit 311dd240892df2f4e39fb7edebb4908ace3db9cc
+Merge: 5811154 de3a748
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Wed Nov 24 21:19:29 2021 +0700
+
+    Merge branch 'main' of https://github.com/duyenthang-dev/z-fashion
+
+commit 5811154241debc1495ca32a4d6060dba75bbee25
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Wed Nov 24 21:19:25 2021 +0700
+
+    fetch product api from back end
+
+commit de3a7484a9b55f312d6e04f0e5abb8910e4f83b0
+Merge: 0f14e1a 8612584
+Author: dangluan343 <77964843+dangluan343@users.noreply.github.com>
+Date:   Wed Nov 24 01:54:22 2021 +0700
+
+    Merge pull request #24 from duyenthang-dev/luan
+    
+    Luan
+
+commit 86125845a09cab7386d0cb90b5767782938a3b1c
+Author: luanluan <dangluan15112001@gmail.com>
+Date:   Wed Nov 24 01:54:02 2021 +0700
+
+    update shop
+
+commit 0f14e1ae9b37fea95c306964746779a278ebf463
+Merge: 3aafbae 5f218b1
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Wed Nov 24 01:17:07 2021 +0700
+
+    Merge pull request #22 from duyenthang-dev/An_17/11
+    
+    An 17/11
+
+commit 3fdcc1be03f7ec22ff3cf753dac285b3f9db4990
+Author: luanluan <dangluan15112001@gmail.com>
+Date:   Wed Nov 24 00:57:08 2021 +0700
+
+    update shop
+
+commit 3aafbaefea79f0561c3852ea00b797fbd0c5cdc8
+Merge: 915f987 5c1098c
+Author: dangluan343 <77964843+dangluan343@users.noreply.github.com>
+Date:   Wed Nov 24 00:08:54 2021 +0700
+
+    Merge pull request #23 from duyenthang-dev/luan
+    
+    update shop
+
+commit 5c1098c3beb14bd1ee3c0d6e5a0a3efe3b221914
+Author: luanluan <dangluan15112001@gmail.com>
+Date:   Wed Nov 24 00:08:33 2021 +0700
+
+    update shop
+
+commit 915f987cd02441fbbeb2e5c92b4de8b56a0417a3
+Author: luanluan <dangluan15112001@gmail.com>
+Date:   Tue Nov 23 22:58:09 2021 +0700
+
+    update shop
+
+commit 5f218b1bfafc58739bbe5fefc05a4525af42cf2b
+Author: An Nguyễn <nguyenthanhan140701@gmail.com>
+Date:   Sat Nov 20 14:08:40 2021 +0700
+
+    Signin page
+    
+    Chưa tạo checkbox
+
+commit 28f8a41cb14ab1af7a007ff32f406b0bfd448158
+Author: Nguyễn Thành An <nguyenthanhan140701@gmail.com>
+Date:   Sat Nov 20 00:16:34 2021 +0700
+
+    .
+    
+    .
+
+commit 9869068c01b7986e01c92e6012c4bc4dca6faf4a
+Merge: 573e998 890eea9
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Wed Nov 17 18:11:16 2021 +0700
+
+    Merge branch 'main' of https://github.com/duyenthang-dev/z-fashion
+
+commit 573e998b0760044aa88e5450b9462e859f7f790e
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Wed Nov 17 18:11:11 2021 +0700
+
+    create register page
+
+commit 890eea9a33dc1b39b081adbc544edccf770f752d
+Merge: b7ca100 8718220
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Wed Nov 17 17:54:13 2021 +0700
+
+    Merge pull request #21 from duyenthang-dev/Thắng-15/11/2021
+    
+    Thắng 15/11/2021
+
+commit 8718220436b41ec8541ac8bc576101f0e592ded7
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Wed Nov 17 17:52:55 2021 +0700
+
+    aaaa
+
+commit b7ca100b71748c98c5b72aae1e8a3823e137ae2a
+Author: An Nguyễn <nguyenthanhan140701@gmail.com>
+Date:   Wed Nov 17 17:45:22 2021 +0700
+
+    Login page
+
+commit ed7f79efb857825b4057a47b2066aad0bbb37460
+Author: An Nguyễn <nguyenthanhan140701@gmail.com>
+Date:   Wed Nov 17 16:18:55 2021 +0700
+
+    .
+    
+    login page
+
+commit 56fd8be8a58691474b599aef881ca3a2ff0e63ca
+Author: luanluan <dangluan15112001@gmail.com>
+Date:   Tue Nov 16 18:31:17 2021 +0700
+
+    update shop
+
+commit 7ccee863d5d72321172a02e1a0eddbd4c8bd6004
+Merge: 62c40ac 4d78aa9
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Tue Nov 16 03:51:50 2021 +0700
+
+    Merge pull request #20 from duyenthang-dev/phuc_222
+    
+    Phúc
+
+commit 480ef04b5f09864061f2bf76b2fe334f5cc2f516
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Tue Nov 16 03:50:45 2021 +0700
+
+    code
+
+commit 4d78aa914a6be065060c943faf17545a83d35dab
+Author: phamhuuphuc <phamhuuphuc2905@gmail.com>
+Date:   Mon Nov 15 23:00:15 2021 +0700
+
+    123
+
+commit 0e1159a82684bddc1f32a7070cb8a05ea2d1919f
+Author: phamhuuphuc <phamhuuphuc2905@gmail.com>
+Date:   Mon Nov 15 22:52:43 2021 +0700
+
+    12345
+
+commit 62c40ace64607e122ec56f107e3a7d5e7cdf8d30
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Mon Nov 15 21:21:48 2021 +0700
+
+    Update README.md
+
+commit 74fc890c6d29390f72b89596640bcd82ef72a986
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Mon Nov 15 21:20:23 2021 +0700
+
+    Update README.md
+
+commit 31bef12c765bbfec60b1d6ce1462426d7f1bc055
+Merge: 7ac9bf0 791b891
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Mon Nov 15 15:36:58 2021 +0700
+
+    Merge pull request #19 from duyenthang-dev/phuc_111
+    
+    Phuc 111: code cart UI
+
+commit 791b8916e1f6216ae075dc06095a5d7974eec477
+Merge: 8ce8f71 7ac9bf0
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Mon Nov 15 15:36:18 2021 +0700
+
+    Merge branch 'main' into phuc_111
+
+commit 7ac9bf058a6516e61802e6eef80c20ea592087f5
+Merge: 96c305a 5e75622
+Author: MaiUoc-hcmut <73373065+MaiUoc-hcmut@users.noreply.github.com>
+Date:   Mon Nov 15 15:28:48 2021 +0700
+
+    Merge branch 'main' of https://github.com/duyenthang-dev/z-fashion
+
+commit 96c305affb7b0edd08a748976c9066e750b62054
+Author: MaiUoc-hcmut <73373065+MaiUoc-hcmut@users.noreply.github.com>
+Date:   Mon Nov 15 15:24:01 2021 +0700
+
+    update 15/11/2021
+
+commit 8ce8f712cb2d0887f2d72bdab2cad5be52ac03d7
+Author: phamhuuphuc <phamhuuphuc2905@gmail.com>
+Date:   Mon Nov 15 15:22:25 2021 +0700
+
+    @@
+
+commit 5e756225e0c7a32aa893750bc4ac9a25171dc95c
+Merge: 739260f 0e266a5
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Mon Nov 15 10:36:11 2021 +0700
+
+    Merge pull request #18 from duyenthang-dev/Thắng-12/11/2021
+    
+    Thắng 12/11/2021
+
+commit 0e266a5e5c39b8f4543fe296edc87cf7076f07ec
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Mon Nov 15 10:27:41 2021 +0700
+
+    code toast
+
+commit 8bbbf336c00c6dd641df8666a10d6cd0895937c1
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Sat Nov 13 21:38:25 2021 +0700
+
+    code modal add to cart
+
+commit 93ed04e9724fefa2ebcb647a8cb249f3debdfeb2
+Author: phamhuuphuc <phamhuuphuc2905@gmail.com>
+Date:   Sat Nov 13 00:01:11 2021 +0700
+
+    123
+
+commit 739260f75c4258410d83b86d8a19dfd792363a52
+Merge: 9d4827c 4dc272c
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Fri Nov 12 19:22:57 2021 +0700
+
+    Merge pull request #17 from duyenthang-dev/Thắng-10/11/2021
+    
+    Thắng 10/11/2021:  code chức năng add to cart
+
+commit 4dc272ca70f64be711137bf0d7ec1276da874de4
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Fri Nov 12 19:19:41 2021 +0700
+
+    Thắng : thêm chức năng add to cart
+
+commit 58c301ec1af83537e9bb88421ae5f729bff2a75e
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Thu Nov 11 16:14:45 2021 +0700
+
+    fix cart
+
+commit 9d4827c27860b997435499b9967537515bec282c
+Merge: 6028add 964d195
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Wed Nov 10 20:41:54 2021 +0700
+
+    Merge pull request #16 from duyenthang-dev/Thắng-8/11/2021
+    
+    Thắng 8/11/2021: code product pop-up
+
+commit 964d195f7f9a8f25d82a9f59495e6e0c11ac8a10
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Wed Nov 10 20:40:53 2021 +0700
+
+    code product  modal
+
+commit 6ff77c15663c039f49ccfd407cd8432e9374535b
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Wed Nov 10 18:53:47 2021 +0700
+
+    Update productModal.css
+
+commit 9087c7e25d3473b2c67cb5e7307880ebf39afb58
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Tue Nov 9 13:48:31 2021 +0700
+
+    code modal product
+
+commit 6028addcf203ea11b45244afbb7558ef838078ce
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Mon Nov 8 03:13:53 2021 +0700
+
+    Thắng: thêm ảnh
+
+commit 9dc1e611c654e204a066060c165fd5c21f989a4f
+Merge: f847820 cf7f286
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Sun Nov 7 18:42:13 2021 +0700
+
+    Merge branch 'main' of https://github.com/duyenthang-dev/z-fashion
+
+commit f8478204e1450612fd228e2e3923600b0b77e443
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Sun Nov 7 18:42:09 2021 +0700
+
+    code
+
+commit cf7f286d5edcf04e7a3b9ee40f9a80780a4f6098
+Merge: 46a538e fe4a392
+Author: dangluan343 <77964843+dangluan343@users.noreply.github.com>
+Date:   Sun Nov 7 11:03:55 2021 +0700
+
+    Merge pull request #15 from duyenthang-dev/luan
+    
+    update
+
+commit fe4a392217ad1e980f3c1b544ddfad7dd4ffd82f
+Author: luanluan <dangluan15112001@gmail.com>
+Date:   Sun Nov 7 11:02:40 2021 +0700
+
+    update
+
+commit 46a538e230087dc419db446c48441ad984bb11e5
+Merge: fc23f47 c80b38b
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Sun Nov 7 10:08:09 2021 +0700
+
+    Merge branch 'main' of https://github.com/duyenthang-dev/z-fashion
+
+commit fc23f47f704e63e9388e85870bebd1f941efdf4c
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Sun Nov 7 10:08:04 2021 +0700
+
+    code phần check out
+
+commit c80b38bf72031e0c063cb5a97b987d4f0a829a60
+Merge: 44a08c7 08fcf3e
+Author: dangluan343 <77964843+dangluan343@users.noreply.github.com>
+Date:   Sun Nov 7 04:39:04 2021 +0700
+
+    Merge pull request #14 from duyenthang-dev/luan
+    
+    update
+
+commit 08fcf3ef777ae9ac33bc7124e8300b378183e4ea
+Author: luanluan <dangluan15112001@gmail.com>
+Date:   Sun Nov 7 04:38:04 2021 +0700
+
+    update
+
+commit 44a08c74eb8e5fea8cf52233c46add7cfe9ee965
+Merge: 9eb2767 242c688
+Author: dangluan343 <77964843+dangluan343@users.noreply.github.com>
+Date:   Sun Nov 7 03:53:54 2021 +0700
+
+    Merge pull request #13 from duyenthang-dev/luan
+    
+    Luan
+
+commit 242c6880bdea741359f0f5f4d4583cda4c4416e3
+Author: luanluan <dangluan15112001@gmail.com>
+Date:   Sun Nov 7 03:51:03 2021 +0700
+
+    update
+
+commit 9eb2767468565043a461cae66b9d64abb6e079c7
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Sun Nov 7 00:05:22 2021 +0700
+
+    fix bug
+
+commit 40612b545fc30faf988537bbf0bd54d11d737a7e
+Merge: 369a914 6718ef9
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Sat Nov 6 23:54:09 2021 +0700
+
+    Merge branch 'phuc_06_11'
+
+commit 6718ef93773fa9144c6899cf63eacd395522478e
+Author: phamhuuphuc <phamhuuphuc2905@gmail.com>
+Date:   Sat Nov 6 23:44:54 2021 +0700
+
+    123
+
+commit 46a0fc4ad5ac007e88d8b9cf274094cc09a721a5
+Author: luanluan <dangluan15112001@gmail.com>
+Date:   Sat Nov 6 22:50:05 2021 +0700
+
+    Update index.jsx
+
+commit 369a914a73911405cd512f262c53108ea69640e5
+Merge: 3852ccf d056630
+Author: dangluan343 <77964843+dangluan343@users.noreply.github.com>
+Date:   Sat Nov 6 21:32:38 2021 +0700
+
+    Merge pull request #11 from duyenthang-dev/luanluan
+    
+    Update shop.jsx
+
+commit d056630140a5f1164dbc40f6d37a5e03203e29f8
+Author: luanluan <dangluan15112001@gmail.com>
+Date:   Sat Nov 6 21:30:46 2021 +0700
+
+    Update shop.jsx
+
+commit 3852ccf564009522f730aad6f33e779276e70603
+Merge: a165578 f005713
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Sat Nov 6 20:55:55 2021 +0700
+
+    Merge pull request #10 from duyenthang-dev/thang-5/11/2021
+    
+    Thắng 5/11/2021: code full trang chủ
+
+commit f00571334e8d6542826673919b51a72cb342f8d1
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Sat Nov 6 20:50:19 2021 +0700
+
+    code full home page
+
+commit 9841c774cff032567104fa28c64d8cb1445e8b7f
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Sat Nov 6 03:58:58 2021 +0700
+
+    code blog list in home page
+
+commit a165578d10e5b676611e642d132fa9f776223508
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Fri Nov 5 22:16:40 2021 +0700
+
+    code banner of homepage
+
+commit 710118c848cf60d440da266ecdb3a330cdd1c08d
+Merge: da2e30e 040ff74
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Fri Nov 5 11:47:32 2021 +0700
+
+    Merge pull request #9 from duyenthang-dev/thang-5/11/2021
+    
+    code
+
+commit 040ff7494a7df95e96148657cb53f54b00f3f6b4
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Fri Nov 5 11:47:13 2021 +0700
+
+    code
+
+commit da2e30e6081497fba99a398c7e4db7398f06afb8
+Merge: e1ff5d6 0b9e694
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Thu Nov 4 20:10:59 2021 +0700
+
+    Merge pull request #8 from duyenthang-dev/thang-4/11/2021
+    
+    Thắng: code homepage
+
+commit 0b9e69463cf5da3313a24bcb8a32b0b763e2c180
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Thu Nov 4 20:10:34 2021 +0700
+
+    aa
+
+commit e1ff5d6fa74d81299bbfb3ee24e7c4f142c2ed6d
+Merge: 676f087 e358528
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Thu Nov 4 14:47:19 2021 +0700
+
+    Merge pull request #7 from duyenthang-dev/thang_3-11-2021
+    
+    Thắng: thêm ảnh sản phẩm
+
+commit e358528c18a24f75eeb42693978f935170bc244e
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Thu Nov 4 14:44:39 2021 +0700
+
+    updaterimage
+
+commit 4e6091440e5cbd47898bee4aac8bb319382682a9
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Thu Nov 4 02:57:48 2021 +0700
+
+    update img
+
+commit b01f0a0e804e1180406910d7f2490a803e682598
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Thu Nov 4 00:00:42 2021 +0700
+
+    update header
+
+commit 676f08700d0627ea6d928a58e11ca37402206662
+Merge: 7962658 74eb3e2
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Wed Nov 3 17:44:27 2021 +0700
+
+    Merge pull request #6 from duyenthang-dev/thang_3/11/2021
+    
+    update router
+
+commit 74eb3e2118d3802517c2f9823290612fa1b17ce6
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Wed Nov 3 17:44:06 2021 +0700
+
+    update router
+
+commit 79626581ec50de22ac565bbf24ea44bf9e65acd6
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Wed Nov 3 16:56:26 2021 +0700
+
+    .
+
+commit fd08d191c29a448775e6027975795c53e0f4be9b
+Merge: 18d6a5b 169402d
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Wed Nov 3 16:47:18 2021 +0700
+
+    Merge pull request #5 from duyenthang-dev/thang
+    
+    Update full structure, router, ....
+
+commit 169402d5a5bd397ae7457e1e292be1957310d7a8
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Wed Nov 3 16:45:04 2021 +0700
+
+    "code"
+
+commit a18934009bd74e03d9b626b1023afdaca5320e36
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Wed Nov 3 14:00:00 2021 +0700
+
+    "code homepage"
+
+commit 18d6a5b348a3a13c8cce4f009ebf31e971a04cc8
+Merge: 9f0fc7a 985b2b6
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Wed Nov 3 09:00:41 2021 +0700
+
+    Merge branch 'main' of https://github.com/duyenthang-dev/z-fashion
+
+commit 9f0fc7afab13a8ee56b29b5fe82cc1dd77cef41c
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Wed Nov 3 09:00:33 2021 +0700
+
+    .
+
+commit 985b2b693040f52452e844c0767f151fb458eb73
+Merge: 3ad3ae2 8be8e95
+Author: dangluan343 <77964843+dangluan343@users.noreply.github.com>
+Date:   Tue Nov 2 22:31:39 2021 +0700
+
+    Merge pull request #4 from duyenthang-dev/luan
+    
+    Update index.jsx
+
+commit 8be8e95665753acfa73ca585c584a25da6cb2fe0
+Author: luanluan <dangluan15112001@gmail.com>
+Date:   Tue Nov 2 22:30:31 2021 +0700
+
+    Update index.jsx
+
+commit 3ad3ae2b3149bd8ccff3f831780e6a911cf79eca
+Merge: cb3d785 fbca832
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Tue Nov 2 21:55:20 2021 +0700
+
+    Merge pull request #3 from duyenthang-dev/thang
+    
+    create page
+
+commit fbca8323f589db1e74cf59a2316f275cd0549948
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Tue Nov 2 21:54:52 2021 +0700
+
+    aaaa
+
+commit cb3d78594dd42a0c5c367b0e0996dce36a74ab96
+Merge: 3ed7ef0 5ba0d17
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Tue Nov 2 15:18:54 2021 +0700
+
+    Merge pull request #2 from duyenthang-dev/thang
+    
+    Thắng: code header, footer
+
+commit 5ba0d1795a4b489ab1a236572d2729d157b997d4
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Tue Nov 2 15:14:18 2021 +0700
+
+    code footer
+
+commit a1760d86c1d54008f3e9894994ba9a8f85549d43
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Tue Nov 2 11:41:42 2021 +0700
+
+    aaa
+
+commit 3ed7ef0191d4499f356985afa5f8bbc6b67dc793
+Merge: b9a79bc f32f330
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Tue Nov 2 10:21:08 2021 +0700
+
+    Merge pull request #1 from duyenthang-dev/thang
+    
+    Update header.css
+
+commit f32f330343f8572416458e09ffc37c65efc64a14
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Tue Nov 2 10:19:57 2021 +0700
+
+    Update header.css
+
+commit b9a79bcc76f3a1cfd412e736a7798bfada668da3
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Tue Nov 2 08:35:34 2021 +0700
+
+    aa
+
+commit 5ce67f30a5a7406933a6d92c801535824cc4a3c2
+Merge: 2fb5a98 69e24e7
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Tue Nov 2 08:20:11 2021 +0700
+
+    merge
+
+commit 69e24e7886bfe4b5e8082095b1b2b3ac1dc0083c
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Tue Nov 2 08:09:06 2021 +0700
+
+    update
+
+commit 2fb5a98a8ce55958fdebdabddf26c4275df31509
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Mon Nov 1 19:29:19 2021 +0700
+
+    aa
+
+commit 68a2421568eb68acb83b012aa1f38e501ae23ab9
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Mon Nov 1 18:25:38 2021 +0700
+
+    commit
+
+commit 21fa6d0dc632c3b303ed63e777e0f66cd5a91512
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Mon Nov 1 17:48:47 2021 +0700
+
+    update img
+
+commit 64ae51464269167f5c276ca31bbe9892ffc05a58
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Mon Nov 1 17:29:19 2021 +0700
+
+    Update README.md
+
+commit 29f4e4c8ce3e31bd8e7ee2f1bea910f112b1badc
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Mon Nov 1 16:53:06 2021 +0700
+
+    update project structure
+
+commit 502e6d8d77351ba42e513918d4f2960aaa78b475
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Mon Nov 1 16:48:07 2021 +0700
+
+    a
+
+commit b87bd576ccfa79759fc05279b38c9623797f6989
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Mon Nov 1 16:45:23 2021 +0700
+
+    a
+
+commit d79d6d9b9a1c30570d9898560ee61c5ecfe2adfa
+Merge: daa47a8 00d5d00
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Mon Nov 1 16:38:57 2021 +0700
+
+    Merge branch 'main' of https://github.com/duyenthang-dev/z-fashion
+
+commit daa47a81dae08521d43b5399aae3b18f35ee35a0
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Mon Nov 1 16:37:55 2021 +0700
+
+    update structure
+
+commit 00d5d00654d6fa3c59d66506bf1a33f33d2e1a8a
+Author: Duyen Thang <90021262+duyenthang-dev@users.noreply.github.com>
+Date:   Sun Oct 31 14:01:49 2021 +0700
+
+    Delete Cặk_lòn_chim_bướm.txt
+
+commit a9187f7db5d0b134cf2f5e5a2be4337f98e56cc5
+Author: MaiUoc-hcmut <73373065+MaiUoc-hcmut@users.noreply.github.com>
+Date:   Sun Oct 31 12:24:48 2021 +0700
+
+    Create Cặk_lòn_chim_bướm.txt
+
+commit 7eafd13fce3173cf61f137db77582bf901c938d8
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Sun Oct 31 11:16:57 2021 +0700
+
+    create project
+
+commit 90d0308819af23cb1e5bdb31abc9e6d7e420bb17
+Author: duyenthang_dev <duyenthang.dev@gmail.com>
+Date:   Sun Oct 31 10:37:51 2021 +0700
+
+    Initialize project using Create React App
