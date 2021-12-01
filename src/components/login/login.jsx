@@ -8,15 +8,18 @@ import Container from "@mui/material/Container";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 import "./login.css";
 
 function LoginCompo() {
+    let history = useHistory();
     const [user, setUser] = useState({
         username: "",
         password: "",
     });
     const handleSubmit = (e) => {
-        // e.preventDefault();
+        e.preventDefault();
+        console.log(user);
         const config = {
             headers: {
                 "Content-Type": "application/json",
@@ -26,6 +29,7 @@ function LoginCompo() {
         axios
             .post("http://localhost/dev/backend_zfashion/sessions",JSON.stringify(user),config)
             .then((response) => {
+                console.log(response);
                 if (response?.data?.data?.access_token) {
                     localStorage.setItem("access_token",response.data?.data?.access_token);
                 }
@@ -33,6 +37,8 @@ function LoginCompo() {
                     localStorage.setItem("refresh_token",response.data?.data?.refresh_token);
                 }
                 localStorage.setItem('username', response.data?.data?.username);
+                history.push('/home');
+                // window.location.reload();
             })
             .catch((error) => {
                 console.log(error?.response?.data.success);
